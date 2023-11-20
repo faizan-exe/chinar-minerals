@@ -1,3 +1,11 @@
+
+# Chinar Minerals
+
+Development of a dynamic website for Chinar Minerals to showcase products, enable online ordering and provide information about mining operations, services, and team members.
+
+---Built with ❤️ for Chinar GOC©
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
