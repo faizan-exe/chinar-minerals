@@ -3,7 +3,6 @@ import Link from "next/link";
 import "../styles/style.css";
 import Navbar from "../sharedComponents/Navbar";
 import { AppImages } from "../utils/AppImages";
-import { Butterfly_Kids } from "next/font/google";
 
 interface HomeComponentInterface {}
 
@@ -35,7 +34,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </div>
         </div>
       </div>
-      <div className="flex relative gap-10 mt-[-160px] z-10 justify-center">
+      <div className="flex relative gap-10 mt-[-120px] z-10 justify-center">
         <div className="bg-white flex flex-col justify-center items-center w-[20%] h-60 shadow">
           <Image src={AppImages.sustIcon} alt="Icon" height={50} width={50} />
           <p className="text-black text-xl">Sustainability</p>
@@ -58,6 +57,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </p>
         </div>
       </div>
+
       <div className="flex gap-10 my-[10%] px-[10%]">
         <div className=" w-[40%]">
           <div className="h-[calc(60vh)] relative">
@@ -119,12 +119,12 @@ export default function HomeComponent(props: HomeComponentInterface) {
         </div>
       </div>
 
-      <div className="bg-[#f3f3f3] w-full px-[10%] py-[5%]">
+      <div className="bg-[#f3f3f3] w-full flex px-[10%] py-[5%]">
         <div className="w-[50%]">
           <p className="text-black font-extrabold text-3xl my-[2%]">
             Our Business
           </p>
-          <p className="text-black font-extrabold text-2xl my-[2%]">
+          <p className="text-black font-extrabold text-2xl my-[3%]">
             We're finding better ways to provide the materials the world needs
           </p>
           <p className="text-black text-lg my-[2%]">
@@ -134,13 +134,255 @@ export default function HomeComponent(props: HomeComponentInterface) {
             decarbonise steel and aluminium production, and creating new
             products from waste
           </p>
-          <button className="bg-[#D7051D] p-5 pl-5 rounded-md my-[4%]">
+          <button className="bg-[#D7051D] py-5 px-10 rounded-md my-[4%]">
             View More
           </button>
         </div>
-        <div className="w-[50%]">
-          <div className="relative">
-            <Image src={} alt="Image" />
+        <div className="w-[50%] flex flex-col gap-5 items-center justify-center">
+          <div className="flex gap-5 w-full justify-center">
+            <div className="relative">
+              <Image
+                src={AppImages.gold}
+                alt="Image"
+                height={200}
+                width={200}
+              />
+              <div className="flex items-baseline absolute bottom-5 left-5">
+                <p className="font-bold text-white">Gold</p>
+                <div className="h-[1px] w-[50px] border-2 border-white ml-2" />
+              </div>
+            </div>
+            <div className="relative">
+              <Image
+                src={AppImages.copper}
+                alt="Image"
+                height={195}
+                width={195}
+              />
+              <div className="flex items-baseline absolute bottom-5 left-5">
+                <p className="font-bold text-white">Copper</p>
+                <div className="h-[1px] w-[50px] border-2 border-white ml-2" />
+              </div>
+            </div>
+          </div>
+          <div className="flex gap-5 w-full justify-center">
+            <div className="relative">
+              <Image
+                src={AppImages.copper}
+                alt="Image"
+                height={195}
+                width={195}
+              />
+              <div className="flex items-baseline absolute bottom-5 left-5">
+                <p className="font-bold text-white">Copper</p>
+                <div className="h-[1px] w-[50px] border-2 border-white ml-2" />
+              </div>
+            </div>
+            <div className="relative">
+              <Image
+                src={AppImages.gold}
+                alt="Image"
+                height={200}
+                width={200}
+              />
+              <div className="flex items-baseline absolute bottom-5 left-5">
+                <p className="font-bold text-white">Gold</p>
+                <div className="h-[1px] w-[50px] border-2 border-white ml-2" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative bg-center w-full h-[calc(70vh)] py-10">
+        <Image src={AppImages.background2} alt="Image" layout="fill" />
+        <div className="absolute h-full w-full px-36">
+          <p className="text-[#D7051D] font-semibold my-[1%]">
+            Lorem Ipsum is simply dummy
+          </p>
+          <div>
+            <div className="flex items-baseline">
+              <p className="font-bold text-white text-3xl">
+                More About what we do
+              </p>
+              <div className="h-[1px] w-[80px] border-2 border-[#D7051D] ml-2" />
+            </div>
+          </div>
+          <div className="flex gap-10 justify-center mt-28">
+            <div className="bgBlack relative flex flex-col justify-center items-start w-[25%] h-72 px-8">
+              <div className="bg-[#D7051D] flex items-center justify-center p-5 absolute top-[-30px] left-8">
+                <Image
+                  src={AppImages.analysisIcon}
+                  alt="Icon"
+                  height={50}
+                  width={50}
+                />
+              </div>
+              <p className="text-white text-xl font-bold mb-[3%]">
+                Gold Analysis
+              </p>
+              <p className="text-white text-sm">
+                For 150 years we’ve been looking for new and better ways of
+                doing things. You'll find our teams around the world working to
+                reduce our carbon footprint, partnering to develop new
+                technologies.
+              </p>
+            </div>
+
+            <div className="bgBlack relative flex flex-col justify-center items-start w-[25%] h-72 px-8">
+              <div className="bg-[#D7051D] flex items-center justify-center p-5 absolute top-[-30px] left-8">
+                <Image
+                  src={AppImages.analysisIcon}
+                  alt="Icon"
+                  height={50}
+                  width={50}
+                />
+              </div>
+              <p className="text-white text-xl font-bold mb-[3%]">
+                Gold Analysis
+              </p>
+              <p className="text-white text-sm">
+                For 150 years we’ve been looking for new and better ways of
+                doing things. You'll find our teams around the world working to
+                reduce our carbon footprint, partnering to develop new
+                technologies.
+              </p>
+            </div>
+
+            <div className="bgBlack relative flex flex-col justify-center items-start w-[25%] h-72 px-8">
+              <div className="bg-[#D7051D] flex items-center justify-center p-5 absolute top-[-30px] left-8">
+                <Image
+                  src={AppImages.analysisIcon}
+                  alt="Icon"
+                  height={50}
+                  width={50}
+                />
+              </div>
+              <p className="text-white text-xl font-bold mb-[3%]">
+                Gold Analysis
+              </p>
+              <p className="text-white text-sm">
+                For 150 years we’ve been looking for new and better ways of
+                doing things. You'll find our teams around the world working to
+                reduce our carbon footprint, partnering to develop new
+                technologies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full py-10 bg-white px-36">
+        <p className="text-[#D7051D] font-semibold my-[1%]">
+          Lorem Ipsum is simply dummy
+        </p>
+        <div className="flex items-baseline">
+          <p className="font-bold text-black text-3xl">Our Recent Blogs</p>
+          <div className="h-[1px] w-[80px] border-2 border-[#D7051D] ml-2" />
+        </div>
+
+        <div className="flex gap-10 justify-center mt-28">
+          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start w-[25%] h-auto shadow">
+            <div className="relative w-full h-72">
+              <Image
+                src={AppImages.blogImage}
+                alt="Icon"
+                layout="fill"
+                className="absoltue"
+              />
+              <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
+                <p className="font-medium">04</p>
+                <p className="font-medium">Sep</p>
+              </div>
+            </div>
+            <div className="w-full p-5">
+              <div className="flex justify-between items-center w-full my-2">
+                <p className="text-[#757474]">By: Carlson</p>
+                <div className="flex gap-2">
+                  <Image src={AppImages.commentIcon} alt="Icon" height={20} />
+                  <p className="text-[#757474]">34</p>
+                </div>
+              </div>
+              <p className="text-black text-xl font-semibold my-2">
+                Chinar Resort Speciality
+              </p>
+              <p className="text-black text-sm my-3">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s,
+              </p>
+              <p className="text-[#D7051D] my-2 font-medium underline">
+                Read More...
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start w-[25%] h-auto shadow">
+            <div className="relative w-full h-72">
+              <Image
+                src={AppImages.blogImage}
+                alt="Icon"
+                layout="fill"
+                className="absoltue"
+              />
+              <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
+                <p className="font-medium">04</p>
+                <p className="font-medium">Sep</p>
+              </div>
+            </div>
+            <div className="w-full p-5">
+              <div className="flex justify-between items-center w-full my-2">
+                <p className="text-[#757474]">By: Carlson</p>
+                <div className="flex gap-2">
+                  <Image src={AppImages.commentIcon} alt="Icon" height={20} />
+                  <p className="text-[#757474]">34</p>
+                </div>
+              </div>
+              <p className="text-black text-xl font-semibold my-2">
+                Chinar Resort Speciality
+              </p>
+              <p className="text-black text-sm my-3">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s,
+              </p>
+              <p className="text-[#D7051D] my-2 font-medium underline">
+                Read More...
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start w-[25%] h-auto shadow">
+            <div className="relative w-full h-72">
+              <Image
+                src={AppImages.blogImage}
+                alt="Icon"
+                layout="fill"
+                className="absoltue"
+              />
+              <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
+                <p className="font-medium">04</p>
+                <p className="font-medium">Sep</p>
+              </div>
+            </div>
+            <div className="w-full p-5">
+              <div className="flex justify-between items-center w-full my-2">
+                <p className="text-[#757474]">By: Carlson</p>
+                <div className="flex gap-2">
+                  <Image src={AppImages.commentIcon} alt="Icon" height={20} />
+                  <p className="text-[#757474]">34</p>
+                </div>
+              </div>
+              <p className="text-black text-xl font-semibold my-2">
+                Chinar Resort Speciality
+              </p>
+              <p className="text-black text-sm my-3">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s,
+              </p>
+              <p className="text-[#D7051D] my-2 font-medium underline">
+                Read More...
+              </p>
+            </div>
           </div>
         </div>
       </div>

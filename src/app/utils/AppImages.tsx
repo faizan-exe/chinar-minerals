@@ -7,4 +7,8 @@ export const AppImages = {
   signature: require("../../../public/images/signature.webp"),
   gold: require("../../../public/images/gold.webp"),
   copper: require("../../../public/images/copper.webp"),
+  background2: require("../../../public/images/background2.webp"),
+  analysisIcon: require("../../../public/images/analysisIcon.webp"),
+  blogImage: require("../../../public/images/blogImage.webp"),
+  commentIcon: require("../../../public/images/commentIcon.webp"),
 };
