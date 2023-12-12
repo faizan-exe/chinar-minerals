@@ -35,24 +35,32 @@ export default function HomeComponent(props: HomeComponentInterface) {
         </div>
       </div>
       <div className="flex relative gap-10 mt-[-120px] z-10 justify-center">
-        <div className="bg-white flex flex-col justify-center items-center w-[20%] h-60 shadow">
+        <div className="bg-white flex flex-col justify-center items-center w-[20%] h-60 shadow px-4">
           <Image src={AppImages.sustIcon} alt="Icon" height={50} width={50} />
-          <p className="text-black text-xl">Sustainability</p>
-          <p className="text-black text-center text-sm px-5">
+          <p className="text-black text-xl font-medium mt-6 mb-2">
+            Sustainability
+          </p>
+          <p className="text-black text-center text-sm font-normal px-5">
             These texts aim to encapsulate the ethos of Chinar Minerals
           </p>
         </div>
-        <div className="bg-white flex flex-col justify-center items-center w-[20%] h-60 shadow">
+
+        <div className="bg-white flex flex-col justify-center items-center w-[20%] h-60 shadow px-4">
           <Image src={AppImages.sustIcon} alt="Icon" height={50} width={50} />
-          <p className="text-black text-xl">Sustainability</p>
-          <p className="text-black text-center text-sm px-5">
+          <p className="text-black text-xl font-medium mt-6 mb-2">
+            Sustainability
+          </p>
+          <p className="text-black text-center text-sm font-normal px-5">
             These texts aim to encapsulate the ethos of Chinar Minerals
           </p>
         </div>
-        <div className="bg-white flex flex-col justify-center items-center w-[20%] h-60 shadow">
+
+        <div className="bg-white flex flex-col justify-center items-center w-[20%] h-60 shadow px-4">
           <Image src={AppImages.sustIcon} alt="Icon" height={50} width={50} />
-          <p className="text-black text-xl">Sustainability</p>
-          <p className="text-black text-center text-sm px-5">
+          <p className="text-black text-xl font-medium mt-6 mb-2">
+            Sustainability
+          </p>
+          <p className="text-black text-center text-sm font-normal px-5">
             These texts aim to encapsulate the ethos of Chinar Minerals
           </p>
         </div>
