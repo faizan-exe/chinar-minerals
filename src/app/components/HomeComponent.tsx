@@ -10,14 +10,14 @@ export default function HomeComponent(props: HomeComponentInterface) {
   return (
     <div>
       <Navbar />
-      <div className="relative bg-center w-full h-[calc(90vh)] pt-[10%]">
+      <div className="relative bg-center w-full h-[calc(100vh)] pt-[10%]">
         <Image src={AppImages.backgroundImage} alt="Image" layout="fill" />
         <div className="absolute h-full w-full px-36">
-          <h1 className="font-bold text-white text-6xl leading-snug">
+          <h1 className="font-bold text-white text-6xl leading-snug mt-[1%]">
             Innovating the <br /> Future of Mining
           </h1>
           <div className="max-w-[60%] my-[4%]">
-            <p className="text-2xl">
+            <p className="text-2xl text-white">
               Join us on a journey to revolutionize mining practices. Chinar
               Minerals is at the forefront of implementing cutting-edge
               technology and sustainable methods to reshape the global mining
@@ -127,7 +127,19 @@ export default function HomeComponent(props: HomeComponentInterface) {
         </div>
       </div>
 
-      <div className="bg-[#f3f3f3] w-full flex px-[10%] py-[5%]">
+      <div className="bg-[#f3f3f3] w-full flex px-[10%] py-[5%] relative">
+        <Image
+          src={AppImages.goldBg}
+          alt="Image"
+          height={180}
+          className="absolute left-0 top-5"
+        />
+        <Image
+          src={AppImages.diamonds}
+          alt="Image"
+          height={120}
+          className="absolute bottom-24 left-[35%]"
+        />
         <div className="w-[50%]">
           <p className="text-black font-extrabold text-3xl my-[2%]">
             Our Business
@@ -142,7 +154,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
             decarbonise steel and aluminium production, and creating new
             products from waste
           </p>
-          <button className="bg-[#D7051D] py-5 px-10 rounded-md my-[4%]">
+          <button className="bg-[#D7051D] py-5 px-10 rounded-md my-[4%] text-white">
             View More
           </button>
         </div>
@@ -299,8 +311,8 @@ export default function HomeComponent(props: HomeComponentInterface) {
                 className="absoltue"
               />
               <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
-                <p className="font-medium">04</p>
-                <p className="font-medium">Sep</p>
+                <p className="font-medium text-white">04</p>
+                <p className="font-medium text-white">Sep</p>
               </div>
             </div>
             <div className="w-full p-5">
@@ -333,8 +345,8 @@ export default function HomeComponent(props: HomeComponentInterface) {
                 className="absoltue"
               />
               <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
-                <p className="font-medium">04</p>
-                <p className="font-medium">Sep</p>
+                <p className="font-medium text-white">04</p>
+                <p className="font-medium text-white">Sep</p>
               </div>
             </div>
             <div className="w-full p-5">
@@ -367,8 +379,8 @@ export default function HomeComponent(props: HomeComponentInterface) {
                 className="absoltue"
               />
               <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
-                <p className="font-medium">04</p>
-                <p className="font-medium">Sep</p>
+                <p className="font-medium text-white">04</p>
+                <p className="font-medium text-white">Sep</p>
               </div>
             </div>
             <div className="w-full p-5">

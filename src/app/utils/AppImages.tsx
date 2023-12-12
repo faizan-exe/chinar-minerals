@@ -11,4 +11,6 @@ export const AppImages = {
   analysisIcon: require("../../../public/images/analysisIcon.webp"),
   blogImage: require("../../../public/images/blogImage.webp"),
   commentIcon: require("../../../public/images/commentIcon.webp"),
+  diamonds: require("../../../public/images/diamonds.webp"),
+  goldBg: require("../../../public/images/goldBg.webp"),
 };
