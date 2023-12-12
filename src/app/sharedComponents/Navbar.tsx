@@ -25,19 +25,19 @@ export default function Navbar(props: NavbarComponentInterface) {
       </Link>
 
       <Link href={"/pages/home"}>
-        <p className="text-lg font-medium">Home</p>
+        <p className="text-lg  text-white">Home</p>
       </Link>
       <Link href={"/pages/services"}>
-        <p className="text-lg">Services</p>
+        <p className="text-lg text-white">Services</p>
       </Link>
       <Link href={"/pages/prices"}>
-        <p className="text-lg">Prices</p>
+        <p className="text-lg text-white">Prices</p>
       </Link>
       <Link href={"/pages/aboutUs"}>
-        <p className="text-lg">About us</p>
+        <p className="text-lg text-white">About us</p>
       </Link>
       <Link href={"/pages/contactUs"}>
-        <p className="text-lg">Contact Us</p>
+        <p className="text-lg text-white">Contact Us</p>
       </Link>
     </div>
   );
