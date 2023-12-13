@@ -11,14 +11,14 @@ export default function HomeComponent(props: HomeComponentInterface) {
   return (
     <div>
       <Navbar />
-      <div className="relative bg-center w-full h-[calc(100vh)] pt-[10%]">
+      <div className="relative bg-center w-full h-[calc(100vh)] pt-44">
         <Image src={AppImages.backgroundImage} alt="Image" layout="fill" />
-        <div className="absolute h-full w-full px-36">
-          <h1 className="font-bold text-white text-6xl leading-snug mt-[1%]">
+        <div className="absolute h-full w-full xl:px-36 lg:px-28">
+          <p className="font-semibold text-white leading-snug text-[2.5rem] xl:text-[3.75rem] lg:mt-6 xl:mt-10">
             Innovating the <br /> Future of Mining
-          </h1>
-          <div className="max-w-[60%] my-[4%]">
-            <p className="text-2xl text-white">
+          </p>
+          <div className="lg:max-w-[60%] max-w-[80%] lg:my-12">
+            <p className="text-lg lg:text-2xl xl:text-3xl text-white">
               Join us on a journey to revolutionize mining practices. Chinar
               Minerals is at the forefront of implementing cutting-edge
               technology and sustainable methods to reshape the global mining
@@ -26,17 +26,18 @@ export default function HomeComponent(props: HomeComponentInterface) {
             </p>
           </div>
           <div className="flex gap-10">
-            <button className="bg-transparent text-white text-2xl font-semibold border-white border-2 rounded-lg w-64 py-[1%]">
+            <button className="bg-transparent text-white font-semibold border-white border-2 rounded-lg lg:w-64 w-52 lg:py-5 py-3 lg:text-2xl text-lg">
               Contact Us
             </button>
-            <button className="bg-[#D7051D] text-white text-2xl font-semibold rounded-lg w-64 py-[1%]">
+            <button className="bg-[#D7051D] text-white font-semibold rounded-lg lg:w-64 w-52 lg:py-5 py-3 lg:text-2xl text-lg">
               Explore our World
             </button>
           </div>
         </div>
       </div>
+
       <div className="flex relative gap-10 mt-[-120px] z-10 justify-center">
-        <div className="bg-white flex flex-col justify-center items-center w-[20%] h-60 shadow px-4">
+        <div className="bg-white flex flex-col justify-center items-center xl:w-[20%] lg:w-[25%] h-60 shadow px-4">
           <Image src={AppImages.sustIcon} alt="Icon" height={50} width={50} />
           <p className="text-black text-xl font-medium mt-6 mb-2">
             Sustainability
@@ -46,7 +47,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </p>
         </div>
 
-        <div className="bg-white flex flex-col justify-center items-center w-[20%] h-60 shadow px-4">
+        <div className="bg-white flex flex-col justify-center items-center xl:w-[20%] lg:w-[25%] h-60 shadow px-4">
           <Image src={AppImages.sustIcon} alt="Icon" height={50} width={50} />
           <p className="text-black text-xl font-medium mt-6 mb-2">
             Sustainability
@@ -56,7 +57,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </p>
         </div>
 
-        <div className="bg-white flex flex-col justify-center items-center w-[20%] h-60 shadow px-4">
+        <div className="bg-white flex flex-col justify-center items-center xl:w-[20%] lg:w-[25%] h-60 shadow px-4">
           <Image src={AppImages.sustIcon} alt="Icon" height={50} width={50} />
           <p className="text-black text-xl font-medium mt-6 mb-2">
             Sustainability
@@ -76,8 +77,8 @@ export default function HomeComponent(props: HomeComponentInterface) {
               objectFit="contain"
               layout="fill"
             />
-            <div className="bg-[#D7051D] absolute bottom-[168px] left-[-140px] rotate-90 py-8 px-16">
-              <p className="text-white font-extrabold text-3xl">
+            <div className="bg-[#D7051D] absolute rotate-90 lg:bottom-[187px] lg:left-[-140px] xl:bottom-[168px] xl:left-[-200px] 2xl:left-[-140px] lg:py-5 lg:px-12 xl:py-8 xl:px-16">
+              <p className="text-white lg:font-bold xl:font-extrabold lg:text-xl xl:text-3xl">
                 25 Years Experience
               </p>
             </div>
@@ -85,21 +86,20 @@ export default function HomeComponent(props: HomeComponentInterface) {
               <Image
                 src={AppImages.videoThumbnail}
                 alt="Icon"
-                height={300}
-                className="opacity-80"
+                className="opacity-80 h-[calc(25vh)] w-auto"
               />
             </div>
           </div>
         </div>
         <div className="w-[60%]">
           <div className="h-[75%]">
-            <p className="text-[#D7051D] font-extrabold text-lg mb-[2%]">
+            <p className="text-[#D7051D] font-extrabold lg:text-lg mb-[2%]">
               Lorem ipsum dolor sit amet.
             </p>
-            <p className="text-black font-extrabold text-3xl my-[2%]">
+            <p className="text-black font-extrabold lg:text-xl xl:text-3xl my-[2%]">
               We're finding better ways to provide the materials the world needs
             </p>
-            <p className="text-black font-lg">
+            <p className="text-black lg:text-md xl:text-lg">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -109,19 +109,19 @@ export default function HomeComponent(props: HomeComponentInterface) {
               popularised in the 1960s
             </p>
           </div>
-          <div className="h-[25%] flex gap-10 px-[10%] justify-center">
+          <div className="h-[25%] flex justify-center lg:gap-5 xl:gap-10">
             <div>
-              <p className="text-black font-extrabold text-3xl my-[2%]">
+              <p className="text-black font-extrabold lg:text-xl xl:text-3xl my-[2%]">
                 Shaheen
               </p>
-              <p className="text-black text-3xl my-[2%]">CEO</p>
+              <p className="text-black lg:text-xl xl:text-3xl my-[2%]">CEO</p>
             </div>
             <div className="h-[60%] w-0 border-2 border-black"></div>
             <div>
               <Image
                 src={AppImages.signature}
                 alt="Signature"
-                className="h-[60%] w-auto"
+                className="lg:h-[40%] xl:h-[60%] w-auto"
               />
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
         <Image
           src={AppImages.goldBg}
           alt="Image"
-          height={180}
+          height={175}
           className="absolute left-0 top-5"
         />
         <Image
@@ -217,7 +217,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
 
       <div className="relative bg-center w-full h-[calc(70vh)] py-10">
         <Image src={AppImages.background2} alt="Image" layout="fill" />
-        <div className="absolute h-full w-full px-36">
+        <div className="absolute h-full w-full xl:px-36 lg:px-24">
           <p className="text-[#D7051D] font-semibold my-[1%]">
             Lorem Ipsum is simply dummy
           </p>
@@ -229,8 +229,8 @@ export default function HomeComponent(props: HomeComponentInterface) {
               <div className="h-[1px] w-[80px] border-2 border-[#D7051D] ml-2" />
             </div>
           </div>
-          <div className="flex gap-10 justify-center mt-28">
-            <div className="bgBlack relative flex flex-col justify-center items-start w-[25%] h-72 px-8">
+          <div className="flex lg:gap-6 xl:gap-10 justify-center mt-28">
+            <div className="bgBlack relative flex flex-col justify-center items-start lg:w-[30%] xl:w-[25%] px-8 py-14">
               <div className="bg-[#D7051D] flex items-center justify-center p-5 absolute top-[-30px] left-8">
                 <Image
                   src={AppImages.analysisIcon}
@@ -250,7 +250,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
               </p>
             </div>
 
-            <div className="bgBlack relative flex flex-col justify-center items-start w-[25%] h-72 px-8">
+            <div className="bgBlack relative flex flex-col justify-center items-start lg:w-[30%] xl:w-[25%] px-8 py-14">
               <div className="bg-[#D7051D] flex items-center justify-center p-5 absolute top-[-30px] left-8">
                 <Image
                   src={AppImages.analysisIcon}
@@ -270,7 +270,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
               </p>
             </div>
 
-            <div className="bgBlack relative flex flex-col justify-center items-start w-[25%] h-72 px-8">
+            <div className="bgBlack relative flex flex-col justify-center items-start lg:w-[30%] xl:w-[25%] px-8 py-14">
               <div className="bg-[#D7051D] flex items-center justify-center p-5 absolute top-[-30px] left-8">
                 <Image
                   src={AppImages.analysisIcon}
@@ -293,7 +293,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
         </div>
       </div>
 
-      <div className="w-full py-10 bg-white px-36">
+      <div className="w-full py-10 bg-white xl:px-36 lg:px-24">
         <p className="text-[#D7051D] font-semibold my-[1%]">
           Lorem Ipsum is simply dummy
         </p>
@@ -302,8 +302,8 @@ export default function HomeComponent(props: HomeComponentInterface) {
           <div className="h-[1px] w-[80px] border-2 border-[#D7051D] ml-2" />
         </div>
 
-        <div className="flex gap-10 justify-center mt-28 mb-20">
-          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start w-[25%] h-auto shadow">
+        <div className="flex lg:gap-8 xl:gap-10 justify-center mt-28 mb-20">
+          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] xl:w-[25%] h-auto shadow">
             <div className="relative w-full h-72">
               <Image
                 src={AppImages.blogImage}
@@ -337,7 +337,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
               </p>
             </div>
           </div>
-          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start w-[25%] h-auto shadow">
+          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] xl:w-[25%] h-auto shadow">
             <div className="relative w-full h-72">
               <Image
                 src={AppImages.blogImage}
@@ -371,7 +371,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
               </p>
             </div>
           </div>
-          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start w-[25%] h-auto shadow">
+          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] xl:w-[25%] h-auto shadow">
             <div className="relative w-full h-72">
               <Image
                 src={AppImages.blogImage}

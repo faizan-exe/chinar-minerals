@@ -21,4 +21,5 @@ export const AppImages = {
   productsBg: require("../../../public/images/productsBg.webp"),
   phosphate2: require("../../../public/images/phosphate2.webp"),
   phosphate1: require("../../../public/images/phosphate1.webp"),
+  dropdown: require("../../../public/images/dropdown.webp"),
 };
