@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "../styles/style.css";
 import Navbar from "../sharedComponents/Navbar";
+import Footer from "../sharedComponents/Footer";
 import { AppImages } from "../utils/AppImages";
 
 interface HomeComponentInterface {}
@@ -301,7 +302,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
           <div className="h-[1px] w-[80px] border-2 border-[#D7051D] ml-2" />
         </div>
 
-        <div className="flex gap-10 justify-center mt-28">
+        <div className="flex gap-10 justify-center mt-28 mb-20">
           <div className="flex flex-col bg-[#f3f3f3] justify-center items-start w-[25%] h-auto shadow">
             <div className="relative w-full h-72">
               <Image
@@ -406,6 +407,23 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </div>
         </div>
       </div>
+
+      <div className="bg-[#f3f3f3] w-full flex justify-between items-center px-[10%] py-[5%]">
+        <div>
+          <p className="text-[#D7051D] font-bold text-2xl">
+            Committed to Excellence
+          </p>
+          <p className="text-black">
+            We are committed to keeping our people healthy and safe
+          </p>
+        </div>
+        <div>
+          <button className="bg-[#D7051D] font-bold text-xl text-white p-5 rounded-md">
+            How We work
+          </button>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

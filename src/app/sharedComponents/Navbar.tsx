@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AppImages } from "../utils/AppImages";
@@ -7,12 +7,6 @@ import { AppImages } from "../utils/AppImages";
 interface NavbarComponentInterface {}
 
 export default function Navbar(props: NavbarComponentInterface) {
-  const [show, setShow] = useState(false);
-
-  const handleOnClick = () => {
-    setShow(true);
-  };
-
   return (
     <div className="bg-transparent flex lg:justify-evenly justify-start items-center h-36 absolute top-0 w-[90%] z-10 mx-[5%] border-b-2 border-white">
       <Link href={"/pages/home"} className="lg:flex hidden items-center">
@@ -29,6 +23,9 @@ export default function Navbar(props: NavbarComponentInterface) {
       </Link>
       <Link href={"/pages/services"}>
         <p className="text-lg text-white">Services</p>
+      </Link>
+      <Link href={"/pages/products"}>
+        <p className="text-lg text-white">Products</p>
       </Link>
       <Link href={"/pages/prices"}>
         <p className="text-lg text-white">Prices</p>
