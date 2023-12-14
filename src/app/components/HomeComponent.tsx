@@ -1,3 +1,5 @@
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "../styles/style.css";
@@ -8,28 +10,46 @@ import { AppImages } from "../utils/AppImages";
 interface HomeComponentInterface {}
 
 export default function HomeComponent(props: HomeComponentInterface) {
+  const [startAnimation, setStartAnimation] = useState(false);
+  useEffect(() => {
+    // Start the animation when the component mounts
+    setStartAnimation(true);
+  }, []);
   return (
     <div>
       <Navbar />
       <div className="relative bg-center w-full h-[calc(100vh)] pt-44">
         <Image src={AppImages.backgroundImage} alt="Image" layout="fill" />
         <div className="absolute h-full w-full xl:px-36 lg:px-28">
-          <p className="font-semibold text-white leading-snug text-[2.5rem] xl:text-[3.75rem] lg:mt-6 xl:mt-10">
+          <p
+            className={`font-semibold text-white leading-snug text-[2.5rem] xl:text-[3.75rem] lg:mt-5 xl:mt-10 transition-all duration-500 ease-in-out transform ${
+              startAnimation ? "translate-x-0" : "-translate-x-full"
+            }`}
+          >
             Innovating the <br /> Future of Mining
           </p>
-          <div className="lg:max-w-[60%] max-w-[80%] lg:my-8">
-            <p className="text-lg lg:text-2xl xl:text-3xl text-white">
+          <div className="lg:max-w-[60%] max-w-[80%] lg:my-8 my-4">
+            <p
+              className={`text-lg xl:text-2xl text-white transition-all duration-600 ease-in-out transform ${
+                startAnimation ? "translate-x-0" : "-translate-x-full"
+              }`}
+            >
               Join us on a journey to revolutionize mining practices. Chinar
               Minerals is at the forefront of implementing cutting-edge
               technology and sustainable methods to reshape the global mining
               landscape.
             </p>
           </div>
-          <div className="flex gap-10">
-            <button className="bg-transparent text-white font-semibold border-white border-2 rounded-lg lg:w-64 w-52 lg:py-5 py-3 lg:text-2xl text-lg">
+
+          <div
+            className={`flex gap-10 transition-all duration-700 ease-in-out transform ${
+              startAnimation ? "translate-x-0" : "-translate-x-full"
+            }`}
+          >
+            <button className="bg-transparent text-white font-semibold border-white border-2 rounded-lg xl:w-64 lg:w-52 py-2 lg:py-3 xl:py-5 xl:text-2xl text-lg">
               Contact Us
             </button>
-            <button className="bg-[#D7051D] text-white font-semibold rounded-lg lg:w-64 w-52 lg:py-5 py-3 lg:text-2xl text-lg">
+            <button className="bg-[#D7051D] text-white font-semibold rounded-lg xl:w-64 lg:w-52 lg:py-5 py-2 xl:text-2xl text-lg">
               Explore our World
             </button>
           </div>

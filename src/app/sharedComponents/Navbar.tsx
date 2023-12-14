@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "../styles/style.css";
@@ -9,9 +9,17 @@ interface NavbarComponentInterface {}
 
 export default function Navbar(props: NavbarComponentInterface) {
   const [isProductOpen, setIsProductsOpen] = useState(false);
-
+  const [startAnimation, setStartAnimation] = useState(false);
+  useEffect(() => {
+    // Start the animation when the component mounts
+    setStartAnimation(true);
+  }, []);
   return (
-    <div className="bg-transparent flex lg:justify-evenly justify-start items-center h-36 absolute top-0 lg:w-[95%] xl:w-[90%] z-10 lg:mx-[3%] xl:mx-[5%] border-b-2 border-white">
+    <div
+      className={`bg-transparent flex lg:justify-evenly justify-start items-center h-36 absolute top-0 lg:w-[95%] xl:w-[90%] z-10 lg:mx-[3%] xl:mx-[5%] border-b-2 border-white transition-all duration-700 ease-in-out transform ${
+        startAnimation ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <Link href={"/pages/home"} className="lg:flex hidden items-center">
         <Image
           src={AppImages.logoTransparent}
