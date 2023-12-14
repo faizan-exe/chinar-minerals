@@ -17,7 +17,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
           <p className="font-semibold text-white leading-snug text-[2.5rem] xl:text-[3.75rem] lg:mt-6 xl:mt-10">
             Innovating the <br /> Future of Mining
           </p>
-          <div className="lg:max-w-[60%] max-w-[80%] lg:my-12">
+          <div className="lg:max-w-[60%] max-w-[80%] lg:my-8">
             <p className="text-lg lg:text-2xl xl:text-3xl text-white">
               Join us on a journey to revolutionize mining practices. Chinar
               Minerals is at the forefront of implementing cutting-edge
@@ -36,7 +36,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
         </div>
       </div>
 
-      <div className="flex relative gap-10 mt-[-120px] z-10 justify-center">
+      <div className="flex flex-col lg:flex lg:flex-row relative gap-10 mt-[-120px] z-10 justify-center">
         <div className="bg-white flex flex-col justify-center items-center xl:w-[20%] lg:w-[25%] h-60 shadow px-4">
           <Image src={AppImages.sustIcon} alt="Icon" height={50} width={50} />
           <p className="text-black text-xl font-medium mt-6 mb-2">
@@ -142,10 +142,10 @@ export default function HomeComponent(props: HomeComponentInterface) {
           className="absolute bottom-24 left-[35%]"
         />
         <div className="w-[50%]">
-          <p className="text-black font-extrabold text-3xl my-[2%]">
+          <p className="text-black font-extrabold text-3xl my-10">
             Our Business
           </p>
-          <p className="text-black font-extrabold text-2xl my-[3%]">
+          <p className="text-black font-extrabold text-2xl my-15">
             We're finding better ways to provide the materials the world needs
           </p>
           <p className="text-black text-lg my-[2%]">
@@ -155,7 +155,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
             decarbonise steel and aluminium production, and creating new
             products from waste
           </p>
-          <button className="bg-[#D7051D] py-5 px-10 rounded-md my-[4%] text-white">
+          <button className="bg-[#D7051D] py-5 px-10 rounded-md my-20 text-white">
             View More
           </button>
         </div>

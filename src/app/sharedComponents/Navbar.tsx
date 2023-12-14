@@ -11,7 +11,7 @@ export default function Navbar(props: NavbarComponentInterface) {
   const [isProductOpen, setIsProductsOpen] = useState(false);
 
   return (
-    <div className="bg-transparent flex lg:justify-evenly justify-start items-center h-36 absolute top-0 w-[90%] z-10 mx-[5%] border-b-2 border-white">
+    <div className="bg-transparent flex lg:justify-evenly justify-start items-center h-36 absolute top-0 lg:w-[95%] xl:w-[90%] z-10 lg:mx-[3%] xl:mx-[5%] border-b-2 border-white">
       <Link href={"/pages/home"} className="lg:flex hidden items-center">
         <Image
           src={AppImages.logoTransparent}
@@ -25,7 +25,12 @@ export default function Navbar(props: NavbarComponentInterface) {
         <p className="text-lg  text-white">Home</p>
       </Link>
       <Link href={"/pages/services"}>
-        <p className="text-lg text-white">Services</p>
+        <p className="text-lg text-white flex items-center gap-2">
+          Services
+          <span>
+            <Image src={AppImages.dropdown} alt="Icon" height={10} />
+          </span>
+        </p>
       </Link>
       <Link href={"/pages/products"}>
         <p
@@ -37,7 +42,7 @@ export default function Navbar(props: NavbarComponentInterface) {
             setIsProductsOpen(false);
           }}
         >
-          Products{" "}
+          Products
           <span>
             <Image src={AppImages.dropdown} alt="Icon" height={10} />
           </span>

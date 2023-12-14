@@ -15,8 +15,8 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
         <Image src={AppImages.productsBg} alt="Image" layout="fill" />
         {/* <div className="relative w-full h-full bgBlack" /> */}
       </div>
-      <div className="relative mt-[-104px] z-10 flex justify-center">
-        <div className="bg-white flex flex-col justify-start items-start w-[70%] h-52 shadow py-6 px-12 rounded-lg">
+      <div className="relative mt-[-104px] z-10 flex justify-center lg:px-[8%] xl:px-[15%]">
+        <div className="bg-white flex flex-col justify-start items-start w-[80%] h-52 shadow py-6 px-12 rounded-lg">
           <p className="text-[#757474] font-normal text-sm">
             Home {" > "} Products {" > "}
             <span className="text-[#D7051D]">Phosphate</span>
@@ -28,7 +28,7 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
           </p>
         </div>
       </div>
-      <div className="flex items-center gap-5 px-[10%] my-16">
+      <div className="flex items-center gap-5 lg:px-[8%] xl:px-[15%] my-16">
         <Image src={AppImages.phosphate1} alt="Image" height={300} />
         <div className="w-0 h-[270px] border-[#D7051D] border-2" />
         <p className="text-black text-2xl">
@@ -39,7 +39,7 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
           more efficient and more sustainable.
         </p>
       </div>
-      <div className="px-[13%] mt-5 my-16">
+      <div className="lg:px-[8%] xl:px-[15%] mt-5 my-16">
         <p className="text-black text-xl font-semibold mb-4 mt-12">
           Heading 1:
         </p>

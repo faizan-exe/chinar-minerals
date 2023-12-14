@@ -10,7 +10,7 @@ export default function Footer(props: FooterComponentInterface) {
   return (
     <div className="relative bg-center w-full h-[calc(70vh)]">
       <Image src={AppImages.footerBg} alt="Image" layout="fill" />
-      <div className="absolute h-full w-full p-[10%]">
+      <div className="absolute h-full w-full px-[10%] flex flex-col justify-center">
         <div className="flex justify-between items-center">
           <div className="flex flex-col gap-4 w-[25%]">
             <Link href={"/pages/home"} className="mb-5">
