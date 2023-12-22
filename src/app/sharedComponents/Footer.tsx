@@ -63,22 +63,6 @@ export default function Footer(props: FooterComponentInterface) {
           <p>© 2020 shaheen . All rights reserved</p>
         </div>
       </div>
-
-      {/* <Link href={"/pages/home"}>
-        <p className="text-lg  text-white">Home</p>
-      </Link>
-      <Link href={"/pages/services"}>
-        <p className="text-lg text-white">Services</p>
-      </Link>
-      <Link href={"/pages/prices"}>
-        <p className="text-lg text-white">Prices</p>
-      </Link>
-      <Link href={"/pages/aboutUs"}>
-        <p className="text-lg text-white">About us</p>
-      </Link>
-      <Link href={"/pages/contactUs"}>
-        <p className="text-lg text-white">Contact Us</p>
-      </Link> */}
     </div>
   );
 }

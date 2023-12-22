@@ -11,12 +11,11 @@ export default function Navbar(props: NavbarComponentInterface) {
   const [isProductOpen, setIsProductsOpen] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);
   useEffect(() => {
-    // Start the animation when the component mounts
     setStartAnimation(true);
   }, []);
   return (
     <div
-      className={`bg-transparent flex lg:justify-evenly justify-start items-center h-36 absolute top-0 lg:w-[95%] xl:w-[90%] z-10 lg:mx-[3%] xl:mx-[5%] border-b-2 border-white transition-all duration-700 ease-in-out transform ${
+      className={`bg-transparent flex lg:justify-evenly justify-start items-center lg:h-28 xl:h-32 2xl:h-36 absolute top-0 lg:w-[95%] xl:w-[90%] z-10 lg:mx-[3%] xl:mx-[5%] border-b-2 border-white transition-all duration-700 ease-in-out transform ${
         startAnimation ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -24,25 +23,25 @@ export default function Navbar(props: NavbarComponentInterface) {
         <Image
           src={AppImages.logoTransparent}
           alt="Flexiwork Logo"
-          width={180}
-          height={100}
+          className="
+          lg:w-[160px] xl:w-[200px] 2xl:w-[240px] lg:h-[80px] xl:h-[100px] 2xl:h-[120px]"
         />
       </Link>
 
       <Link href={"/pages/home"}>
-        <p className="text-lg  text-white">Home</p>
+        <p className="2xl:text-lg text-md text-white">Home</p>
       </Link>
       <Link href={"/pages/services"}>
-        <p className="text-lg text-white flex items-center gap-2">
+        <p className="2xl:text-lg text-md text-white flex items-center gap-2">
           Services
           <span>
-            <Image src={AppImages.dropdown} alt="Icon" height={10} />
+            <Image src={AppImages.dropdown} alt="Icon" height={8} />
           </span>
         </p>
       </Link>
       <Link href={"/pages/products"}>
         <p
-          className="text-lg text-white flex items-center gap-2"
+          className="2xl:text-lg text-md text-white flex items-center gap-2"
           onMouseEnter={() => {
             setIsProductsOpen(true);
           }}
@@ -52,7 +51,7 @@ export default function Navbar(props: NavbarComponentInterface) {
         >
           Products
           <span>
-            <Image src={AppImages.dropdown} alt="Icon" height={10} />
+            <Image src={AppImages.dropdown} alt="Icon" height={8} />
           </span>
         </p>
         {isProductOpen && (
@@ -81,13 +80,13 @@ export default function Navbar(props: NavbarComponentInterface) {
         )}
       </Link>
       <Link href={"/pages/prices"}>
-        <p className="text-lg text-white">Prices</p>
+        <p className="2xl:text-lg text-md text-white">Prices</p>
       </Link>
       <Link href={"/pages/aboutUs"}>
-        <p className="text-lg text-white">About us</p>
+        <p className="2xl:text-lg text-md text-white">About us</p>
       </Link>
       <Link href={"/pages/contactUs"}>
-        <p className="text-lg text-white">Contact Us</p>
+        <p className="2xl:text-lg text-md text-white">Contact Us</p>
       </Link>
     </div>
   );

@@ -11,9 +11,9 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
   return (
     <div>
       <Navbar />
-      <div className="relative bg-center w-full h-[calc(70vh)] pt-[10%]">
+      <div className="relative bg-center w-full h-[calc(100vh)] pt-[10%]">
         <Image src={AppImages.productsBg} alt="Image" layout="fill" />
-        {/* <div className="relative w-full h-full bgBlack" /> */}
+        <div className="absolute bg-black opacity-60 w-full h-full top-0 left-0"></div>
       </div>
       <div className="relative mt-[-104px] z-10 px-[5%] lg:px-[8%] xl:px-[15%] flex justify-center">
         <div className="bg-white flex flex-col justify-start items-start w-[80%] h-52 shadow py-6 px-12 rounded-lg">
@@ -64,8 +64,60 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
           </p>
         </div>
       </div>
-      <div className="px-[5%] lg:px-[8%] xl:px-[15%] my-10">
-        <Image src={AppImages.services1} alt="Image" />
+      <div className="bg-[#f3f3f3] px-[5%] lg:px-[8%] xl:px-[10%] my-10 xl:h-[calc(60vh)] 2xl:h-[calc(50vh)] flex items-center">
+        <div className="relative w-[45%] h-full">
+          <Image src={AppImages.services1} alt="Image" fill />
+          <div className="absolute bg-black opacity-60 w-full h-full top-0 left-0"></div>
+          <div className="absolute py-16 px-10 z-10 w-[90%] h-full">
+            <p className="text-white 2xl:text-5xl xl:text-4xl leading-snug font-bold mb-10 abolute">
+              Our approach <br /> and position
+            </p>
+            <p className="text-white text-sm">
+              We recognise our business interacts with a range of material
+              sustainability issue areas
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col lg:flex-row gap-6 w-[70%] ml-[-60px] z-10 justify-center">
+          <div className="bg-white flex flex-col justify-center items-center w-[50%] shadow px-6 py-6">
+            <Image src={AppImages.sustIcon} alt="Icon" height={30} width={30} />
+            <p className="text-black 2xl:text-lg xl:text-md font-medium mt-2 mb-2">
+              Purpose Led
+            </p>
+            <p className="text-black text-center text-xs font-normal">
+              We recognise our business interacts with a range of material
+              sustainability issue areas and governance of our approach to
+              managing our potential and actual impacts is key to operating more
+              sustainably
+            </p>
+          </div>
+
+          <div className="bg-white flex flex-col justify-center items-center w-[50%] shadow px-6 py-6">
+            <Image src={AppImages.sustIcon} alt="Icon" height={30} width={30} />
+            <p className="text-black 2xl:text-lg xl:text-md font-medium mt-2 mb-2">
+              Strong Foundation
+            </p>
+            <p className="text-black text-center text-xs font-normal">
+              We recognise our business interacts with a range of material
+              sustainability issue areas and governance of our approach to
+              managing our potential and actual impacts is key to operating more
+              sustainably
+            </p>
+          </div>
+
+          <div className="bg-white flex flex-col justify-center items-center w-[50%] shadow px-6 py-6">
+            <Image src={AppImages.sustIcon} alt="Icon" height={30} width={30} />
+            <p className="text-black 2xl:text-lg xl:text-md font-medium mt-2 mb-2">
+              Social Value
+            </p>
+            <p className="text-black text-center text-xs font-normal">
+              We recognise our business interacts with a range of material
+              sustainability issue areas and governance of our approach to
+              managing our potential and actual impacts is key to operating more
+              sustainably
+            </p>
+          </div>
+        </div>
       </div>
       <div className="px-[5%] lg:px-[8%] xl:px-[15%] mt-5 my-16">
         <p className="text-black text-xl font-semibold mb-4 mt-12">
@@ -87,18 +139,60 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
         </p>
       </div>
 
-      <div className="relative bg-center w-full h-[calc(50vh)] py-10">
+      <div className="flex w-full">
+        <div className="bg-[#f3f3f3] w-[40%] py-8">
+          <p className="text-[#D7051D] font-bold text-4xl flex justify-center items-center">
+            Our Status
+          </p>
+        </div>
+        <div className="bg-[#141414] w-[20%] flex gap-2 justify-center items-center py-8 border-r-2">
+          <Image
+            src={AppImages.experienceVector}
+            alt="Icon"
+            className="h-9 w-12"
+          />
+          <div>
+            <p className="text-white text-xl">10+ Years</p>
+            <p className="text-white text-md">Experience</p>
+          </div>
+        </div>
+        <div className="bg-[#141414] w-[20%] flex gap-2 justify-center items-center py-8 border-r-2">
+          <Image
+            src={AppImages.buildingVector}
+            alt="Icon"
+            className="h-10 w-10"
+          />
+          <div>
+            <p className="text-white text-xl">220+</p>
+            <p className="text-white text-md">Buildings</p>
+          </div>
+        </div>
+        <div className="bg-[#141414] w-[20%] flex gap-2 justify-center items-center py-8">
+          <Image
+            src={AppImages.clientVector}
+            alt="Icon"
+            className="h-10 w-10"
+          />
+          <div>
+            <p className="text-white text-xl">500+</p>
+            <p className="text-white text-md">Clients</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative bg-center w-full xl:h-[calc(60vh)] 2xl:h-[calc(50vh)] 2xl:py-10 xl:py-6">
         <Image src={AppImages.services2} alt="Image" layout="fill" />
+        <div className="absolute bg-black opacity-60 w-full h-full top-0 left-0"></div>
         <div className="absolute h-full w-[65%] px-[5%] lg:px-[8%] xl:px-[15%] flex flex-col justify-center">
-          <p className="font-bold text-white text-3xl my-10">
+          <p className="font-bold text-white text-3xl 2xl:my-10 xl:my-6">
             Product Safety Data Sheets
           </p>
-          <p className="text-white text-md my-15">
+          <p className="text-white text-md">
             Product Safety Data Sheets provide critical information about the
             properties, environmental impacts, and safe handling (including
             storage and disposal) of our products.
           </p>
-          <button className="bg-[#D7051D] py-5 px-10 w-48 rounded-md my-20 text-white">
+          <button className="bg-[#D7051D] py-4 px-10 w-48 rounded-md my-12 text-white">
             View More
           </button>
         </div>

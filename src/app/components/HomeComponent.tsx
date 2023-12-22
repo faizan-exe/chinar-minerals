@@ -12,28 +12,27 @@ interface HomeComponentInterface {}
 export default function HomeComponent(props: HomeComponentInterface) {
   const [startAnimation, setStartAnimation] = useState(false);
   useEffect(() => {
-    // Start the animation when the component mounts
     setStartAnimation(true);
   }, []);
   return (
     <div>
       <Navbar />
-      <div className="relative bg-center w-full h-[calc(100vh)] pt-44">
+      <div className="relative bg-center w-full h-[calc(100vh)] lg:pt-32 xl:pt-36 2xl:pt-44">
         <Image src={AppImages.backgroundImage} alt="Image" layout="fill" />
-        <div className="absolute h-full w-full xl:px-36 lg:px-28">
+        <div className="absolute h-full w-full xl:px-[10%] lg:px-28">
           <p
-            className={`font-semibold text-white leading-snug text-[2.5rem] xl:text-[3.75rem] lg:mt-5 xl:mt-10 transition-all duration-500 ease-in-out transform ${
+            className={`font-semibold text-white sm:leading-snug md:leading-snug lg:leading-tight xl:leading-snug sm:text-[1.5rem] md:text-[1.75rem] lg:text-[2rem] xl:text-[2.5rem] 2xl:text-[3.75rem] lg:mt-5 xl:mt-10 transition-all duration-500 ease-in-out transform ${
               startAnimation ? "translate-x-0" : "-translate-x-full"
             }`}
           >
             Innovating the <br /> Future of Mining
           </p>
-          <div className="lg:max-w-[60%] max-w-[80%] lg:my-8 my-4">
-            <p
-              className={`text-lg xl:text-2xl text-white transition-all duration-600 ease-in-out transform ${
-                startAnimation ? "translate-x-0" : "-translate-x-full"
-              }`}
-            >
+          <div
+            className={`max-w-[80%] lg:max-w-[70%] 2xl:max-w-[60%] 2xl:my-10 xl:my-7 lg:my-5 my-3 transition-all duration-500 ease-in-out transform ${
+              startAnimation ? "translate-x-0" : "-translate-x-full"
+            }`}
+          >
+            <p className={`lg:text-md xl:text-lg 2xl:text-2xl text-white`}>
               Join us on a journey to revolutionize mining practices. Chinar
               Minerals is at the forefront of implementing cutting-edge
               technology and sustainable methods to reshape the global mining
@@ -46,18 +45,18 @@ export default function HomeComponent(props: HomeComponentInterface) {
               startAnimation ? "translate-x-0" : "-translate-x-full"
             }`}
           >
-            <button className="bg-transparent text-white font-semibold border-white border-2 rounded-lg xl:w-64 lg:w-52 py-2 lg:py-3 xl:py-5 xl:text-2xl text-lg">
+            <button className="bg-transparent text-white font-semibold rounded-lg border-white border-2 2xl:w-64 xl:w-56 lg:w-44 2xl:py-5 xl:py-3 lg:py-2 py-1 2xl:text-2xl xl:text-xl text-lg">
               Contact Us
             </button>
-            <button className="bg-[#D7051D] text-white font-semibold rounded-lg xl:w-64 lg:w-52 lg:py-5 py-2 xl:text-2xl text-lg">
+            <button className="bg-[#D7051D] text-white font-semibold rounded-lg 2xl:w-64 xl:w-56 lg:w-44 2xl:py-5 xl:py-3 lg:py-2 py-1 2xl:text-2xl xl:text-xl text-lg">
               Explore our World
             </button>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex lg:flex-row relative gap-10 mt-[-120px] z-10 justify-center">
-        <div className="bg-white flex flex-col justify-center items-center xl:w-[20%] lg:w-[25%] h-60 shadow px-4">
+      <div className="flex flex-col lg:flex-row relative gap-10 mt-[-120px] z-10 justify-center">
+        <div className="bg-white flex flex-col justify-center items-center xl:w-[20%] lg:w-[22%] h-60 shadow px-4">
           <Image src={AppImages.sustIcon} alt="Icon" height={50} width={50} />
           <p className="text-black text-xl font-medium mt-6 mb-2">
             Sustainability
@@ -67,7 +66,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </p>
         </div>
 
-        <div className="bg-white flex flex-col justify-center items-center xl:w-[20%] lg:w-[25%] h-60 shadow px-4">
+        <div className="bg-white flex flex-col justify-center items-center xl:w-[20%] lg:w-[22%] h-60 shadow px-4">
           <Image src={AppImages.sustIcon} alt="Icon" height={50} width={50} />
           <p className="text-black text-xl font-medium mt-6 mb-2">
             Sustainability
@@ -77,7 +76,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </p>
         </div>
 
-        <div className="bg-white flex flex-col justify-center items-center xl:w-[20%] lg:w-[25%] h-60 shadow px-4">
+        <div className="bg-white flex flex-col justify-center items-center xl:w-[20%] lg:w-[22%] h-60 shadow px-4">
           <Image src={AppImages.sustIcon} alt="Icon" height={50} width={50} />
           <p className="text-black text-xl font-medium mt-6 mb-2">
             Sustainability

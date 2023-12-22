@@ -24,4 +24,11 @@ export const AppImages = {
   dropdown: require("../../../public/images/dropdown.webp"),
   services1: require("../../../public/images/services1.webp"),
   services2: require("../../../public/images/services2.webp"),
+  productsHeroBackground: require("../../../public/images/productsHeroBackground.webp"),
+  crainPNG: require("../../../public/images/crainPNG.webp"),
+  buildingVector: require("../../../public/images/buildingVector.webp"),
+  experienceVector: require("../../../public/images/experienceVector.webp"),
+  clientVector: require("../../../public/images/clientVector.webp"),
+  product1: require("../../../public/images/product1.webp"),
+  product2: require("../../../public/images/product2.webp"),
 };
