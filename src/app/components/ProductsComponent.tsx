@@ -19,12 +19,13 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
         <div className="bg-white flex flex-col justify-start items-start w-[80%] h-52 shadow py-6 px-12 rounded-lg">
           <p className="text-[#757474] font-normal text-sm">
             Home {" > "} Products {" > "}
-            <span className="text-[#D7051D]">Phosphate</span>
+            <span className="text-[#D7051D]">Granite Quarry</span>
           </p>
-          <p className="text-black text-3xl font-bold mt-8 mb-2">PHOSPHATE</p>
+          <p className="text-black text-3xl font-bold mt-8 mb-2">
+            Granite Quarry
+          </p>
           <p className="text-[#757474] text-center text-sm font-normal">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            Welcome to Granite Quarry by Chinar Minerals
           </p>
         </div>
       </div>
@@ -32,32 +33,33 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
         <Image src={AppImages.phosphate1} alt="Image" height={300} />
         <div className="w-0 h-[270px] border-[#D7051D] border-2" />
         <p className="text-black text-2xl">
-          We have continued to focus our portfolio on iron ore and
-          higher-quality metallurgical coal preferred by our steelmaking
-          customers, copper which is used in electrification, nickel which is
-          used in electric cars and potash to make food production and land use
-          more efficient and more sustainable.
+          At Granite Quarry, a proud subsidiary of Chinar Minerals Processing
+          Mills, we specialize in the art of extracting, cutting, and polishing
+          the world's most sought-after stones. Located in the scenic Kagali
+          Village of Oghi Mansehra District, our quarry is not just a site, but
+          the birthplace of exquisite natural stone products that are as unique
+          as they are beautiful.
         </p>
       </div>
       <div className="lg:px-[8%] xl:px-[15%] mt-5 my-16">
-        <p className="text-black text-xl font-semibold mb-4 mt-12">
-          Heading 1:
+        <p className="text-black text-xl font-semibold mb-6 mt-12">
+          Our Expertise
         </p>
-        <p className="text-black text-md leading-10">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32.
+        <p className="text-black text-md leading-10 my-4">
+          <span className="font-bold">Extraction Excellence:</span> In the heart
+          of nature, we carefully select and extract premium quality granite.
+          Our methods are a blend of traditional wisdom and modern technology,
+          ensuring the integrity and quality of each stone.
+        </p>
+        <p className="text-black text-md leading-10 my-4">
+          <span className="font-bold">Precision Cutting & Polishing: </span> Our
+          state-of-the-art facility in Hattar, Haripur is where magic happens.
+          With advanced machinery and skilled artisans, we transform raw stones
+          into polished masterpieces, each reflecting a story of millions of
+          years.
         </p>
       </div>
+
       <div className="relative h-[calc(80vh)]">
         <Image
           src={AppImages.productsHeroBackground}
@@ -71,42 +73,80 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
           className="absolute right-[-65px] top-[-60px] h-[110%] 2xl:h-[100%] w-auto z-20"
         />
         <div className="absolute flex items-baseline top-0 left-0 mt-14 ml-14">
-          <p className="font-bold text-white text-3xl">
-            Where is Phosphate used?
-          </p>
+          <p className="font-bold text-white text-3xl">Products of Granite</p>
           <div className="h-[1px] w-[80px] border-2 border-[#D7051D] ml-2" />
         </div>
-        {/* <div className="absolute flex h-[50%] z-30 top-40 left-0">
-          <div className="h-[100px] w-[100px] flex-col">
-            <Image src={AppImages.product1} alt="Image" fill />
-            <p className="text-white">Construction</p>
-            <p className="text-wjite">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum
-            </p>
+
+        <div className="absolute flex flex-row gap-6 h-[50%] z-30 top-0 left-0 mt-44 ml-14">
+          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-70 hover:opacity-100 hover:scale-105">
+            <div className="relative w-full h-72">
+              <Image
+                src={AppImages.granite1}
+                alt="Icon"
+                layout="fill"
+                className="absoltue"
+              />
+            </div>
+            <div className="w-full p-5">
+              <p className="font-bold text-[#D7051D]">Custom Designs</p>
+              <p className="text-black text-sm my-3">
+                Tailored to your specification for a personal touch.
+              </p>
+            </div>
           </div>
-          <div></div>
-          <div></div>
-        </div> */}
+
+          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-70 hover:opacity-100 hover:scale-105">
+            <div className="relative w-full h-72">
+              <Image
+                src={AppImages.granite3}
+                alt="Icon"
+                layout="fill"
+                className="absoltue"
+              />
+            </div>
+            <div className="w-full p-5">
+              <p className="font-bold text-[#D7051D]">Classic Granite</p>
+              <p className="text-black text-sm my-3">
+                Timeless elegance for interiors and exteriors.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-70 hover:opacity-100 hover:scale-105">
+            <div className="relative w-full h-72">
+              <Image
+                src={AppImages.granite2}
+                alt="Icon"
+                layout="fill"
+                className="absoltue"
+              />
+            </div>
+            <div className="w-full p-5">
+              <p className="font-bold text-[#D7051D]">Exotic Patterns</p>
+              <p className="text-black text-sm my-3">
+                Timeless elegance for interiors and exteriors.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="lg:px-[8%] xl:px-[15%] my-16">
-        <p className="text-black text-xl font-semibold mb-4 mt-12">
-          Heading 2:
+        <p className="text-black text-xl font-semibold mb-6 mt-12">
+          Our Commitment
         </p>
-        <p className="text-black text-md leading-10">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32.
+        <p className="text-black text-md leading-10 my-4">
+          At Granite Quarry, quality is not just a promise but a practice. We
+          adhere to strict standards and conduct thorough inspections to ensure
+          each product meets our high-quality benchmarks.
+        </p>
+        <p className="text-black text-xl font-semibold mb-6 mt-12">Join Us</p>
+        <p className="text-black text-md leading-10 my-4">
+          Discover the beauty and versatility of granite with Chinar Minerals'
+          Granite Quarry. Whether you are an architect, a builder, or a
+          homeowner, we are here to provide you with the best natural stone
+          solutions. Contact us today to start your journey with us, and let's
+          create something beautiful together!
         </p>
       </div>
       <div className="lg:px-[6%] xl:px-[10%] mb-20 flex">
@@ -131,15 +171,16 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
               Chinar Mine
             </p>
             <p className="text-[#D7051D] 2xl:text-5xl text-3xl font-semibold">
-              Phosphate?
+              Granite?
             </p>
           </div>
           <div className="mt-5 ml-10 max-w-[60%]">
-            <p className="lg:text-md text-sm text-black xl:leading-snug xl:mt-10">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia
+            <p className="xl:text-lg lg:text-md text-sm text-black xl:leading-loose xl:mt-10">
+              Chinar Minerals mines granite due to its durability, aesthetic
+              appeal, and high market demand. By providing a robust and
+              beautiful material ideal for various construction and design
+              applications, the company meets the needs of a diverse clientele
+              while committing to responsible and sustainable mining practices.
             </p>
             <button className="bg-[#D7051D] py-3 px-5 text-white rounded-md xl:my-10 my-5">
               Get a Qoute

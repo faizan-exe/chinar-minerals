@@ -64,7 +64,7 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
           </p>
         </div>
       </div>
-      <div className="bg-[#f3f3f3] px-[5%] lg:px-[8%] xl:px-[10%] my-10 xl:h-[calc(60vh)] 2xl:h-[calc(50vh)] flex items-center">
+      <div className="bg-[#f3f3f3] pl-0 pr-10 my-10 xl:h-[calc(60vh)] 2xl:h-[calc(50vh)] flex items-center">
         <div className="relative w-[45%] h-full">
           <Image src={AppImages.services1} alt="Image" fill />
           <div className="absolute bg-black opacity-60 w-full h-full top-0 left-0"></div>

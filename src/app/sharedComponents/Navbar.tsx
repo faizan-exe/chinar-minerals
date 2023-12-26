@@ -9,13 +9,14 @@ interface NavbarComponentInterface {}
 
 export default function Navbar(props: NavbarComponentInterface) {
   const [isProductOpen, setIsProductsOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);
   useEffect(() => {
     setStartAnimation(true);
   }, []);
   return (
     <div
-      className={`bg-transparent flex lg:justify-evenly justify-start items-center lg:h-28 xl:h-32 2xl:h-36 absolute top-0 lg:w-[95%] xl:w-[90%] z-10 lg:mx-[3%] xl:mx-[5%] border-b-2 border-white transition-all duration-700 ease-in-out transform ${
+      className={`bg-transparent hidden lg:flex lg:justify-evenly justify-start items-center lg:h-28 xl:h-32 2xl:h-36 absolute top-0 lg:w-[95%] xl:w-[90%] z-10 lg:mx-[3%] xl:mx-[5%] border-b-2 border-white transition-all duration-700 ease-in-out transform ${
         startAnimation ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -24,7 +25,7 @@ export default function Navbar(props: NavbarComponentInterface) {
           src={AppImages.logoTransparent}
           alt="Flexiwork Logo"
           className="
-          lg:w-[160px] xl:w-[200px] 2xl:w-[240px] lg:h-[80px] xl:h-[100px] 2xl:h-[120px]"
+          lg:w-[120px] xl:w-[150px] 2xl:w-[180px] lg:h-[80px] xl:h-[100px] 2xl:h-[120px]"
         />
       </Link>
 

@@ -8,47 +8,53 @@ interface FooterComponentInterface {}
 
 export default function Footer(props: FooterComponentInterface) {
   return (
-    <div className="relative bg-center w-full h-[calc(70vh)]">
+    <div className="relative bg-center w-full h-[calc(90vh)] lg:h-[calc(70vh)]">
       <Image src={AppImages.footerBg} alt="Image" layout="fill" />
       <div className="absolute h-full w-full px-[10%] flex flex-col justify-center">
-        <div className="flex justify-between items-center">
-          <div className="flex flex-col gap-4 w-[25%]">
-            <Link href={"/pages/home"} className="mb-5">
-              <Image
-                src={AppImages.logoTransparent}
-                alt="Logo"
-                width={150}
-                height={100}
-              />
-            </Link>
-            <p className="font-semibold text-white mb-5">
-              Chinar Mineral Prcessing Mills
-            </p>
-            <p className="text-xs text-white">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,
-            </p>
-            <div className="flex justify-start items-center gap-3">
-              <Image src={AppImages.youtube} alt="Icon" height={20} />
-              <Image src={AppImages.twitter} alt="Icon" height={20} />
-              <Image src={AppImages.instagram} alt="Icon" height={20} />
-              <Image
-                src={AppImages.facebook}
-                alt="Icon"
-                height={22}
-                className="mt-1"
-              />
+        <div className="md:flex md:justify-between md:items-center grid grid-rows-2">
+          <div className="flex space-between lg:w-[75%] w-full">
+            <div className="flex flex-col gap-4 lg:w-[40%] w-[60%]">
+              <Link href={"/pages/home"} className="mb-5">
+                <Image
+                  src={AppImages.logoTransparent}
+                  alt="Logo"
+                  width={150}
+                  height={100}
+                />
+              </Link>
+              <p className="font-semibold text-white mb-5">
+                Chinar Mineral Prcessing Mills
+              </p>
+              <p className="text-xs text-white">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s,
+              </p>
+              <div className="flex justify-start items-center gap-3">
+                <Image src={AppImages.youtube} alt="Icon" height={20} />
+                <Image src={AppImages.twitter} alt="Icon" height={20} />
+                <Image src={AppImages.instagram} alt="Icon" height={20} />
+                <Image
+                  src={AppImages.facebook}
+                  alt="Icon"
+                  height={22}
+                  className="mt-1"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-2 justify-center items-center lg:w-[60%] w-[40%]">
+              <p className="font-semibold text-sm text-white mb-3">
+                Quick Links
+              </p>
+              <p className=" text-sm text-[#a7a6a6]">Services</p>
+              <p className="text-sm text-[#a7a6a6]">Products</p>
+              <p className="text-sm text-[#a7a6a6]">About Us</p>
+              <p className="text-sm text-[#a7a6a6]">Contact Us</p>
             </div>
           </div>
-          <div className="flex flex-col gap-2 justify-center items-center w-[35%]">
-            <p className="font-semibold text-sm text-white mb-3">Quick Links</p>
-            <p className=" text-sm text-[#a7a6a6]">Services</p>
-            <p className="text-sm text-[#a7a6a6]">Products</p>
-            <p className="text-sm text-[#a7a6a6]">About Us</p>
-            <p className="text-sm text-[#a7a6a6]">Contact Us</p>
-          </div>
-          <div className="flex flex-col gap-5 justify-end w-[20%]">
+
+          <div className="flex flex-col gap-5 lg:justify-end justify-center lg:items-start items-center md:w-[25%] w-full">
             <p className="text-lg text-white">
               123 Market St. #22B Charlottesville, California 44635
             </p>
