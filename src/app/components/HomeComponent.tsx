@@ -54,7 +54,6 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </div>
         </div>
       </div>
-
       <div className="flex flex-col lg:flex-row relative px-8 lg:px-0 gap-10 mt-[-120px] z-10 justify-center">
         <div className="bg-white flex flex-col justify-center items-center xl:w-[20%] lg:w-[22%] h-60 shadow px-4">
           <Image src={AppImages.sustIcon} alt="Icon" height={50} width={50} />
@@ -82,7 +81,6 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </p>
         </div>
       </div>
-
       <div className="flex flex-col lg:flex-row lg:gap-10 my-[10%] px-[10%]">
         <div className="w-full lg:w-[40%]">
           <div className="h-[calc(100vh)] lg:h-[calc(60vh)] relative">
@@ -222,7 +220,6 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </div>
         </div>
       </div>
-
       <div className="relative bg-center w-full h-[calc(150vh)] lg:h-[calc(85vh)] bg-red-600 2xl:h-[calc(70vh)] py-10">
         <Image
           src={AppImages.background2}
