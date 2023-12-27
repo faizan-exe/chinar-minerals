@@ -223,9 +223,20 @@ export default function HomeComponent(props: HomeComponentInterface) {
         </div>
       </div>
 
-      <div className="relative bg-center w-full lg:h-[calc(85vh)] 2xl:h-[calc(70vh)] py-10">
-        <Image src={AppImages.background2} alt="Image" fill />
-        <div className="absolute h-full w-full xl:px-36 lg:px-24">
+      <div className="relative bg-center w-full h-[calc(150vh)] lg:h-[calc(85vh)] bg-red-600 2xl:h-[calc(70vh)] py-10">
+        <Image
+          src={AppImages.background2}
+          alt="Image"
+          fill
+          className="hidden md:block"
+        />
+        <Image
+          src={AppImages.background2Mob}
+          alt="Image"
+          fill
+          className="block md:hidden"
+        />
+        <div className="absolute h-full w-full xl:px-36 lg:px-24 px-8">
           <p className="text-[#D7051D] font-semibold my-[1%]">
             Quality, Innovation, & Customer Service.
           </p>
@@ -238,9 +249,9 @@ export default function HomeComponent(props: HomeComponentInterface) {
             </div>
           </div>
 
-          <div className="flex lg:gap-6 xl:gap-10 justify-center xl:mt-20 2xl:mt-28">
-            <div className="bgBlack relative flex flex-col items-start lg:w-[30%] xl:w-[25%] lg:px-8 2xl:px-5 lg:pt-10 2xl:py-20">
-              <div className="bg-[#D7051D] flex items-center justify-center lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8">
+          <div className="flex flex-col lg:flex-row gap-14 lg:gap-6 xl:gap-10 justify-center mt-16 xl:mt-20 2xl:mt-28 lg:px-2">
+            <div className="bgBlack relative flex flex-col items-start lg:w-[30%] xl:w-[25%] lg:px-8 2xl:px-5 p-5 lg:pt-10 2xl:py-20">
+              <div className="bg-[#D7051D] flex items-center justify-center p-1 lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8">
                 <Image
                   src={AppImages.analysisIcon}
                   alt="Icon"
@@ -258,8 +269,8 @@ export default function HomeComponent(props: HomeComponentInterface) {
               </p>
             </div>
 
-            <div className="bgBlack relative flex flex-col items-start lg:w-[30%] xl:w-[25%] lg:px-8 2xl:px-5 lg:py-10 2xl:py-20">
-              <div className="bg-[#D7051D] flex items-center justify-center lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8">
+            <div className="bgBlack relative flex flex-col items-start lg:w-[30%] xl:w-[25%] lg:px-8 2xl:px-5 p-5 lg:py-10 2xl:py-20">
+              <div className="bg-[#D7051D] flex items-center justify-center p-1 lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8">
                 <Image
                   src={AppImages.analysisIcon}
                   alt="Icon"
@@ -278,8 +289,8 @@ export default function HomeComponent(props: HomeComponentInterface) {
               </p>
             </div>
 
-            <div className="bgBlack relative flex flex-col items-start lg:w-[30%] xl:w-[25%] lg:px-8 2xl:px-5 lg:py-10 2xl:py-20">
-              <div className="bg-[#D7051D] flex items-center justify-center lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8">
+            <div className="bgBlack relative flex flex-col items-start lg:w-[30%] xl:w-[25%] lg:px-8 2xl:px-5 p-5 lg:py-10 2xl:py-20">
+              <div className="bg-[#D7051D] flex items-center justify-center p-1 lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8">
                 <Image
                   src={AppImages.analysisIcon}
                   alt="Icon"

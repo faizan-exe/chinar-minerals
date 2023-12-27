@@ -15,24 +15,25 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
         <Image src={AppImages.productsBg} alt="Image" layout="fill" />
         <div className="absolute bg-black opacity-60 w-full h-full top-0 left-0"></div>
       </div>
-      <div className="relative mt-[-104px] z-10 flex justify-center lg:px-[8%] xl:px-[15%]">
-        <div className="bg-white flex flex-col justify-start items-start w-[80%] h-52 shadow py-6 px-12 rounded-lg">
-          <p className="text-[#757474] font-normal text-sm">
+      <div className="relative mt-[-104px] z-10 flex justify-center px-[1%] lg:px-[8%] xl:px-[15%]">
+        <div className="bg-white flex flex-col justify-start items-start w-[90%] md:w-[80%] h-52 shadow py-6 px-4 md:px-12 rounded-lg">
+          <p className="text-[#757474] font-normal text-xs md:text-sm">
             Home {" > "} Products {" > "}
             <span className="text-[#D7051D]">Granite Quarry</span>
           </p>
-          <p className="text-black text-3xl font-bold mt-8 mb-2">
+          <p className="text-black text-2xl md:text-3xl font-bold mt-8 mb-4">
             Granite Quarry
           </p>
-          <p className="text-[#757474] text-center text-sm font-normal">
+          <p className="text-[#757474]  text-sm font-normal">
             Welcome to Granite Quarry by Chinar Minerals
           </p>
         </div>
       </div>
-      <div className="flex items-center gap-5 lg:px-[8%] xl:px-[15%] my-16">
+
+      <div className="flex flex-col md:flex-row items-center gap-5 px-[5%] lg:px-[8%] xl:px-[15%] my-16">
         <Image src={AppImages.phosphate1} alt="Image" height={300} />
-        <div className="w-0 h-[270px] border-[#D7051D] border-2" />
-        <p className="text-black text-2xl">
+        <div className="w-[295px] h-0 md:w-0 md:h-[270px] border-[#D7051D] border-2" />
+        <p className="text-black text-lg md:text-2xl">
           At Granite Quarry, a proud subsidiary of Chinar Minerals Processing
           Mills, we specialize in the art of extracting, cutting, and polishing
           the world's most sought-after stones. Located in the scenic Kagali
@@ -41,7 +42,8 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
           as they are beautiful.
         </p>
       </div>
-      <div className="lg:px-[8%] xl:px-[15%] mt-5 my-16">
+
+      <div className="px-[5%] lg:px-[8%] xl:px-[15%] mt-5 my-16">
         <p className="text-black text-xl font-semibold mb-6 mt-12">
           Our Expertise
         </p>
@@ -60,72 +62,79 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
         </p>
       </div>
 
-      <div className="relative h-[calc(80vh)]">
+      <div className="relative h-[calc(150vh)] md:h-[calc(80vh)]">
         <Image
           src={AppImages.productsHeroBackground}
           alt="Image"
-          className="w-full h-full absolute"
+          className="w-full h-full absolute md:block hidden"
+        />
+        <Image
+          src={AppImages.productsHeroBackgroundMob}
+          alt="Image"
+          className="w-full h-full absolute block md:hidden"
         />
         <div className="absolute bg-black opacity-60 w-full h-full top-0 left-0"></div>
         <Image
           src={AppImages.crainPNG}
           alt="Image"
-          className="absolute right-[-65px] top-[-60px] h-[110%] 2xl:h-[100%] w-auto z-20"
+          className="absolute right-[-65px] top-[-60px] h-[110%] 2xl:h-[100%] w-auto z-20 hidden md:block"
         />
-        <div className="absolute flex items-baseline top-0 left-0 mt-14 ml-14">
-          <p className="font-bold text-white text-3xl">Products of Granite</p>
-          <div className="h-[1px] w-[80px] border-2 border-[#D7051D] ml-2" />
-        </div>
-
-        <div className="absolute flex flex-row gap-6 h-[50%] z-30 top-0 left-0 mt-44 ml-14">
-          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-70 hover:opacity-100 hover:scale-105">
-            <div className="relative w-full h-72">
-              <Image
-                src={AppImages.granite1}
-                alt="Icon"
-                layout="fill"
-                className="absoltue"
-              />
-            </div>
-            <div className="w-full p-5">
-              <p className="font-bold text-[#D7051D]">Custom Designs</p>
-              <p className="text-black text-sm my-3">
-                Tailored to your specification for a personal touch.
-              </p>
-            </div>
+        <div className="absolute top-0 left-0 xl:px-32 lg:px-24 px-8 z-30 py-10">
+          <div className="flex items-baseline">
+            <p className="font-bold text-white text-3xl">Products of Granite</p>
+            <div className="h-[1px] w-[80px] border-2 border-[#D7051D] ml-2" />
           </div>
 
-          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-70 hover:opacity-100 hover:scale-105">
-            <div className="relative w-full h-72">
-              <Image
-                src={AppImages.granite3}
-                alt="Icon"
-                layout="fill"
-                className="absoltue"
-              />
+          <div className=" flex flex-col md:flex-row gap-6 md:h-[50%] mt-10 md:mt-20">
+            <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-70 hover:opacity-100 hover:scale-105">
+              <div className="relative w-full h-56 md:h-72">
+                <Image
+                  src={AppImages.granite1}
+                  alt="Icon"
+                  layout="fill"
+                  className="absoltue"
+                />
+              </div>
+              <div className="w-full p-5">
+                <p className="font-bold text-[#D7051D]">Custom Designs</p>
+                <p className="text-black text-sm my-3">
+                  Tailored to your specification for a personal touch.
+                </p>
+              </div>
             </div>
-            <div className="w-full p-5">
-              <p className="font-bold text-[#D7051D]">Classic Granite</p>
-              <p className="text-black text-sm my-3">
-                Timeless elegance for interiors and exteriors.
-              </p>
-            </div>
-          </div>
 
-          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-70 hover:opacity-100 hover:scale-105">
-            <div className="relative w-full h-72">
-              <Image
-                src={AppImages.granite2}
-                alt="Icon"
-                layout="fill"
-                className="absoltue"
-              />
+            <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-70 hover:opacity-100 hover:scale-105">
+              <div className="relative w-full h-72">
+                <Image
+                  src={AppImages.granite3}
+                  alt="Icon"
+                  layout="fill"
+                  className="absoltue"
+                />
+              </div>
+              <div className="w-full p-5">
+                <p className="font-bold text-[#D7051D]">Classic Granite</p>
+                <p className="text-black text-sm my-3">
+                  Timeless elegance for interiors and exteriors.
+                </p>
+              </div>
             </div>
-            <div className="w-full p-5">
-              <p className="font-bold text-[#D7051D]">Exotic Patterns</p>
-              <p className="text-black text-sm my-3">
-                Timeless elegance for interiors and exteriors.
-              </p>
+
+            <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-70 hover:opacity-100 hover:scale-105">
+              <div className="relative w-full h-72">
+                <Image
+                  src={AppImages.granite2}
+                  alt="Icon"
+                  layout="fill"
+                  className="absoltue"
+                />
+              </div>
+              <div className="w-full p-5">
+                <p className="font-bold text-[#D7051D]">Exotic Patterns</p>
+                <p className="text-black text-sm my-3">
+                  Timeless elegance for interiors and exteriors.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -149,6 +158,7 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
           create something beautiful together!
         </p>
       </div>
+
       <div className="lg:px-[6%] xl:px-[10%] mb-20 flex">
         <div className="relative w-[50%]">
           <div className="bg-[#f7cdd2] relative 2xl:h-[calc(60vh)] lg:h-[calc(60vh)] w-[calc(40vw)]">
