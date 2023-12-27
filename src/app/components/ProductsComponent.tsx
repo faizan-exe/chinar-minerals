@@ -11,12 +11,12 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
   return (
     <div className="overflow-x-hidden">
       <Navbar />
-      <div className="relative bg-center w-full h-[calc(100vh)] pt-[10%]">
+      <div className="relative bg-center w-full h-[calc(50vh)] md:h-[calc(100vh)] pt-[10%]">
         <Image src={AppImages.productsBg} alt="Image" layout="fill" />
         <div className="absolute bg-black opacity-60 w-full h-full top-0 left-0"></div>
       </div>
       <div className="relative mt-[-104px] z-10 flex justify-center px-[1%] lg:px-[8%] xl:px-[15%]">
-        <div className="bg-white flex flex-col justify-start items-start w-[90%] md:w-[80%] h-52 shadow py-6 px-4 md:px-12 rounded-lg">
+        <div className="bg-white flex flex-col justify-start items-start w-[90%] md:w-[80%] h-44 md:h-52 shadow py-6 px-4 md:px-12 rounded-lg">
           <p className="text-[#757474] font-normal text-xs md:text-sm">
             Home {" > "} Products {" > "}
             <span className="text-[#D7051D]">Granite Quarry</span>
@@ -77,17 +77,17 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
         <Image
           src={AppImages.crainPNG}
           alt="Image"
-          className="absolute right-[-65px] top-[-60px] h-[110%] 2xl:h-[100%] w-auto z-20 hidden md:block"
+          className="absolute right-[-65px] top-[-60px] h-[110%] 2xl:h-[100%] w-auto z-20 hidden 2xl:block"
         />
-        <div className="absolute top-0 left-0 xl:px-32 lg:px-24 px-8 z-30 py-10">
+        <div className="absolute top-0 left-0 xl:px-32 lg:px-24 px-8 z-30 py-10 lg:py-16">
           <div className="flex items-baseline">
             <p className="font-bold text-white text-3xl">Products of Granite</p>
             <div className="h-[1px] w-[80px] border-2 border-[#D7051D] ml-2" />
           </div>
 
-          <div className=" flex flex-col md:flex-row gap-6 md:h-[50%] mt-10 md:mt-20">
-            <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-70 hover:opacity-100 hover:scale-105">
-              <div className="relative w-full h-56 md:h-72">
+          <div className=" flex flex-col md:flex-row gap-6 md:h-[50%] my-10 md:my-16">
+            <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-100 md:opacity-70 hover:opacity-100 hover:scale-105">
+              <div className="relative w-full h-40 md:h-72">
                 <Image
                   src={AppImages.granite1}
                   alt="Icon"
@@ -103,8 +103,8 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
               </div>
             </div>
 
-            <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-70 hover:opacity-100 hover:scale-105">
-              <div className="relative w-full h-72">
+            <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-100 md:opacity-70 hover:opacity-100 hover:scale-105">
+              <div className="relative w-full h-40 md:h-72">
                 <Image
                   src={AppImages.granite3}
                   alt="Icon"
@@ -120,8 +120,8 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
               </div>
             </div>
 
-            <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-70 hover:opacity-100 hover:scale-105">
-              <div className="relative w-full h-72">
+            <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-100 md:opacity-70 hover:opacity-100 hover:scale-105">
+              <div className="relative w-full h-40 md:h-72">
                 <Image
                   src={AppImages.granite2}
                   alt="Icon"
@@ -140,7 +140,7 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
         </div>
       </div>
 
-      <div className="lg:px-[8%] xl:px-[15%] my-16">
+      <div className="px-[5%] lg:px-[8%] xl:px-[15%] my-16">
         <p className="text-black text-xl font-semibold mb-6 mt-12">
           Our Commitment
         </p>
@@ -159,24 +159,27 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
         </p>
       </div>
 
-      <div className="lg:px-[6%] xl:px-[10%] mb-20 flex">
-        <div className="relative w-[50%]">
+      <div className="px-[5%] lg:px-[6%] xl:px-[10%] mb-20 flex">
+        <div className="relative w-0 lg:w-[50%]">
           <div className="bg-[#f7cdd2] relative 2xl:h-[calc(60vh)] lg:h-[calc(60vh)] w-[calc(40vw)]">
             <Image
               src={AppImages.product2}
               alt="Image"
-              className="absolute right-[-30px] bottom-[-30px] 2xl:h-[calc(60vh)] lg:h-[calc(60vh)] w-[calc(40vw)]"
+              className="absolute right-[-30px] bottom-[-30px] 2xl:h-[calc(60vh)] lg:h-[calc(60vh)] w-[calc(40vw)] hidden lg:block"
             />
             <div className="absolute bg-black opacity-40 w-full h-full right-[-30px] bottom-[-30px]"></div>
           </div>
-          <div className="absolute flex top-[80px] lg:right-2 xl:right-[-27px]">
+          <div className="absolute hidden lg:flex top-[80px] lg:right-5 xl:right-[-27px]">
             <p className="text-white 2xl:text-5xl text-3xl font-semibold">
               Why does
             </p>
           </div>
         </div>
-        <div className="w-[50%] mt-[80px] lg:ml-25 xl:ml-[40px]">
+        <div className="w-[100%] lg:w-[50%] lg:mt-[80px] lg:ml-[0px] xl:ml-[40px]">
           <div>
+            <p className="text-black 2xl:text-5xl text-3xl font-semibold block lg:hidden">
+              Why does
+            </p>
             <p className="text-black 2xl:text-5xl text-3xl font-semibold mb-2">
               Chinar Mine
             </p>
@@ -184,8 +187,8 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
               Granite?
             </p>
           </div>
-          <div className="mt-5 ml-10 max-w-[60%]">
-            <p className="xl:text-lg lg:text-md text-sm text-black xl:leading-loose xl:mt-10">
+          <div className="mt-5 lg:ml-10 lg:max-w-[60%]">
+            <p className="2xl:text-lg lg:text-md text-sm text-black 2xl:leading-loose xl:mt-10">
               Chinar Minerals mines granite due to its durability, aesthetic
               appeal, and high market demand. By providing a robust and
               beautiful material ideal for various construction and design
