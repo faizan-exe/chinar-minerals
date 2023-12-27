@@ -40,4 +40,7 @@ export const AppImages = {
   granite3: require("../../../public/images/granite3.webp"),
   innovIcon: require("../../../public/images/innovIcon.webp"),
   qualIcon: require("../../../public/images/qualIcon.webp"),
+  sustPracIcon: require("../../../public/images/sustPracIcon.webp"),
+  innovSolIcon: require("../../../public/images/innovSolIcon.webp"),
+  cccIcon: require("../../../public/images/cccIcon.webp"),
 };

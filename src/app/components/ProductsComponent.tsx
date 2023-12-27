@@ -21,7 +21,7 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
             Home {" > "} Products {" > "}
             <span className="text-[#D7051D]">Granite Quarry</span>
           </p>
-          <p className="text-black text-2xl md:text-3xl font-bold mt-8 mb-4">
+          <p className="text-black text-2xl md:text-3xl font-bold mt-6 mb-4">
             Granite Quarry
           </p>
           <p className="text-[#757474]  text-sm font-normal">

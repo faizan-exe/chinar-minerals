@@ -17,18 +17,18 @@ export default function HomeComponent(props: HomeComponentInterface) {
   return (
     <div>
       <Navbar />
-      <div className="relative bg-center w-full h-[calc(70vh)] lg:h-[calc(100vh)] lg:pt-32 xl:pt-36 2xl:pt-44">
+      <div className="relative bg-center w-full h-[calc(80vh)] lg:h-[calc(100vh)] px-[5%] pt-12 lg:pt-32 xl:pt-36 2xl:pt-44">
         <Image src={AppImages.backgroundImage} alt="Image" layout="fill" />
         <div className="absolute h-full w-full xl:px-[10%] lg:px-28">
           <p
-            className={`font-semibold text-white sm:leading-snug md:leading-snug lg:leading-tight xl:leading-snug sm:text-2xl md:text-[1.75rem] lg:text-[2rem] xl:text-[2.5rem] 2xl:text-[3.75rem] lg:mt-5 xl:mt-10 transition-all duration-500 ease-in-out transform ${
+            className={`font-semibold text-white sm:leading-snug lg:leading-tight xl:leading-snug text-[1.5rem] md:text-[1.75rem] lg:text-[2rem] xl:text-[2.5rem] 2xl:text-[3.75rem] lg:mt-5 xl:mt-10 transition-all duration-500 ease-in-out transform ${
               startAnimation ? "translate-x-0" : "-translate-x-full"
             }`}
           >
             Revolutionizing <br /> Mineral Excellence
           </p>
           <div
-            className={`max-w-[80%] lg:max-w-[70%] 2xl:max-w-[60%] 2xl:my-10 xl:my-7 lg:my-5 my-3 transition-all duration-500 ease-in-out transform ${
+            className={`w-[90%] lg:max-w-[70%] 2xl:max-w-[60%] 2xl:my-10 xl:my-7 lg:my-5 my-3 transition-all duration-500 ease-in-out transform ${
               startAnimation ? "translate-x-0" : "-translate-x-full"
             }`}
           >
@@ -41,14 +41,14 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </div>
 
           <div
-            className={`flex gap-6 lg:gap-10 transition-all duration-700 ease-in-out transform ${
+            className={`flex flex-col md:flex-row gap-3 md:gap-6 lg:gap-10 transition-all duration-700 ease-in-out transform ${
               startAnimation ? "translate-x-0" : "-translate-x-full"
             }`}
           >
-            <button className="bg-transparent text-white font-semibold rounded-lg border-white border-2 2xl:w-64 xl:w-56 lg:w-44 w-40 2xl:py-5 xl:py-3 lg:py-2 py-1 2xl:text-2xl xl:text-xl text-sm">
+            <button className="bg-transparent text-white font-normal md:font-semibold rounded-lg border-white border-2 2xl:w-64 xl:w-56 lg:w-44 w-40 2xl:py-5 xl:py-3 lg:py-2 py-2 2xl:text-2xl xl:text-xl text-sm">
               Contact Us
             </button>
-            <button className="bg-[#D7051D] text-white font-semibold rounded-lg 2xl:w-64 xl:w-56 lg:w-44 w-40 2xl:py-5 xl:py-3 lg:py-2 py-1 2xl:text-2xl xl:text-xl text-sm">
+            <button className="bg-[#D7051D] text-white font-normal md:font-semibold rounded-lg 2xl:w-64 xl:w-56 lg:w-44 w-40 2xl:py-5 xl:py-3 lg:py-2 py-2 2xl:text-2xl xl:text-xl text-sm">
               Explore our World
             </button>
           </div>
@@ -421,8 +421,8 @@ export default function HomeComponent(props: HomeComponentInterface) {
         </div>
       </div>
 
-      <div className="bg-[#f3f3f3] w-full flex flex-col lg:flex-row gap-10 lg:gap-0 justify-between items-center px-[10%] py-[5%]">
-        <div>
+      <div className="bg-[#f3f3f3] w-full flex flex-col md:flex-row gap-10 lg:gap-0 justify-between items-center px-[5%] md:px-[10%] py-[5%]">
+        <div className="flex flex-col items-start w-full">
           <p className="text-[#D7051D] font-bold text-2xl">
             Committed to Excellence
           </p>
@@ -430,8 +430,8 @@ export default function HomeComponent(props: HomeComponentInterface) {
             We are committed to keeping our people healthy and safe
           </p>
         </div>
-        <div>
-          <button className="bg-[#D7051D] font-bold text-xl text-white p-5 rounded-md">
+        <div className="flex justify-start md:justify-end w-full md:w-[30%]">
+          <button className="bg-[#D7051D] font-bold text-lg md:text-xl text-white p-3 lg:p-5 rounded-md">
             How We work
           </button>
         </div>
