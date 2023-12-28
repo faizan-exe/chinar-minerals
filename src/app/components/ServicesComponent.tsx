@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import "../styles/style.css";
 import Navbar from "../sharedComponents/Navbar";
@@ -8,9 +9,27 @@ import Footer from "../sharedComponents/Footer";
 interface ServicesComponentInterface {}
 
 export default function ServicesComponent(props: ServicesComponentInterface) {
+  const [isHeaderShow, setIsHeaderShow] = useState(false);
+  let lastScrollTop = 0;
+  useEffect(() => {
+    const handleScroll = () => {
+      const st = window.pageYOffset;
+      if (st < 10) {
+        setIsHeaderShow(false);
+      } else if (st > lastScrollTop) {
+        setIsHeaderShow(true);
+      } else {
+        setIsHeaderShow(true);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div>
-      <Navbar />
+      <Navbar isHeaderShow={isHeaderShow} />
       <div className="relative bg-center w-full h-[calc(50vh)] md:h-[calc(100vh)] pt-[10%]">
         <Image src={AppImages.productsBg} alt="Image" layout="fill" />
         <div className="absolute bg-black opacity-60 w-full h-full top-0 left-0"></div>
@@ -51,7 +70,7 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
           <p className="text-black text-xl font-semibold mb-4">
             Mineral Analysis
           </p>
-          <p className="text-black text-md leading-10">
+          <p className="text-black text-base leading-10">
             Understanding the importance of quality and compliance, we offer
             thorough mineral analysis services. Our state-of-the-art laboratory
             facilities are equipped with advanced analytical tools to perform
@@ -94,7 +113,7 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
               />
             </div>
             <div className="flex basis-2/12 justify-center items-center w-full">
-              <p className="text-black text-center 2xl:text-lg xl:text-md font-semibold">
+              <p className="text-black text-center 2xl:text-lg xl:text-base font-semibold">
                 Client-Centric Customization
               </p>
             </div>
@@ -118,7 +137,7 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
               />
             </div>
             <div className="flex basis-2/12 justify-center items-center w-full">
-              <p className="text-black text-center 2xl:text-lg xl:text-md font-semibold">
+              <p className="text-black text-center 2xl:text-lg xl:text-base font-semibold">
                 Innovative Solutions
               </p>
             </div>
@@ -142,7 +161,7 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
               />
             </div>
             <div className="flex basis-2/12 justify-center items-center w-full">
-              <p className="text-black text-center 2xl:text-lg xl:text-md font-semibold">
+              <p className="text-black text-center 2xl:text-lg xl:text-base font-semibold">
                 Sustainable Practices
               </p>
             </div>
@@ -164,7 +183,7 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
             <Image src={AppImages.cccIcon} alt="Icon" height={45} width={45} />
           </div>
           <div className="flex basis-2/12 justify-center items-center w-full">
-            <p className="text-black text-center 2xl:text-lg xl:text-md font-semibold">
+            <p className="text-black text-center 2xl:text-lg xl:text-base font-semibold">
               Client-Centric Customization
             </p>
           </div>
@@ -188,7 +207,7 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
             />
           </div>
           <div className="flex basis-2/12 justify-center items-center w-full">
-            <p className="text-black text-center 2xl:text-lg xl:text-md font-semibold">
+            <p className="text-black text-center 2xl:text-lg xl:text-base font-semibold">
               Innovative Solutions
             </p>
           </div>
@@ -212,7 +231,7 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
             />
           </div>
           <div className="flex basis-2/12 justify-center items-center w-full">
-            <p className="text-black text-center 2xl:text-lg xl:text-md font-semibold">
+            <p className="text-black text-center 2xl:text-lg xl:text-base font-semibold">
               Sustainable Practices
             </p>
           </div>
@@ -231,7 +250,7 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
         <p className="text-black text-xl font-semibold mb-4 mt-12">
           Efficient Logistics and Timely Delivery
         </p>
-        <p className="text-black text-md leading-10">
+        <p className="text-black text-base leading-10">
           At Chinar Minerals, efficient logistics and timely delivery are the
           cornerstones of our commitment to client satisfaction. Our
           comprehensive approach encompasses customized logistics planning, a
@@ -305,7 +324,7 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
           <p className="font-bold text-white text-lg md:text-xl lg:text-3xl my-3 xl:my-6 2xl:my-10">
             Product Safety Data Sheets
           </p>
-          <p className="text-white text-sm md:text-md">
+          <p className="text-white text-sm md:text-base">
             We prioritize the safety and well-being of our clients and
             employees. Our Product Safety Data Sheets (PSDS) provide detailed
             information on the properties of our minerals, handling

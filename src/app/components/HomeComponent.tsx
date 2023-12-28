@@ -11,15 +11,31 @@ interface HomeComponentInterface {}
 
 export default function HomeComponent(props: HomeComponentInterface) {
   const [startAnimation, setStartAnimation] = useState(false);
+  const [isHeaderShow, setIsHeaderShow] = useState(false);
+  let lastScrollTop = 0;
   useEffect(() => {
     setStartAnimation(true);
+    const handleScroll = () => {
+      const st = window.pageYOffset;
+      if (st < 10) {
+        setIsHeaderShow(false);
+      } else if (st > lastScrollTop) {
+        setIsHeaderShow(true);
+      } else {
+        setIsHeaderShow(true);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
   return (
     <div>
-      <Navbar />
-      <div className="relative bg-center w-full h-[calc(80vh)] lg:h-[calc(100vh)] px-[5%] pt-12 lg:pt-32 xl:pt-36 2xl:pt-44">
+      <Navbar isHeaderShow={isHeaderShow} />
+      <div className="relative bg-center w-full h-[calc(80vh)] lg:h-[calc(100vh)] pt-24 md:pt-28 lg:pt-32 xl:pt-36 2xl:pt-44">
         <Image src={AppImages.backgroundImage} alt="Image" layout="fill" />
-        <div className="absolute h-full w-full xl:px-[10%] lg:px-28">
+        <div className="absolute h-full w-full px-[5%] xl:px-[10%] lg:px-28">
           <p
             className={`font-semibold text-white sm:leading-snug lg:leading-tight xl:leading-snug text-[1.5rem] md:text-[1.75rem] lg:text-[2rem] xl:text-[2.5rem] 2xl:text-[3.75rem] lg:mt-5 xl:mt-10 transition-all duration-500 ease-in-out transform ${
               startAnimation ? "translate-x-0" : "-translate-x-full"
@@ -32,7 +48,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
               startAnimation ? "translate-x-0" : "-translate-x-full"
             }`}
           >
-            <p className={`text-sm xl:text-md 2xl:text-lg text-white`}>
+            <p className={`text-sm xl:text-base 2xl:text-lg text-white`}>
               Embark on a transformative journey with us. Chinar Minerals leads
               the charge in adopting advanced technology and eco-friendly
               practices, redefining the mining industry and setting new
@@ -108,7 +124,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
             <p className="text-black font-extrabold lg:text-xl xl:text-3xl my-8 lg:my-4">
               We're finding better ways to provide the materials the world needs
             </p>
-            <p className="text-black lg:text-md 2xl:text-lg mb-6 lg:mb-0">
+            <p className="text-black lg:text-base 2xl:text-lg mb-6 lg:mb-0">
               At Chinar Minerals Processing Mills, we're dedicated to finding
               better ways to provide the essential materials the world needs.
               With a focus on innovation and quality, we harness cutting-edge
@@ -135,7 +151,6 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </div>
         </div>
       </div>
-
       <div className="bg-[#f3f3f3] w-full flex flex-col lg:flex-row px-[10%] py-[5%] relative">
         <div className="w-full lg:w-[50%]">
           <p className="text-black font-extrabold text-3xl my-10">
@@ -305,7 +320,6 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </div>
         </div>
       </div>
-
       <div className="w-full py-10 bg-white px-8 xl:px-36 lg:px-24">
         <p className="text-[#D7051D] font-semibold my-[1%]">
           Lorem Ipsum is simply dummy
@@ -420,7 +434,6 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </div>
         </div>
       </div>
-
       <div className="bg-[#f3f3f3] w-full flex flex-col md:flex-row gap-10 lg:gap-0 justify-between items-center px-[5%] md:px-[10%] py-[5%]">
         <div className="flex flex-col items-start w-full">
           <p className="text-[#D7051D] font-bold text-2xl">

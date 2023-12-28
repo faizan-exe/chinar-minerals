@@ -58,7 +58,7 @@ export default function Footer(props: FooterComponentInterface) {
           </div>
 
           <div className="flex md:w-[25%] flex-col md:gap-5 gap-2 mt-12 md:mt-0">
-            <p className="text-md md:text-lg text-white">
+            <p className="text-base md:text-lg text-white">
               Phase 3, Hattar Industrial Estate, Pakistan، Haripur, 22620
             </p>
             <p className="text-sm text-white">(0995) 617504</p>

@@ -23,7 +23,8 @@ export const AppImages = {
   productsBg: require("../../../public/images/productsBg.webp"),
   phosphate2: require("../../../public/images/phosphate2.webp"),
   phosphate1: require("../../../public/images/phosphate1.webp"),
-  dropdown: require("../../../public/images/dropdown.webp"),
+  dropdownWhite: require("../../../public/images/dropdownWhite.webp"),
+  dropdownBlack: require("../../../public/images/dropdownBlack.webp"),
   services1: require("../../../public/images/services1.webp"),
   services2: require("../../../public/images/services2.webp"),
   productsHeroBackground: require("../../../public/images/productsHeroBackground.webp"),
@@ -43,4 +44,8 @@ export const AppImages = {
   sustPracIcon: require("../../../public/images/sustPracIcon.webp"),
   innovSolIcon: require("../../../public/images/innovSolIcon.webp"),
   cccIcon: require("../../../public/images/cccIcon.webp"),
+  hamburgerBlack: require("../../../public/images/hamburgerBlack.png"),
+  hamburgerWhite: require("../../../public/images/hamburgerWhite.png"),
+  cross: require("../../../public/images/cross.png"),
+  arrow: require("../../../public/images/arrow.png"),
 };

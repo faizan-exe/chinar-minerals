@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import "../styles/style.css";
 import Navbar from "../sharedComponents/Navbar";
 import { AppImages } from "../utils/AppImages";
@@ -8,9 +9,27 @@ import Footer from "../sharedComponents/Footer";
 interface ProductsComponentInterface {}
 
 export default function ProductsComponent(props: ProductsComponentInterface) {
+  const [isHeaderShow, setIsHeaderShow] = useState(false);
+  let lastScrollTop = 0;
+  useEffect(() => {
+    const handleScroll = () => {
+      const st = window.pageYOffset;
+      if (st < 10) {
+        setIsHeaderShow(false);
+      } else if (st > lastScrollTop) {
+        setIsHeaderShow(true);
+      } else {
+        setIsHeaderShow(true);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div className="overflow-x-hidden">
-      <Navbar />
+      <Navbar isHeaderShow={isHeaderShow} />
       <div className="relative bg-center w-full h-[calc(50vh)] md:h-[calc(100vh)] pt-[10%]">
         <Image src={AppImages.productsBg} alt="Image" layout="fill" />
         <div className="absolute bg-black opacity-60 w-full h-full top-0 left-0"></div>
@@ -47,13 +66,13 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
         <p className="text-black text-xl font-semibold mb-6 mt-12">
           Our Expertise
         </p>
-        <p className="text-black text-md leading-10 my-4">
+        <p className="text-black text-base leading-10 my-4">
           <span className="font-bold">Extraction Excellence:</span> In the heart
           of nature, we carefully select and extract premium quality granite.
           Our methods are a blend of traditional wisdom and modern technology,
           ensuring the integrity and quality of each stone.
         </p>
-        <p className="text-black text-md leading-10 my-4">
+        <p className="text-black text-base leading-10 my-4">
           <span className="font-bold">Precision Cutting & Polishing: </span> Our
           state-of-the-art facility in Hattar, Haripur is where magic happens.
           With advanced machinery and skilled artisans, we transform raw stones
@@ -144,13 +163,13 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
         <p className="text-black text-xl font-semibold mb-6 mt-12">
           Our Commitment
         </p>
-        <p className="text-black text-md leading-10 my-4">
+        <p className="text-black text-base leading-10 my-4">
           At Granite Quarry, quality is not just a promise but a practice. We
           adhere to strict standards and conduct thorough inspections to ensure
           each product meets our high-quality benchmarks.
         </p>
         <p className="text-black text-xl font-semibold mb-6 mt-12">Join Us</p>
-        <p className="text-black text-md leading-10 my-4">
+        <p className="text-black text-base leading-10 my-4">
           Discover the beauty and versatility of granite with Chinar Minerals'
           Granite Quarry. Whether you are an architect, a builder, or a
           homeowner, we are here to provide you with the best natural stone
@@ -188,7 +207,7 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
             </p>
           </div>
           <div className="mt-5 lg:ml-10 lg:max-w-[60%]">
-            <p className="2xl:text-lg lg:text-md text-sm text-black 2xl:leading-loose xl:mt-10">
+            <p className="2xl:text-lg lg:text-base text-sm text-black 2xl:leading-loose xl:mt-10">
               Chinar Minerals mines granite due to its durability, aesthetic
               appeal, and high market demand. By providing a robust and
               beautiful material ideal for various construction and design
