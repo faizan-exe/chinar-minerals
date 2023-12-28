@@ -180,7 +180,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
                 width={200}
                 className="rounded-lg"
               />
-              <div className="absolute bg-black opacity-40 w-full h-full top-0 left-0 rounded-lg"></div>
+              <div className="absolute bg-black opacity-40 hover:opacity-60 w-full h-full top-0 left-0 rounded-lg"></div>
               <div className="flex items-baseline absolute bottom-5 left-2 lg:left-5">
                 <p className="font-semibold lg:font-bold text-white">Gold</p>
                 <div className="h-[1px] w-[25px] lg:w-[50px] border-2 border-white ml-1 lg:ml-2" />
@@ -194,7 +194,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
                 width={200}
                 className="rounded-lg"
               />
-              <div className="absolute bg-black opacity-40 w-full h-full top-0 left-0 rounded-lg"></div>
+              <div className="absolute bg-black opacity-40 hover:opacity-60 w-full h-full top-0 left-0 rounded-lg"></div>
               <div className="flex items-baseline absolute bottom-5 left-2 lg:left-5">
                 <p className="font-semibold lg:font-bold text-white">Copper</p>
                 <div className="h-[1px] w-[25px] lg:w-[50px] border-2 border-white ml-1 lg:ml-2" />
@@ -210,7 +210,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
                 width={200}
                 className="rounded-lg"
               />
-              <div className="absolute bg-black opacity-40 w-full h-full top-0 left-0 rounded-lg"></div>
+              <div className="absolute bg-black opacity-40 hover:opacity-60 w-full h-full top-0 left-0 rounded-lg"></div>
               <div className="flex items-baseline absolute bottom-5 left-2 lg:left-5">
                 <p className="font-semibold lg:font-bold text-white">
                   Rocksheet
@@ -226,7 +226,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
                 width={200}
                 className="rounded-lg"
               />
-              <div className="absolute bg-black opacity-40 w-full h-full top-0 left-0 rounded-lg"></div>
+              <div className="absolute bg-black opacity-40 hover:opacity-60 w-full h-full top-0 left-0 rounded-lg"></div>
               <div className="flex items-baseline absolute bottom-5 left-2 lg:left-5">
                 <p className="font-semibold lg:font-bold text-white">Granite</p>
                 <div className="h-[1px] w-[25px] lg:w-[50px] border-2 border-white ml-1 lg:ml-2" />
