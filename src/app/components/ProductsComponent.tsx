@@ -14,11 +14,11 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
   const [startAnimation, setStartAnimation] = useState(false);
   const [isHeaderShow, setIsHeaderShow] = useState(false);
   let lastScrollTop = 0;
-  AOS.init({
-    duration: 1500,
-  });
   useEffect(() => {
     setStartAnimation(true);
+    AOS.init({
+      duration: 1500,
+    });
     const handleScroll = () => {
       const st = window.pageYOffset;
       if (st < 10) {
