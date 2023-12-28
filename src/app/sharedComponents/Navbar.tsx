@@ -21,11 +21,7 @@ export default function Navbar(props: NavbarComponentInterface) {
   return (
     <>
       {isSidebarOpen ? (
-        <div
-          className={`w-[calc(100vw)] h-[calc(100vh)] bg-white fixed top-0 z-50 px-[5%] transition-all duration-700 ease-in-out transform ${
-            startAnimation ? "translate-x-0" : "-translate-x-full"
-          }`}
-        >
+        <div className="w-[calc(100vw)] h-[calc(100vh)] bg-white fixed top-0 z-50 px-[5%]">
           <div className="flex justify-between items-center pr-3">
             <Image
               src={AppImages.logoTransparent}
@@ -117,7 +113,7 @@ export default function Navbar(props: NavbarComponentInterface) {
       ) : null}
       <>
         <div
-          className={`fixed flex md:justify-evenly justify-between items-center h-20 md:h-24 lg:h-28 xl:h-32 2xl:h-36 top-0 w-full z-40 px-[5%] md:px-[3%] xl:px-[5%] transition-all duration-700 ease-in-out transform ${
+          className={`fixed flex md:justify-evenly justify-between items-center h-20 md:h-24 lg:h-28 xl:h-32 2xl:h-36 top-0 w-full z-40 px-[5%] md:px-[3%] xl:px-[5%] transition-all duration-1000 ease-in-out transform ${
             startAnimation ? "translate-y-0" : "-translate-y-full"
           }`}
           style={

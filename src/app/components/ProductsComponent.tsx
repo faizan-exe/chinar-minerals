@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import "../styles/style.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Navbar from "../sharedComponents/Navbar";
 import { AppImages } from "../utils/AppImages";
 import Footer from "../sharedComponents/Footer";
@@ -9,9 +11,14 @@ import Footer from "../sharedComponents/Footer";
 interface ProductsComponentInterface {}
 
 export default function ProductsComponent(props: ProductsComponentInterface) {
+  const [startAnimation, setStartAnimation] = useState(false);
   const [isHeaderShow, setIsHeaderShow] = useState(false);
   let lastScrollTop = 0;
+  AOS.init({
+    duration: 1500,
+  });
   useEffect(() => {
+    setStartAnimation(true);
     const handleScroll = () => {
       const st = window.pageYOffset;
       if (st < 10) {
@@ -34,7 +41,11 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
         <Image src={AppImages.productsBg} alt="Image" layout="fill" />
         <div className="absolute bg-black opacity-60 w-full h-full top-0 left-0"></div>
       </div>
-      <div className="relative mt-[-104px] z-10 flex justify-center px-[1%] lg:px-[8%] xl:px-[15%]">
+      <div
+        className={`relative mt-[-104px] z-10 flex justify-center px-[1%] lg:px-[8%] xl:px-[15%] transition-all duration-700 ease-in-out transform ${
+          startAnimation ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
         <div className="bg-white flex flex-col justify-start items-start w-[90%] md:w-[80%] h-44 md:h-52 shadow py-6 px-4 md:px-12 rounded-lg">
           <p className="text-[#757474] font-normal text-xs md:text-sm">
             Home {" > "} Products {" > "}
@@ -50,9 +61,17 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
       </div>
 
       <div className="flex flex-col md:flex-row items-center gap-5 px-[5%] lg:px-[8%] xl:px-[15%] my-16">
-        <Image src={AppImages.phosphate1} alt="Image" height={300} />
-        <div className="w-[295px] h-0 md:w-0 md:h-[270px] border-[#D7051D] border-2" />
-        <p className="text-black text-lg md:text-2xl">
+        <Image
+          src={AppImages.phosphate1}
+          alt="Image"
+          height={300}
+          data-aos="fade-right"
+        />
+        <div
+          className="w-[295px] h-0 md:w-0 md:h-[270px] border-[#D7051D] border-2"
+          data-aos="fade"
+        />
+        <p className="text-black text-lg md:text-2xl" data-aos="fade-left">
           At Granite Quarry, a proud subsidiary of Chinar Minerals Processing
           Mills, we specialize in the art of extracting, cutting, and polishing
           the world's most sought-after stones. Located in the scenic Kagali
@@ -62,7 +81,10 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
         </p>
       </div>
 
-      <div className="px-[5%] lg:px-[8%] xl:px-[15%] mt-5 my-16">
+      <div
+        className="px-[5%] lg:px-[8%] xl:px-[15%] mt-5 my-16"
+        data-aos="fade-down"
+      >
         <p className="text-black text-xl font-semibold mb-6 mt-12">
           Our Expertise
         </p>
@@ -99,12 +121,15 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
           className="absolute right-[-65px] top-[-60px] h-[110%] 2xl:h-[100%] w-auto z-20 hidden 2xl:block"
         />
         <div className="absolute top-0 left-0 xl:px-32 lg:px-24 px-8 z-30 py-10 lg:py-16">
-          <div className="flex items-baseline">
+          <div className="flex items-baseline" data-aos="fade-right">
             <p className="font-bold text-white text-3xl">Products of Granite</p>
             <div className="h-[1px] w-[80px] border-2 border-[#D7051D] ml-2" />
           </div>
 
-          <div className=" flex flex-col md:flex-row gap-6 md:h-[50%] my-10 md:my-16">
+          <div
+            className=" flex flex-col md:flex-row gap-6 md:h-[50%] my-10 md:my-16"
+            data-aos="fade-left"
+          >
             <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] h-auto shadow opacity-100 md:opacity-70 hover:opacity-100 hover:scale-105">
               <div className="relative w-full h-40 md:h-72">
                 <Image
@@ -159,7 +184,10 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
         </div>
       </div>
 
-      <div className="px-[5%] lg:px-[8%] xl:px-[15%] my-16">
+      <div
+        className="px-[5%] lg:px-[8%] xl:px-[15%] my-16"
+        data-aos="fade-down"
+      >
         <p className="text-black text-xl font-semibold mb-6 mt-12">
           Our Commitment
         </p>
@@ -179,7 +207,7 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
       </div>
 
       <div className="px-[5%] lg:px-[6%] xl:px-[10%] mb-20 flex">
-        <div className="relative w-0 lg:w-[50%]">
+        <div className="relative w-0 lg:w-[50%]" data-aos="fade-right">
           <div className="bg-[#f7cdd2] relative 2xl:h-[calc(60vh)] lg:h-[calc(60vh)] w-[calc(40vw)]">
             <Image
               src={AppImages.product2}
@@ -194,7 +222,10 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
             </p>
           </div>
         </div>
-        <div className="w-[100%] lg:w-[50%] lg:mt-[80px] lg:ml-[0px] xl:ml-[40px]">
+        <div
+          className="w-[100%] lg:w-[50%] lg:mt-[80px] lg:ml-[0px] xl:ml-[40px]"
+          data-aos="fade-left"
+        >
           <div>
             <p className="text-black 2xl:text-5xl text-3xl font-semibold block lg:hidden">
               Why does
