@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Navbar from "../sharedComponents/Navbar";
 import { AppImages } from "../utils/AppImages";
 import Footer from "../sharedComponents/Footer";
@@ -14,6 +16,9 @@ export default function ContactUsComponent(props: ContactUsComponentInterface) {
   let lastScrollTop = 0;
   useEffect(() => {
     setStartAnimation(true);
+    AOS.init({
+      duration: 1500,
+    });
     const handleScroll = () => {
       const st = window.pageYOffset;
       if (st < 10) {
@@ -57,7 +62,7 @@ export default function ContactUsComponent(props: ContactUsComponentInterface) {
       </div>
 
       <div className="flex gap-20 lg:gap-0 flex-col lg:flex-row px-[5%] lg:px-[8%] xl:px-[15%] mt-5 my-16">
-        <div className="w-full lg:w-[35%]">
+        <div className="w-full lg:w-[35%]" data-aos="fade-right">
           <p className="text-black text-2xl font-bold mt-6 mb-4">
             Find Us on Map
           </p>
@@ -68,7 +73,7 @@ export default function ContactUsComponent(props: ContactUsComponentInterface) {
             <Map />
           </div>
         </div>
-        <div className="w-full lg:w-[65%]">
+        <div className="w-full lg:w-[65%]" data-aos="fade-left">
           <p className="text-black text-2xl font-bold mt-6 mb-4">Write Us</p>
           <p className="text-[#757474]  text-sm font-normal">
             Contact Us & we will get back to you at our earliest.

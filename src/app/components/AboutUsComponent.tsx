@@ -103,7 +103,10 @@ export default function AboutUsComponent(props: AboutUsComponentInterface) {
       </div>
 
       <div className="px-[5%] lg:px-[6%] xl:px-[10%] my-20 flex gap-10 xl:gap-14 flex-col lg:flex-row">
-        <div className="w-full lg:w-[50%] shadow rounded-md p-10">
+        <div
+          className="w-full lg:w-[50%] shadow rounded-md p-10"
+          data-aos="fade-right"
+        >
           <p className="text-black font-bold text-xl text-center">
             OUR HISTORY
           </p>
@@ -120,7 +123,10 @@ export default function AboutUsComponent(props: AboutUsComponentInterface) {
             and Islamabad.
           </p>
         </div>
-        <div className="w-full lg:w-[50%] shadow rounded-md p-10">
+        <div
+          className="w-full lg:w-[50%] shadow rounded-md p-10"
+          data-aos="fade-left"
+        >
           <p className="text-black font-bold text-xl text-center">
             OUR EXPERIENCES
           </p>
@@ -267,7 +273,7 @@ export default function AboutUsComponent(props: AboutUsComponentInterface) {
       </div>
 
       <div className="bg-[#f3f3f3] px-[5%] lg:px-[6%] xl:px-[10%] my-20 flex gap-10 flex-col lg:flex-row py-[10%] lg:py-[5%]">
-        <div className="w-full lg:w-[60%]">
+        <div className="w-full lg:w-[60%]" data-aos="fade-right">
           <p className="text-[#D7051D] font-bold text-lg">
             CHINAR MINERALS at a glance
           </p>
@@ -287,7 +293,10 @@ export default function AboutUsComponent(props: AboutUsComponentInterface) {
             How We work
           </button>
         </div>
-        <div className="w-full lg:w-[40%] shadow bg-white rounded-lg flex flex-col justify-evenly px-2">
+        <div
+          className="w-full lg:w-[40%] shadow bg-white rounded-lg flex flex-col justify-evenly px-2"
+          data-aos="fade-left"
+        >
           <div className="flex flex-col items-center py-5 border-b border-[#D7051D]">
             <p className="text-black text-3xl font-bold">1995</p>
             <p className="text-black text-sm">
