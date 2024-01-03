@@ -35,7 +35,7 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
     };
   }, []);
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar isHeaderShow={isHeaderShow} />
       <div className="relative bg-center w-full h-[calc(50vh)] md:h-[calc(100vh)] pt-[10%]">
         <Image src={AppImages.productsBg} alt="Image" layout="fill" />

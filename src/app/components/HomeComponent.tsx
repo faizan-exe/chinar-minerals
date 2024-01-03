@@ -36,7 +36,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
     };
   }, []);
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar isHeaderShow={isHeaderShow} />
       <div className="relative bg-center w-full h-[calc(80vh)] lg:h-[calc(100vh)] pt-24 md:pt-28 lg:pt-32 xl:pt-36 2xl:pt-44">
         <Image src={AppImages.backgroundImage} alt="Image" layout="fill" />
@@ -75,6 +75,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </div>
         </div>
       </div>
+
       <div
         className={`flex flex-col lg:flex-row relative px-8 lg:px-0 gap-10 mt-[-120px] z-10 justify-center transition-all duration-1000 ease-in-out transform ${
           startAnimation ? "translate-y-0" : "-translate-y-full"
@@ -106,6 +107,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </p>
         </div>
       </div>
+
       <div className="flex flex-col lg:flex-row lg:gap-10 my-[10%] px-[10%]">
         <div className="w-full lg:w-[40%]">
           <div className="h-[calc(100vh)] lg:h-[calc(60vh)] relative">
@@ -164,7 +166,8 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </div>
         </div>
       </div>
-      <div className="bg-[#f3f3f3] w-full flex flex-col lg:flex-row px-[10%] py-[5%] relative">
+
+      <div className="bg-[#f3f3f3] w-full flex lg:gap-6 flex-col lg:flex-row px-[10%] py-[5%] relative">
         <div className="w-full lg:w-[50%]" data-aos="fade-right">
           <p className="text-black font-extrabold text-3xl my-10">
             Our Business
@@ -282,11 +285,11 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </div>
 
           <div
-            className="flex flex-col lg:flex-row gap-14 lg:gap-6 xl:gap-10 justify-center mt-16 xl:mt-20 2xl:mt-28 lg:px-2"
+            className="flex flex-col lg:flex-row gap-14 lg:gap-6 xl:gap-10 justify-center lg:justify-start mt-16 lg:mt-20 2xl:mt-28"
             data-aos="fade-up"
           >
-            <div className="bgBlack relative flex flex-col items-start lg:w-[30%] xl:w-[25%] lg:px-8 2xl:px-5 p-5 lg:pt-10 2xl:py-20">
-              <div className="bg-[#D7051D] flex items-center justify-center p-1 lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8">
+            <div className="bgBlack relative flex flex-col items-start lg:w-[33%] lg:px-8 2xl:px-5 p-5 lg:pt-10 2xl:py-20 rounded-lg">
+              <div className="bg-[#D7051D] flex items-center justify-center p-1 lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8 rounded-lg">
                 <Image
                   src={AppImages.analysisIcon}
                   alt="Icon"
@@ -304,8 +307,8 @@ export default function HomeComponent(props: HomeComponentInterface) {
               </p>
             </div>
 
-            <div className="bgBlack relative flex flex-col items-start lg:w-[30%] xl:w-[25%] lg:px-8 2xl:px-5 p-5 lg:py-10 2xl:py-20">
-              <div className="bg-[#D7051D] flex items-center justify-center p-1 lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8">
+            <div className="bgBlack relative flex flex-col items-start lg:w-[33%] lg:px-8 2xl:px-5 p-5 lg:py-10 2xl:py-20 rounded-lg">
+              <div className="bg-[#D7051D] flex items-center justify-center p-1 lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8 rounded-lg">
                 <Image
                   src={AppImages.analysisIcon}
                   alt="Icon"
@@ -324,8 +327,8 @@ export default function HomeComponent(props: HomeComponentInterface) {
               </p>
             </div>
 
-            <div className="bgBlack relative flex flex-col items-start lg:w-[30%] xl:w-[25%] lg:px-8 2xl:px-5 p-5 lg:py-10 2xl:py-20">
-              <div className="bg-[#D7051D] flex items-center justify-center p-1 lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8">
+            <div className="bgBlack relative flex flex-col items-start lg:w-[33%] lg:px-8 2xl:px-5 p-5 lg:py-10 2xl:py-20 rounded-lg">
+              <div className="bg-[#D7051D] flex items-center justify-center p-1 lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8 rounded-lg">
                 <Image
                   src={AppImages.analysisIcon}
                   alt="Icon"
@@ -343,6 +346,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
           </div>
         </div>
       </div>
+
       <div className="w-full py-10 bg-white px-8 xl:px-36 lg:px-24">
         <p
           className="text-[#D7051D] font-semibold my-[1%]"
@@ -359,13 +363,13 @@ export default function HomeComponent(props: HomeComponentInterface) {
           className="flex flex-col lg:flex-row gap-12 lg:gap-8 xl:gap-10 justify-center mt-28 mb-20"
           data-aos="fade-up"
         >
-          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] xl:w-[25%] h-auto shadow">
+          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] xl:w-[25%] h-auto shadow rounded-lg">
             <div className="relative w-full h-72">
               <Image
                 src={AppImages.blogImage}
                 alt="Icon"
                 layout="fill"
-                className="absoltue"
+                className="absoltue rounded-lg"
               />
               <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
                 <p className="font-medium text-white">04</p>
@@ -393,13 +397,13 @@ export default function HomeComponent(props: HomeComponentInterface) {
               </p>
             </div>
           </div>
-          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] xl:w-[25%] h-auto shadow">
+          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] xl:w-[25%] h-auto shadow rounded-lg">
             <div className="relative w-full h-72">
               <Image
                 src={AppImages.blogImage}
                 alt="Icon"
                 layout="fill"
-                className="absoltue"
+                className="absoltue rounded-lg"
               />
               <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
                 <p className="font-medium text-white">04</p>
@@ -427,13 +431,13 @@ export default function HomeComponent(props: HomeComponentInterface) {
               </p>
             </div>
           </div>
-          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] xl:w-[25%] h-auto shadow">
+          <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] xl:w-[25%] h-auto shadow rounded-lg">
             <div className="relative w-full h-72">
               <Image
                 src={AppImages.blogImage}
                 alt="Icon"
                 layout="fill"
-                className="absoltue"
+                className="absoltue rounded-lg"
               />
               <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
                 <p className="font-medium text-white">04</p>
@@ -477,7 +481,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
           className="flex justify-start md:justify-end w-full md:w-[30%]"
           data-aos="fade-left"
         >
-          <button className="bg-[#D7051D] font-bold text-lg md:text-xl text-white p-3 lg:p-5 rounded-md">
+          <button className="bg-[#D7051D] font-bold text-lg md:text-xl text-white p-3 lg:p-5 rounded-lg">
             How We work
           </button>
         </div>

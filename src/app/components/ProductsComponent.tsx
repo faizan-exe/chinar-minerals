@@ -208,11 +208,11 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
 
       <div className="px-[5%] lg:px-[6%] xl:px-[10%] mb-20 flex">
         <div className="relative w-0 lg:w-[50%]" data-aos="fade-right">
-          <div className="bg-[#f7cdd2] relative 2xl:h-[calc(60vh)] lg:h-[calc(60vh)] w-[calc(40vw)]">
+          <div className="bg-[#f7cdd2] relative lg:h-[calc(60vh)] w-[calc(40vw)]">
             <Image
               src={AppImages.product2}
               alt="Image"
-              className="absolute right-[-30px] bottom-[-30px] 2xl:h-[calc(60vh)] lg:h-[calc(60vh)] w-[calc(40vw)] hidden lg:block"
+              className="absolute right-[-30px] bottom-[-30px] lg:h-[calc(60vh)] w-[calc(40vw)] hidden lg:block"
             />
             <div className="absolute bg-black opacity-40 w-full h-full right-[-30px] bottom-[-30px]"></div>
           </div>
@@ -238,7 +238,7 @@ export default function ProductsComponent(props: ProductsComponentInterface) {
             </p>
           </div>
           <div className="mt-5 lg:ml-10 lg:max-w-[60%]">
-            <p className="2xl:text-lg lg:text-base text-sm text-black 2xl:leading-loose xl:mt-10">
+            <p className="2xl:text-lg lg:text-base text-sm text-black 2xl:leading-normal xl:mt-10">
               Chinar Minerals mines granite due to its durability, aesthetic
               appeal, and high market demand. By providing a robust and
               beautiful material ideal for various construction and design
