@@ -313,7 +313,7 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
             className="h-9 w-12 md:h-7 md:w-10 lg:h-9 lg:w-12"
           />
           <div>
-            <p className="text-white text-xl md:text-base lg:text-xl">
+            <p className="text-white font-bold text-2xl md:text-base lg:text-xl">
               10+ Years
             </p>
             <p className="text-white text-xl md:text-base lg:text-xl">
@@ -331,7 +331,9 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
             className="h-10 w-10 md:h-8 md:w-8 lg:h-10 lg:w-10"
           />
           <div>
-            <p className="text-white text-xl md:text-base lg:text-xl">6+</p>
+            <p className="text-white font-bold text-2xl md:text-base lg:text-xl">
+              6+
+            </p>
             <p className="text-white text-xl md:text-base lg:text-xl">
               Buildings
             </p>
@@ -347,7 +349,9 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
             className="h-10 w-10 md:h-8 md:w-8 lg:h-10 lg:w-10"
           />
           <div>
-            <p className="text-white text-xl md:text-base lg:text-xl">500+</p>
+            <p className="text-white font-bold text-2xl md:text-base lg:text-xl">
+              500+
+            </p>
             <p className="text-white text-xl md:text-base lg:text-xl">
               Customers
             </p>

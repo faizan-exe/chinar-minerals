@@ -169,23 +169,12 @@ export default function Navbar(props: NavbarComponentInterface) {
           </Link>
           <Link href={"/pages/services"} className="md:flex hidden">
             <p
-              className="2xl:text-lg lg:text-base text-sm flex items-center gap-1 lg:gap-2"
+              className="2xl:text-lg lg:text-base text-sm"
               style={
                 props.isHeaderShow ? { color: "black" } : { color: "white" }
               }
             >
               Services
-              <span>
-                <Image
-                  src={
-                    props.isHeaderShow
-                      ? AppImages.dropdownBlack
-                      : AppImages.dropdownWhite
-                  }
-                  alt="Icon"
-                  className="h-[6px] lg:h-2 w-auto"
-                />
-              </span>
             </p>
           </Link>
           <Link href={"/pages/products/granite"} className="md:flex hidden">
@@ -277,16 +266,6 @@ export default function Navbar(props: NavbarComponentInterface) {
                   </p>
                 </div>
               )}
-            </p>
-          </Link>
-          <Link href={"/pages/prices"} className="md:flex hidden">
-            <p
-              className="2xl:text-lg lg:text-base text-sm"
-              style={
-                props.isHeaderShow ? { color: "black" } : { color: "white" }
-              }
-            >
-              Prices
             </p>
           </Link>
           <Link href={"/pages/aboutUs"} className="md:flex hidden">

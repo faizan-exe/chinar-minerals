@@ -250,23 +250,23 @@ export default function AboutUsComponent(props: AboutUsComponentInterface) {
           className="w-full lg:w-[40%] flex items-center"
           data-aos="fade-left"
         >
-          <div className="w-full h-full lg:h-[90%] xl:h-[80%] flex flex-col justify-center items-center shadow rounded-md p-10">
-            <p className="text-black font-bold text-xl text-center">
+          <div className="w-full h-full lg:h-[90%] xl:h-[80%] flex flex-col justify-center shadow rounded-md p-10">
+            <p className="text-black font-bold text-2xl">
               Why our work matters
             </p>
-            <p className="lg:text-base text-sm text-black leading-loose mt-5 2xl:mt-10 text-center">
+            <p className="lg:text-base text-sm text-[#5c5c5c] font-bold leading-loose mt-5 2xl:mt-10">
               The raw materials we responsibly produce are fundamental to how we
               live now, and many will be in the future too.
             </p>
-            <p className="lg:text-base text-sm text-black leading-loose mt-5 2xl:mt-10 text-center">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
+            <p className="lg:text-base text-sm text-black leading-loose mt-5 2xl:mt-10">
+              <span className="font-semibold">Sustaining Modern Life: </span>Our
+              minerals are essential in various industries, supporting global
+              infrastructure and advancement.
             </p>
-            <p className="lg:text-base text-sm text-black leading-loose mt-5 2xl:mt-10 text-center">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
+            <p className="lg:text-base text-sm text-black leading-loose mt-5 2xl:mt-10">
+              <span className="font-semibold">Driving Innovation: </span>We
+              provide materials crucial for technological progress, helping
+              shape a sustainable and advanced future.
             </p>
           </div>
         </div>
@@ -278,16 +278,16 @@ export default function AboutUsComponent(props: AboutUsComponentInterface) {
             CHINAR MINERALS at a glance
           </p>
           <p className="text-black lg:text-base text-sm leading-loose my-10">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem the leap into electronic
-            typesetting, remaining essentially
+            Chinar Minerals is a prominent B2B manufacturer specializing in the
+            extraction, processing, and distribution of essential minerals like
+            Calcium Carbonate, Chalk, and Talc. Established in 2011 and rooted
+            in Hattar Industrial Estate, Pakistan, our company has swiftly
+            expanded its operations to meet global demands. With a commitment to
+            innovation, quality, and sustainability, we utilize cutting-edge
+            technology to produce micro powders and fillers that are integral to
+            various industries. Our range of high-quality products, including
+            Coated and Non-Coated Calcium Carbonate, Talcum Powder, and Chalk,
+            is complemented by our tailored and a customer-centric approach.
           </p>
           <button className="bg-[#D7051D] font-bold text-lg md:text-xl text-white p-3 lg:p-5 rounded-lg">
             How We work
@@ -298,21 +298,21 @@ export default function AboutUsComponent(props: AboutUsComponentInterface) {
           data-aos="fade-left"
         >
           <div className="flex flex-col items-center py-5 border-b border-[#D7051D]">
-            <p className="text-black text-3xl font-bold">1995</p>
+            <p className="text-black text-3xl font-bold">2011</p>
             <p className="text-black text-sm">
-              Chinar minerals was founded in 1995.
+              Chinar minerals was founded in 2011.
             </p>
           </div>
           <div className="flex flex-col items-center py-5 border-b border-[#D7051D]">
             <p className="text-black text-3xl font-bold">30,000</p>
             <p className="text-black text-sm">
-              Around 80,000 employees at chinar minerals.
+              Around 30,000 employees at Chinar Minerals.
             </p>
           </div>
           <div className="flex flex-col items-center py-5">
-            <p className="text-black text-3xl font-bold">30</p>
+            <p className="text-black text-3xl font-bold">7+</p>
             <p className="text-black text-sm">
-              We work over 90 locations worldwide.
+              We work over 7 locations nation-wide.
             </p>
           </div>
         </div>
@@ -341,16 +341,14 @@ export default function AboutUsComponent(props: AboutUsComponentInterface) {
               COMPANY CEO
             </p>
             <p className="xl:max-w-[80%] 2xl:text-lg lg:text-base text-sm text-black leading-loose mt-3 md:mt-5 lg:mt-8">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem the leap into electronic typesetting, remaining essentially
+              As the CEO of Chinar Minerals, I extend my heartfelt greetings to
+              each of you. Since our establishment in 2011, Chinar Minerals has
+              been driven by a vision to excel in the mineral processing
+              industry by providing high-quality, innovative, and sustainable
+              solutions. Our journey has been one of continuous growth and
+              learning, and today, I am proud to say that we stand as a
+              testament to what dedication, teamwork, and commitment to
+              excellence can achieve.
             </p>
             <button className="bg-[#D7051D] text-lg md:text-xl text-white p-3 lg:p-5 rounded-lg my-5 xl:my-8 2xl:my-5">
               Learn more

@@ -291,7 +291,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
             <div className="bgBlack relative flex flex-col items-start lg:w-[33%] lg:px-8 2xl:px-5 p-5 lg:pt-10 2xl:py-20 rounded-lg">
               <div className="bg-[#D7051D] flex items-center justify-center p-1 lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8 rounded-lg">
                 <Image
-                  src={AppImages.analysisIcon}
+                  src={AppImages.enpIcon}
                   alt="Icon"
                   height={50}
                   width={50}
@@ -310,7 +310,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
             <div className="bgBlack relative flex flex-col items-start lg:w-[33%] lg:px-8 2xl:px-5 p-5 lg:py-10 2xl:py-20 rounded-lg">
               <div className="bg-[#D7051D] flex items-center justify-center p-1 lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8 rounded-lg">
                 <Image
-                  src={AppImages.analysisIcon}
+                  src={AppImages.piIcon}
                   alt="Icon"
                   height={50}
                   width={50}
@@ -330,7 +330,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
             <div className="bgBlack relative flex flex-col items-start lg:w-[33%] lg:px-8 2xl:px-5 p-5 lg:py-10 2xl:py-20 rounded-lg">
               <div className="bg-[#D7051D] flex items-center justify-center p-1 lg:p-3 xl:p-4 2xl:p-5 absolute top-[-30px] left-8 rounded-lg">
                 <Image
-                  src={AppImages.analysisIcon}
+                  src={AppImages.consultationIcon}
                   alt="Icon"
                   height={50}
                   width={50}
@@ -352,7 +352,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
           className="text-[#D7051D] font-semibold my-[1%]"
           data-aos="fade-right"
         >
-          Lorem Ipsum is simply dummy
+          Check Out The Latest News
         </p>
         <div className="flex items-baseline" data-aos="fade-right">
           <p className="font-bold text-black text-3xl">Our Recent Blogs</p>
@@ -366,31 +366,31 @@ export default function HomeComponent(props: HomeComponentInterface) {
           <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] xl:w-[25%] h-auto shadow rounded-lg">
             <div className="relative w-full h-72">
               <Image
-                src={AppImages.blogImage}
+                src={AppImages.blog1}
                 alt="Icon"
                 layout="fill"
                 className="absoltue rounded-lg"
               />
-              <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
+              {/* <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
                 <p className="font-medium text-white">04</p>
                 <p className="font-medium text-white">Sep</p>
-              </div>
+              </div> */}
             </div>
             <div className="w-full p-5">
               <div className="flex justify-between items-center w-full my-2">
-                <p className="text-[#757474]">By: Carlson</p>
+                <p className="text-[#757474]">By Ishtiaq Rao</p>
                 <div className="flex gap-2">
                   <Image src={AppImages.commentIcon} alt="Icon" height={20} />
-                  <p className="text-[#757474]">34</p>
+                  <p className="text-[#757474]">7</p>
                 </div>
               </div>
               <p className="text-black text-xl font-semibold my-2">
-                Chinar Resort Speciality
+                Pakistan Minerals Summit
               </p>
               <p className="text-black text-sm my-3">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s,
+                The Pakistan Minerals Summit was held here on Tuesday to discuss
+                and find the best way forward towards exploring Pakistan’s
+                minerals potential.
               </p>
               <p className="text-[#D7051D] my-2 font-medium underline">
                 Read More...
@@ -400,31 +400,30 @@ export default function HomeComponent(props: HomeComponentInterface) {
           <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] xl:w-[25%] h-auto shadow rounded-lg">
             <div className="relative w-full h-72">
               <Image
-                src={AppImages.blogImage}
+                src={AppImages.blog2}
                 alt="Icon"
                 layout="fill"
                 className="absoltue rounded-lg"
               />
-              <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
+              {/* <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
                 <p className="font-medium text-white">04</p>
                 <p className="font-medium text-white">Sep</p>
-              </div>
+              </div> */}
             </div>
             <div className="w-full p-5">
               <div className="flex justify-between items-center w-full my-2">
-                <p className="text-[#757474]">By: Carlson</p>
+                <p className="text-[#757474]">By Syed Akhtar Ali</p>
                 <div className="flex gap-2">
                   <Image src={AppImages.commentIcon} alt="Icon" height={20} />
-                  <p className="text-[#757474]">34</p>
+                  <p className="text-[#757474]">4</p>
                 </div>
               </div>
               <p className="text-black text-xl font-semibold my-2">
-                Chinar Resort Speciality
+                Pakistan Mineral Outlook
               </p>
               <p className="text-black text-sm my-3">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s,
+                Recently, an important conference, ‘Pakistan Mineral Summit’,
+                has been organised in Islamabad by the Petroleum Division...
               </p>
               <p className="text-[#D7051D] my-2 font-medium underline">
                 Read More...
@@ -434,31 +433,31 @@ export default function HomeComponent(props: HomeComponentInterface) {
           <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] xl:w-[25%] h-auto shadow rounded-lg">
             <div className="relative w-full h-72">
               <Image
-                src={AppImages.blogImage}
+                src={AppImages.blog3}
                 alt="Icon"
                 layout="fill"
                 className="absoltue rounded-lg"
               />
-              <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
+              {/* <div className="absolute top-5 right-5 bg-[#D7051D] h-16 w-16 flex flex-col items-center justify-center">
                 <p className="font-medium text-white">04</p>
                 <p className="font-medium text-white">Sep</p>
-              </div>
+              </div> */}
             </div>
             <div className="w-full p-5">
               <div className="flex justify-between items-center w-full my-2">
-                <p className="text-[#757474]">By: Carlson</p>
+                <p className="text-[#757474]">By Azfar Ahsan</p>
                 <div className="flex gap-2">
                   <Image src={AppImages.commentIcon} alt="Icon" height={20} />
-                  <p className="text-[#757474]">34</p>
+                  <p className="text-[#757474]">5</p>
                 </div>
               </div>
               <p className="text-black text-xl font-semibold my-2">
-                Chinar Resort Speciality
+                Pakistan’s Shift to Minerals
               </p>
               <p className="text-black text-sm my-3">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s,
+                The world’s axis has shifted, a geological event that warrants
+                worry – beckoning humanity to contribute towards the stability
+                of the planet...
               </p>
               <p className="text-[#D7051D] my-2 font-medium underline">
                 Read More...
