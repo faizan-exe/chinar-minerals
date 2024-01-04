@@ -245,9 +245,11 @@ export default function GraniteComponent(props: GraniteComponentInterface) {
               applications, the company meets the needs of a diverse clientele
               while committing to responsible and sustainable mining practices.
             </p>
-            <button className="bg-[#D7051D] py-3 px-5 text-white rounded-md xl:my-10 my-5">
-              Get a Qoute
-            </button>
+            <Link href={"/pages/contactUs"}>
+              <button className="bg-[#D7051D] py-3 px-5 text-white rounded-md xl:my-10 my-5">
+                Get a Qoute
+              </button>
+            </Link>
           </div>
         </div>
       </div>

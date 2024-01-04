@@ -289,9 +289,11 @@ export default function AboutUsComponent(props: AboutUsComponentInterface) {
             Coated and Non-Coated Calcium Carbonate, Talcum Powder, and Chalk,
             is complemented by our tailored and a customer-centric approach.
           </p>
-          <button className="bg-[#D7051D] font-bold text-lg md:text-xl text-white p-3 lg:p-5 rounded-lg">
-            How We work
-          </button>
+          <Link href={"/pages/services"}>
+            <button className="bg-[#D7051D] font-bold text-lg md:text-xl text-white p-3 lg:p-5 rounded-lg">
+              How We work
+            </button>
+          </Link>
         </div>
         <div
           className="w-full lg:w-[40%] shadow bg-white rounded-lg flex flex-col justify-evenly px-2"
@@ -350,9 +352,16 @@ export default function AboutUsComponent(props: AboutUsComponentInterface) {
               testament to what dedication, teamwork, and commitment to
               excellence can achieve.
             </p>
-            <button className="bg-[#D7051D] text-lg md:text-xl text-white p-3 lg:p-5 rounded-lg my-5 xl:my-8 2xl:my-5">
-              Learn more
-            </button>
+            <Link
+              href={
+                "https://www.linkedin.com/in/liaqatsultan?originalSubdomain=pk"
+              }
+              target="_blank"
+            >
+              <button className="bg-[#D7051D] text-lg md:text-xl text-white p-3 lg:p-5 rounded-lg my-5 xl:my-8 2xl:my-5">
+                Learn more
+              </button>
+            </Link>
           </div>
         </div>
       </div>

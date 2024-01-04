@@ -394,9 +394,11 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
           className="flex justify-start md:justify-end w-full md:w-[30%]"
           data-aos="fade-left"
         >
-          <button className="bg-[#D7051D] font-bold text-lg md:text-xl text-white p-3 lg:p-5 rounded-md">
-            How We work
-          </button>
+          <Link href={"/pages/services"}>
+            <button className="bg-[#D7051D] font-bold text-lg md:text-xl text-white p-3 lg:p-5 rounded-lg">
+              How We work
+            </button>
+          </Link>
         </div>
       </div>
       <Footer />

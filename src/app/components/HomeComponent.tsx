@@ -66,12 +66,16 @@ export default function HomeComponent(props: HomeComponentInterface) {
               startAnimation ? "translate-x-0" : "-translate-x-full"
             }`}
           >
-            <button className="bg-transparent text-white font-normal md:font-semibold rounded-lg border-white border-2 2xl:w-64 xl:w-56 lg:w-44 w-40 2xl:py-5 xl:py-3 lg:py-2 py-2 2xl:text-2xl xl:text-xl text-sm">
-              Contact Us
-            </button>
-            <button className="bg-[#D7051D] text-white font-normal md:font-semibold rounded-lg 2xl:w-64 xl:w-56 lg:w-44 w-40 2xl:py-5 xl:py-3 lg:py-2 py-2 2xl:text-2xl xl:text-xl text-sm">
-              Explore our World
-            </button>
+            <Link href={"/pages/contactUs"}>
+              <button className="bg-transparent text-white font-normal md:font-semibold rounded-lg border-white border-2 2xl:w-64 xl:w-56 lg:w-44 w-40 2xl:py-5 xl:py-3 lg:py-2 py-2 2xl:text-2xl xl:text-xl text-sm">
+                Contact Us
+              </button>
+            </Link>
+            <Link href={"/pages/aboutUs"}>
+              <button className="bg-[#D7051D] text-white font-normal md:font-semibold rounded-lg 2xl:w-64 xl:w-56 lg:w-44 w-40 2xl:py-5 xl:py-3 lg:py-2 py-2 2xl:text-2xl xl:text-xl text-sm">
+                Explore our World
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -182,14 +186,54 @@ export default function HomeComponent(props: HomeComponentInterface) {
             technologies to decarbonize production processes, and innovating to
             create valuable products from waste materials.
           </p>
-          <button className="bg-[#D7051D] py-5 px-10 rounded-md my-10 lg:my-20 text-white">
-            View More
-          </button>
+          <Link href={"/pages/products/granite"}>
+            <button className="bg-[#D7051D] py-5 px-10 rounded-md my-10 lg:my-20 text-white">
+              View More
+            </button>
+          </Link>
         </div>
         <div
           className="w-full lg:w-[50%] flex flex-col gap-5 items-center justify-center"
           data-aos="fade-left"
         >
+          <div className="flex gap-5 w-full justify-center">
+            <Link href={"/pages/products/granite"}>
+              <div className="relative">
+                <Image
+                  src={AppImages.graniteHome}
+                  alt="Image"
+                  height={200}
+                  width={200}
+                  className="rounded-lg"
+                />
+                <div className="absolute bg-black opacity-40 hover:opacity-60 w-full h-full top-0 left-0 rounded-lg"></div>
+                <div className="flex items-baseline absolute bottom-5 left-2 lg:left-5">
+                  <p className="font-semibold lg:font-bold text-white">
+                    Granite
+                  </p>
+                  <div className="h-[1px] w-[25px] lg:w-[50px] border-2 border-white ml-1 lg:ml-2" />
+                </div>
+              </div>
+            </Link>
+            <Link href={"/pages/products/rocksheet"}>
+              <div className="relative">
+                <Image
+                  src={AppImages.rocksheetHome}
+                  alt="Image"
+                  height={200}
+                  width={200}
+                  className="rounded-lg"
+                />
+                <div className="absolute bg-black opacity-40 hover:opacity-60 w-full h-full top-0 left-0 rounded-lg"></div>
+                <div className="flex items-baseline absolute bottom-5 left-2 lg:left-5">
+                  <p className="font-semibold lg:font-bold text-white">
+                    Rocksheet
+                  </p>
+                  <div className="h-[1px] w-[25px] lg:w-[50px] border-2 border-white ml-1 lg:ml-2" />
+                </div>
+              </div>
+            </Link>
+          </div>
           <div className="flex gap-5 w-full justify-center">
             <div className="relative">
               <Image
@@ -216,38 +260,6 @@ export default function HomeComponent(props: HomeComponentInterface) {
               <div className="absolute bg-black opacity-40 hover:opacity-60 w-full h-full top-0 left-0 rounded-lg"></div>
               <div className="flex items-baseline absolute bottom-5 left-2 lg:left-5">
                 <p className="font-semibold lg:font-bold text-white">Copper</p>
-                <div className="h-[1px] w-[25px] lg:w-[50px] border-2 border-white ml-1 lg:ml-2" />
-              </div>
-            </div>
-          </div>
-          <div className="flex gap-5 w-full justify-center">
-            <div className="relative">
-              <Image
-                src={AppImages.rocksheetHome}
-                alt="Image"
-                height={200}
-                width={200}
-                className="rounded-lg"
-              />
-              <div className="absolute bg-black opacity-40 hover:opacity-60 w-full h-full top-0 left-0 rounded-lg"></div>
-              <div className="flex items-baseline absolute bottom-5 left-2 lg:left-5">
-                <p className="font-semibold lg:font-bold text-white">
-                  Rocksheet
-                </p>
-                <div className="h-[1px] w-[25px] lg:w-[50px] border-2 border-white ml-1 lg:ml-2" />
-              </div>
-            </div>
-            <div className="relative">
-              <Image
-                src={AppImages.graniteHome}
-                alt="Image"
-                height={200}
-                width={200}
-                className="rounded-lg"
-              />
-              <div className="absolute bg-black opacity-40 hover:opacity-60 w-full h-full top-0 left-0 rounded-lg"></div>
-              <div className="flex items-baseline absolute bottom-5 left-2 lg:left-5">
-                <p className="font-semibold lg:font-bold text-white">Granite</p>
                 <div className="h-[1px] w-[25px] lg:w-[50px] border-2 border-white ml-1 lg:ml-2" />
               </div>
             </div>
@@ -392,9 +404,16 @@ export default function HomeComponent(props: HomeComponentInterface) {
                 and find the best way forward towards exploring Pakistan’s
                 minerals potential.
               </p>
-              <p className="text-[#D7051D] my-2 font-medium underline">
-                Read More...
-              </p>
+              <Link
+                href={
+                  "https://www.app.com.pk/national/pakistan-minerals-summit-held-to-explore-pakistans-minerals-potential-three-mous-signed/"
+                }
+                target="_blank"
+              >
+                <p className="text-[#D7051D] my-2 font-medium underline cursor-pointer">
+                  Read More...
+                </p>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] xl:w-[25%] h-auto shadow rounded-lg">
@@ -425,9 +444,16 @@ export default function HomeComponent(props: HomeComponentInterface) {
                 Recently, an important conference, ‘Pakistan Mineral Summit’,
                 has been organised in Islamabad by the Petroleum Division...
               </p>
-              <p className="text-[#D7051D] my-2 font-medium underline">
-                Read More...
-              </p>
+              <Link
+                href={
+                  "https://www.brecorder.com/news/40258095/pakistan-mineral-outlook"
+                }
+                target="_blank"
+              >
+                <p className="text-[#D7051D] my-2 font-medium underline">
+                  Read More...
+                </p>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col bg-[#f3f3f3] justify-center items-start lg:w-[30%] xl:w-[25%] h-auto shadow rounded-lg">
@@ -459,9 +485,14 @@ export default function HomeComponent(props: HomeComponentInterface) {
                 worry – beckoning humanity to contribute towards the stability
                 of the planet...
               </p>
-              <p className="text-[#D7051D] my-2 font-medium underline">
-                Read More...
-              </p>
+              <Link
+                href={"https://www.arabnews.pk/node/2356861"}
+                target="_blank"
+              >
+                <p className="text-[#D7051D] my-2 font-medium underline">
+                  Read More...
+                </p>
+              </Link>
             </div>
           </div>
         </div>
@@ -480,9 +511,11 @@ export default function HomeComponent(props: HomeComponentInterface) {
           className="flex justify-start md:justify-end w-full md:w-[30%]"
           data-aos="fade-left"
         >
-          <button className="bg-[#D7051D] font-bold text-lg md:text-xl text-white p-3 lg:p-5 rounded-lg">
-            How We work
-          </button>
+          <Link href={"/pages/services"}>
+            <button className="bg-[#D7051D] font-bold text-lg md:text-xl text-white p-3 lg:p-5 rounded-lg">
+              How We work
+            </button>
+          </Link>
         </div>
       </div>
       <Footer />

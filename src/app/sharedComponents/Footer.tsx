@@ -33,15 +33,31 @@ export default function Footer(props: FooterComponentInterface) {
                 </p>
               </div>
               <div className="flex justify-start items-center gap-3">
-                <Image src={AppImages.youtube} alt="Icon" height={20} />
-                <Image src={AppImages.twitter} alt="Icon" height={20} />
-                <Image src={AppImages.instagram} alt="Icon" height={20} />
-                <Image
-                  src={AppImages.facebook}
-                  alt="Icon"
-                  height={22}
-                  className="mt-1"
-                />
+                <Link
+                  href={"https://www.instagram.com/rocksheet13/"}
+                  target="_blank"
+                >
+                  <Image src={AppImages.instagram} alt="Icon" height={27} />
+                </Link>
+                <Link
+                  href={"https://www.facebook.com/chinarmineral/"}
+                  target="_blank"
+                >
+                  <Image
+                    src={AppImages.facebook}
+                    alt="Icon"
+                    height={32}
+                    className="mt-1"
+                  />
+                </Link>
+                <Link
+                  href={
+                    "https://www.linkedin.com/company/chinar-mineral-processing-mills/?originalSubdomain=pk"
+                  }
+                  target="_blank"
+                >
+                  <Image src={AppImages.linkedIn} alt="Icon" height={28} />
+                </Link>
               </div>
             </div>
             <div className="w-[40%] md:w-[55%] flex items-center justify-center">
@@ -49,10 +65,18 @@ export default function Footer(props: FooterComponentInterface) {
                 <p className="font-semibold text-sm text-white mb-3">
                   Quick Links
                 </p>
-                <p className="text-sm text-[#a7a6a6] my-1">Services</p>
-                <p className="text-sm text-[#a7a6a6] my-1">Products</p>
-                <p className="text-sm text-[#a7a6a6] my-1">About Us</p>
-                <p className="text-sm text-[#a7a6a6] my-1">Contact Us</p>
+                <Link href={"/pages/services"}>
+                  <p className="text-sm text-[#a7a6a6] my-1">Services</p>
+                </Link>
+                <Link href={"/pages/products/granite"}>
+                  <p className="text-sm text-[#a7a6a6] my-1">Products</p>
+                </Link>
+                <Link href={"/pages/aboutUs"}>
+                  <p className="text-sm text-[#a7a6a6] my-1">About Us</p>
+                </Link>
+                <Link href={"/pages/contactUs"}>
+                  <p className="text-sm text-[#a7a6a6] my-1">Contact Us</p>
+                </Link>
               </div>
             </div>
           </div>
@@ -61,7 +85,11 @@ export default function Footer(props: FooterComponentInterface) {
             <p className="text-base md:text-lg text-white">
               Phase 3, Hattar Industrial Estate, Pakistan، Haripur, 22620
             </p>
-            <p className="text-sm text-white">(0995) 617504</p>
+            <div>
+              <p className="text-sm text-white">+92-300-0222914</p>
+              <p className="text-sm text-white">+92-300-0301241</p>
+              <p className="text-sm text-white">+92-995-617504</p>
+            </div>
             <p className="text-sm text-white">info@chinarminerals.com</p>
           </div>
         </div>

@@ -42,34 +42,11 @@ export default function Navbar(props: NavbarComponentInterface) {
               Home
             </p>
           </Link>
-          <div className="flex justify-between items-center pr-3 py-3 border-b-2">
-            <Link href={"/pages/services"}>
-              <p className="text-black text-lg">Services</p>
-            </Link>
-            <Image
-              src={AppImages.arrow}
-              alt="Logo"
-              className="w-[25px] h-[25px]"
-              style={
-                isServiceMobOpen
-                  ? { transform: "rotate(270deg)" }
-                  : { transform: "rotate(90deg)" }
-              }
-              onClick={() => {
-                setIsServiceMobOpen(!isServiceMobOpen);
-              }}
-            />
-          </div>
-          {isServiceMobOpen ? (
-            <div className="bg-white px-[5%]">
-              <p className="text-base text-black py-3 border-b-2">
-                Mineral Analysis
-              </p>
-              <p className="text-base text-black py-3 border-b-2">Approach</p>
-              <p className="text-base text-black py-3 border-b-2">Status</p>
-              <p className="text-base text-black py-3">Product Safety Data</p>
-            </div>
-          ) : null}
+          <Link href={"/pages/services"}>
+            <p className="text-black text-lg py-4 border-b-2 flex items-center">
+              Services
+            </p>
+          </Link>
           <div className="flex justify-between items-center pr-3 py-3 border-b-2">
             <Link href={"/pages/products"}>
               <p className="text-black text-lg">Products</p>
@@ -102,11 +79,6 @@ export default function Navbar(props: NavbarComponentInterface) {
               <p className="text-base text-black py-3">Phosphorus</p>
             </div>
           ) : null}
-          <Link href={"/pages/prices"}>
-            <p className="text-black text-lg py-3 border-b-2 flex items-center">
-              Prices
-            </p>
-          </Link>
           <Link href={"/pages/aboutUs"}>
             <p className="text-black text-lg py-3 border-b-2 flex items-center">
               About Us

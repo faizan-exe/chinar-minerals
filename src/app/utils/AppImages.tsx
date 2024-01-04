@@ -27,6 +27,7 @@ export const AppImages = {
   facebook: require("../../../public/images/facebook.webp"),
   youtube: require("../../../public/images/youtube.webp"),
   instagram: require("../../../public/images/instagram.webp"),
+  linkedIn: require("../../../public/images/linkedIn.webp"),
   productsBg: require("../../../public/images/productsBg.webp"),
   phosphate2: require("../../../public/images/phosphate2.webp"),
   phosphate1: require("../../../public/images/phosphate1.webp"),

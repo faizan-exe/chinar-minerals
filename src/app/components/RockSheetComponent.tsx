@@ -309,9 +309,11 @@ export default function RockSheetComponent(props: RockSheetComponentInterface) {
               demands while aligning with the company's commitment to innovation
               and eco-friendly practices.
             </p>
-            <button className="bg-[#D7051D] py-3 px-5 text-white rounded-md xl:my-10 my-5">
-              Get a Qoute
-            </button>
+            <Link href={"/pages/contactUs"}>
+              <button className="bg-[#D7051D] py-3 px-5 text-white rounded-md xl:my-10 my-5">
+                Get a Qoute
+              </button>
+            </Link>
           </div>
         </div>
       </div>
