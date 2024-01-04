@@ -8,9 +8,9 @@ import Navbar from "../sharedComponents/Navbar";
 import { AppImages } from "../utils/AppImages";
 import Footer from "../sharedComponents/Footer";
 
-interface ProductsComponentInterface {}
+interface GraniteComponentInterface {}
 
-export default function ProductsComponent(props: ProductsComponentInterface) {
+export default function GraniteComponent(props: GraniteComponentInterface) {
   const [startAnimation, setStartAnimation] = useState(false);
   const [isHeaderShow, setIsHeaderShow] = useState(false);
   let lastScrollTop = 0;

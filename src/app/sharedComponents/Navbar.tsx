@@ -21,7 +21,7 @@ export default function Navbar(props: NavbarComponentInterface) {
   return (
     <>
       {isSidebarOpen ? (
-        <div className="w-[calc(100vw)] h-[calc(100vh)] bg-white fixed top-0 z-50 px-[5%]">
+        <div className="w-[calc(100vw)] h-[calc(100vh)] bg-white fixed top-0 z-50 px-[5%] overflow-y-scroll">
           <div className="flex justify-between items-center pr-3">
             <Image
               src={AppImages.logoTransparent}
@@ -62,12 +62,12 @@ export default function Navbar(props: NavbarComponentInterface) {
           </div>
           {isServiceMobOpen ? (
             <div className="bg-white px-[5%]">
-              <p className="text-base text-black py-2 border-b-2">
+              <p className="text-base text-black py-3 border-b-2">
                 Mineral Analysis
               </p>
-              <p className="text-base text-black py-2 border-b-2">Approach</p>
-              <p className="text-base text-black py-2 border-b-2">Status</p>
-              <p className="text-base text-black py-2">Product Safety Data</p>
+              <p className="text-base text-black py-3 border-b-2">Approach</p>
+              <p className="text-base text-black py-3 border-b-2">Status</p>
+              <p className="text-base text-black py-3">Product Safety Data</p>
             </div>
           ) : null}
           <div className="flex justify-between items-center pr-3 py-3 border-b-2">
@@ -90,10 +90,16 @@ export default function Navbar(props: NavbarComponentInterface) {
           </div>
           {isProductMobOpen ? (
             <div className="bg-white px-[5%]">
-              <p className="text-base text-black py-2 border-b-2">Granite</p>
-              <p className="text-base text-black py-2 border-b-2">Iron</p>
-              <p className="text-base text-black py-2 border-b-2">Copper</p>
-              <p className="text-base text-black py-2">Phosphorus</p>
+              <Link href={"/pages/products/granite"}>
+                <p className="text-base text-black py-3 border-b-2">Granite</p>
+              </Link>
+              <Link href={"/pages/products/rocksheet"}>
+                <p className="text-base text-black py-3 border-b-2">
+                  Rocksheet
+                </p>
+              </Link>
+              <p className="text-base text-black py-3 border-b-2">Copper</p>
+              <p className="text-base text-black py-3">Phosphorus</p>
             </div>
           ) : null}
           <Link href={"/pages/prices"}>
@@ -182,9 +188,9 @@ export default function Navbar(props: NavbarComponentInterface) {
               </span>
             </p>
           </Link>
-          <Link href={"/pages/products"} className="md:flex hidden">
+          <Link href={"/pages/products/granite"} className="md:flex hidden">
             <p
-              className="2xl:text-lg lg:text-base text-sm flex items-center gap-1 lg:gap-2"
+              className="2xl:text-lg lg:text-base text-sm flex items-center gap-1 lg:gap-2 relative"
               style={
                 props.isHeaderShow ? { color: "black" } : { color: "white" }
               }
@@ -207,31 +213,71 @@ export default function Navbar(props: NavbarComponentInterface) {
                   className="h-[6px] lg:h-2 w-auto"
                 />
               </span>
+              {isProductOpen && (
+                <div
+                  style={
+                    props.isHeaderShow
+                      ? {
+                          backgroundColor: "white",
+                          boxShadow: "0px 6px 4px 0px rgba(0, 0, 0, 0.25)",
+                          color: "black",
+                        }
+                      : {
+                          backgroundColor: "#D7051D",
+                          color: "white",
+                        }
+                  }
+                  className="absolute top-[25px] shadow"
+                  onMouseEnter={() => {
+                    setIsProductOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    setIsProductOpen(false);
+                  }}
+                >
+                  <Link href={"/pages/products/granite"}>
+                    <p
+                      className={`text-base p-3 hover:bg-[#9B0113] ${
+                        props.isHeaderShow
+                          ? "hover:bg-[#acacac]"
+                          : "hover:bg-[#9B0113]"
+                      }`}
+                    >
+                      Granite
+                    </p>
+                  </Link>
+                  <Link href={"/pages/products/rocksheet"}>
+                    <p
+                      className={`text-base p-3 hover:bg-[#9B0113] ${
+                        props.isHeaderShow
+                          ? "hover:bg-[#acacac]"
+                          : "hover:bg-[#9B0113]"
+                      }`}
+                    >
+                      Rocksheet
+                    </p>
+                  </Link>
+                  <p
+                    className={`text-base p-3 hover:bg-[#9B0113] ${
+                      props.isHeaderShow
+                        ? "hover:bg-[#acacac]"
+                        : "hover:bg-[#9B0113]"
+                    }`}
+                  >
+                    Copper
+                  </p>
+                  <p
+                    className={`text-base p-3 hover:bg-[#9B0113] ${
+                      props.isHeaderShow
+                        ? "hover:bg-[#acacac]"
+                        : "hover:bg-[#9B0113]"
+                    }`}
+                  >
+                    Phosphorus
+                  </p>
+                </div>
+              )}
             </p>
-            {isProductOpen && (
-              <div
-                className=" bg-white absolute shadow px-2"
-                onMouseEnter={() => {
-                  setIsProductOpen(true);
-                }}
-                onMouseLeave={() => {
-                  setIsProductOpen(false);
-                }}
-              >
-                <p className="text-base text-black py-1 border-b border-b-black hover:bg-[#b3b3b3]">
-                  Granite
-                </p>
-                <p className="text-base text-black py-1 border-b border-b-black hover:bg-[#b3b3b3]">
-                  Iron
-                </p>
-                <p className="text-base text-black py-1 border-b border-b-black hover:bg-[#b3b3b3]">
-                  Copper
-                </p>
-                <p className="text-base text-black py-1 hover:bg-[#b3b3b3]">
-                  Phosphorus
-                </p>
-              </div>
-            )}
           </Link>
           <Link href={"/pages/prices"} className="md:flex hidden">
             <p
