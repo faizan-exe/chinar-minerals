@@ -126,16 +126,110 @@ export default function ContactUsComponent(props: ContactUsComponentInterface) {
               />
             </div>
             <div className="flex justify-between mt-8">
-              <div className="w-full">
-                {/* <p className="text-black text-xs font-normal">Email</p>
-                <input
-                  type="text"
-                  className="w-full h-12 px-4 border-b border-black focus:outline-none focus:border-b text-black"
-                /> */}
-              </div>
+              <div className="w-full"></div>
               <button className="bg-[#D7051D] text-lg md:text-xl text-white py-2 lg:py-3 px-5 lg:px-8 rounded-lg my-5">
                 Send
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex gap-10 lg:gap-5 flex-col lg:flex-row px-[5%] lg:px-[8%] xl:px-[15%] mt-5 my-16">
+        <div className="w-full lg:w-1/3 flex justify-start">
+          <div className="flex flex-col items-start">
+            <p className="text-black font-bold text-3xl my-4">Head Office</p>
+            <div className="flex gap-5 my-4">
+              <Image
+                src={AppImages.addressIcon}
+                alt="Icon"
+                className="h-8 w-8"
+              />
+              <div className="flex flex-col gap-2">
+                <p className="text-black">Chinar Mineral processing Mills</p>
+                <p className="text-black">plot # 66 phase III,</p>
+                <p className="text-black">Hattar industrial estate,</p>
+                <p className="text-black">Haripur, Pakistan</p>
+              </div>
+            </div>
+            <div className="flex gap-5 my-4">
+              <Image
+                src={AppImages.mobileIcon}
+                alt="Icon"
+                className="h-8 w-8"
+              />
+              <div className="flex flex-col gap-2">
+                <p className="text-black">+92-3000222914</p>
+                <p className="text-black">+92-300-0301241</p>
+                <p className="text-black">+92-300-0301243</p>
+                <p className="text-black">+92-995-617504</p>
+              </div>
+            </div>
+            <div className="flex gap-5 mt-4 mb-2">
+              <Image src={AppImages.mailIcon} alt="Icon" className="h-8 w-8" />
+              <div>
+                <p className="text-black">info@chinargoc.com</p>
+              </div>
+            </div>
+            <p className="text-black">Send us your query at anytime!</p>
+          </div>
+        </div>
+
+        <div className="w-full lg:w-1/3 flex lg:justify-center justify-start">
+          <div className="flex flex-col items-start">
+            <p className="text-black font-bold text-3xl my-4">Karachi Office</p>
+            <div className="flex gap-5 my-4">
+              <Image
+                src={AppImages.addressIcon}
+                alt="Icon"
+                className="h-8 w-8"
+              />
+              <div className="flex flex-col gap-2">
+                <p className="text-black">a/2 Gohar chamber,</p>
+                <p className="text-black">
+                  CC Area Block-7/8, K.c.h.c Near Duty
+                </p>
+                <p className="text-black">Free Shop,</p>
+                <p className="text-black">Shahra-e- faisal, Karachi</p>
+              </div>
+            </div>
+            <div className="flex gap-5 my-4">
+              <Image
+                src={AppImages.mobileIcon}
+                alt="Icon"
+                className="h-8 w-8"
+              />
+              <div>
+                <p className="text-black">+92-300-0301248</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full lg:w-1/3 flex lg:justify-end justify-start">
+          <div className="flex flex-col items-start">
+            <p className="text-black font-bold text-3xl my-4">Lahore Office</p>
+            <div className="flex gap-5 my-4">
+              <Image
+                src={AppImages.addressIcon}
+                alt="Icon"
+                className="h-8 w-8"
+              />
+              <div className="flex flex-col gap-2">
+                <p className="text-black">141 G, Commercial Area,</p>
+                <p className="text-black">Phase 1 DHA, </p>
+                <p className="text-black">Lahore</p>
+              </div>
+            </div>
+            <div className="flex gap-5 my-4">
+              <Image
+                src={AppImages.mobileIcon}
+                alt="Icon"
+                className="h-8 w-8"
+              />
+              <div>
+                <p className="text-black">+92-324-4219809</p>
+              </div>
             </div>
           </div>
         </div>

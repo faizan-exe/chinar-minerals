@@ -72,4 +72,7 @@ export const AppImages = {
   rsBg: require("../../../public/images/rsBg.webp"),
   rsBg2: require("../../../public/images/rsBg2.webp"),
   rsBg2Mob: require("../../../public/images/rsBg2Mob.jpg"),
+  addressIcon: require("../../../public/images/addressIcon.webp"),
+  mobileIcon: require("../../../public/images/mobileIcon.webp"),
+  mailIcon: require("../../../public/images/mailIcon.webp"),
 };
