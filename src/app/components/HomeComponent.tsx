@@ -42,7 +42,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
         <Image src={AppImages.backgroundImage} alt="Image" layout="fill" />
         <div className="absolute h-full w-full px-[5%] xl:px-[10%] lg:px-28">
           <p
-            className={`font-semibold text-white sm:leading-snug lg:leading-tight xl:leading-snug text-[1.5rem] md:text-[1.75rem] lg:text-[2rem] xl:text-[2.5rem] 2xl:text-[3.75rem] lg:mt-6 xl:mt-12 transition-all duration-1000 ease-in-out transform ${
+            className={`font-semibold text-white sm:leading-snug lg:leading-tight xl:leading-snug text-[1.5rem] md:text-[1.75rem] lg:text-[2rem] xl:text-[2.5rem] 2xl:text-[3.75rem] mt-4 lg:mt-6 xl:mt-16 transition-all duration-1000 ease-in-out transform ${
               startAnimation ? "translate-x-0" : "-translate-x-full"
             }`}
           >
