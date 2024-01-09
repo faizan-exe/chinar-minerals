@@ -11,6 +11,7 @@ interface NavbarComponentInterface {
 
 export default function Navbar(props: NavbarComponentInterface) {
   const [isProductOpen, setIsProductOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isProductMobOpen, setIsProductMobOpen] = useState(false);
   const [isServiceMobOpen, setIsServiceMobOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -42,11 +43,39 @@ export default function Navbar(props: NavbarComponentInterface) {
               Home
             </p>
           </Link>
-          <Link href={"/pages/services"}>
-            <p className="text-black text-lg py-4 border-b-2 flex items-center">
-              Services
-            </p>
-          </Link>
+          <div className="flex justify-between items-center pr-3 py-3 border-b-2">
+            <Link href={"/pages/services"}>
+              <p className="text-black text-lg">Services</p>
+            </Link>
+            <Image
+              src={AppImages.arrow}
+              alt="Logo"
+              className="w-[25px] h-[25px]"
+              style={
+                isServiceMobOpen
+                  ? { transform: "rotate(270deg)" }
+                  : { transform: "rotate(90deg)" }
+              }
+              onClick={() => {
+                setIsServiceMobOpen(!isServiceMobOpen);
+              }}
+            />
+          </div>
+          {isServiceMobOpen ? (
+            <div className="bg-white px-[5%]">
+              <Link href={"/pages/services/geologicalServices"}>
+                <p className="text-base text-black py-3 border-b-2">
+                  Geological Services
+                </p>
+              </Link>
+              {/* <Link href={"/pages/products/rocksheet"}>
+                <p className="text-base text-black py-3 border-b-2">
+                  Geological Services
+                </p>
+              </Link> */}
+            </div>
+          ) : null}
+
           <div className="flex justify-between items-center pr-3 py-3 border-b-2">
             <Link href={"/pages/products/granite"}>
               <p className="text-black text-lg">Products</p>
@@ -146,12 +175,75 @@ export default function Navbar(props: NavbarComponentInterface) {
           </Link>
           <Link href={"/pages/services"} className="md:flex hidden">
             <p
-              className="2xl:text-lg lg:text-base text-sm"
+              className="2xl:text-lg lg:text-base text-sm flex items-center gap-1 lg:gap-2 relative"
               style={
                 props.isHeaderShow ? { color: "black" } : { color: "white" }
               }
+              onMouseEnter={() => {
+                setIsServicesOpen(true);
+              }}
+              onMouseLeave={() => {
+                setIsServicesOpen(false);
+              }}
             >
               Services
+              <span>
+                <Image
+                  src={
+                    props.isHeaderShow
+                      ? AppImages.dropdownBlack
+                      : AppImages.dropdownWhite
+                  }
+                  alt="Icon"
+                  className="h-[6px] lg:h-2 w-auto"
+                />
+              </span>
+              {isServicesOpen && (
+                <div
+                  style={
+                    props.isHeaderShow
+                      ? {
+                          backgroundColor: "white",
+                          boxShadow: "0px 6px 4px 0px rgba(0, 0, 0, 0.25)",
+                          color: "black",
+                        }
+                      : {
+                          backgroundColor: "#D7051D",
+                          color: "white",
+                        }
+                  }
+                  className="absolute top-[25px] shadow"
+                  onMouseEnter={() => {
+                    setIsServicesOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    setIsServicesOpen(false);
+                  }}
+                >
+                  <Link href={"/pages/services/geologicalServices"}>
+                    <p
+                      className={`text-base p-3 hover:bg-[#9B0113] ${
+                        props.isHeaderShow
+                          ? "hover:bg-[#acacac]"
+                          : "hover:bg-[#9B0113]"
+                      }`}
+                    >
+                      Geological Services
+                    </p>
+                  </Link>
+                  {/* <Link href={"/pages/services/geologicalServices"}>
+                    <p
+                      className={`text-base p-3 hover:bg-[#9B0113] ${
+                        props.isHeaderShow
+                          ? "hover:bg-[#acacac]"
+                          : "hover:bg-[#9B0113]"
+                      }`}
+                    >
+                      Rocksheet
+                    </p>
+                  </Link> */}
+                </div>
+              )}
             </p>
           </Link>
           <Link href={"/pages/products/granite"} className="md:flex hidden">

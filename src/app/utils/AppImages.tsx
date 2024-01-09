@@ -79,4 +79,5 @@ export const AppImages = {
   arrowRight: require("../../../public/images/arrowRight.webp"),
   graph: require("../../../public/images/graph.webp"),
   prices1: require("../../../public/images/prices1.webp"),
+  geoServicesBg: require("../../../public/images/geoServicesBg.webp"),
 };

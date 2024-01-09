@@ -32,7 +32,7 @@ export default function PricesComponent(props: PricesComponentInterface) {
   return (
     <div className="overflow-x-hidden">
       <Navbar isHeaderShow={isHeaderShow} />
-      <div className="relative bg-center w-full h-[calc(50vh)] md:h-[calc(100vh)] pt-[10%]">
+      <div className="relative bg-center w-full h-[calc(50vh)] md:h-[calc(80vh)] pt-[10%]">
         <Image src={AppImages.aboutUs2} alt="Image" layout="fill" />
         <div className="absolute bg-black opacity-60 w-full h-full top-0 left-0"></div>
       </div>
@@ -62,7 +62,7 @@ export default function PricesComponent(props: PricesComponentInterface) {
           data-aos="fade-right"
         >
           <div className="flex items-baseline">
-            <p className="font-bold text-2xl md:text-lg lg:text-xl xl:text-2xl text-black">
+            <p className="font-bold text-2xl md:text-3xl text-black">
               Investor Center
             </p>
             <div className="h-[2px] w-[70px] xl:w-[50px] 2xl:w-[70px] border-2 border-[#D7051D] ml-2" />
@@ -79,7 +79,7 @@ export default function PricesComponent(props: PricesComponentInterface) {
         </div>
         <div className="flex flex-col md:w-[55%]" data-aos="fade-left">
           <div className="flex items-baseline">
-            <p className="font-bold text-2xl md:text-lg lg:text-xl xl:text-2xl text-black">
+            <p className="font-bold text-2xl md:text-3xl text-black">
               Financial Reports
             </p>
             <div className="h-[2px] w-[70px] xl:w-[50px] 2xl:w-[70px] border-2 border-[#D7051D] ml-2" />
@@ -164,7 +164,7 @@ export default function PricesComponent(props: PricesComponentInterface) {
 
       <div className="px-[5%] lg:px-[8%] xl:px-[15%] my-10">
         <div className="flex items-baseline my-3">
-          <p className="font-bold text-xl md:text-lg lg:text-xl xl:text-2xl text-black">
+          <p className="font-bold text-2xl md:text-3xl text-black">
             Share Price Information
           </p>
           <div className="h-[2px] w-[70px] xl:w-[50px] 2xl:w-[70px] border-2 border-[#D7051D] ml-2" />
@@ -177,7 +177,7 @@ export default function PricesComponent(props: PricesComponentInterface) {
       <div className="flex flex-col md:flex-row md:justify-between xl:gap-20 gap-5 px-[5%] lg:px-[8%] xl:px-[15%] my-14">
         <div className="flex flex-col md:w-[50%]" data-aos="fade-right">
           <div className="flex items-baseline">
-            <p className="font-bold text-2xl md:text-lg lg:text-xl xl:text-2xl text-black">
+            <p className="font-bold text-2xl md:text-3xl text-black">
               Presentations
             </p>
             <div className="h-[2px] w-[70px] xl:w-[50px] 2xl:w-[70px] border-2 border-[#D7051D] ml-2" />
@@ -260,7 +260,7 @@ export default function PricesComponent(props: PricesComponentInterface) {
         </div>
         <div className="flex flex-col md:w-[30%]" data-aos="fade-left">
           <div className="flex items-baseline">
-            <p className="font-bold text-2xl md:text-lg lg:text-xl xl:text-2xl text-black">
+            <p className="font-bold text-2xl md:text-3xl text-black">
               Annual Report
             </p>
             <div className="h-[2px] w-[70px] xl:w-[50px] 2xl:w-[70px] border-2 border-[#D7051D] ml-2" />
