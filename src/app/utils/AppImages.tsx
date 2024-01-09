@@ -75,4 +75,8 @@ export const AppImages = {
   addressIcon: require("../../../public/images/addressIcon.webp"),
   mobileIcon: require("../../../public/images/mobileIcon.webp"),
   mailIcon: require("../../../public/images/mailIcon.webp"),
+  uploadIcon: require("../../../public/images/uploadIcon.webp"),
+  arrowRight: require("../../../public/images/arrowRight.webp"),
+  graph: require("../../../public/images/graph.webp"),
+  prices1: require("../../../public/images/prices1.webp"),
 };

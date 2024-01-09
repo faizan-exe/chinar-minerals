@@ -2,6 +2,6 @@
 import React from "react";
 import GraniteComponent from "@/app/components/GraniteComponent";
 
-export default function Products() {
+export default function Granite() {
   return <GraniteComponent />;
 }

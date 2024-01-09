@@ -309,7 +309,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
                   width={50}
                 />
               </div>
-              <p className="text-white text-xl font-bold mb-3">
+              <p className="text-white text-xl font-bold mt-4 lg:mt-0 mb-3">
                 Extraction and Processing
               </p>
               <p className="text-white text-sm">
@@ -328,7 +328,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
                   width={50}
                 />
               </div>
-              <p className="text-white text-xl font-bold mb-3">
+              <p className="text-white text-xl font-bold mt-4 lg:mt-0 mb-3">
                 Product Innovation
               </p>
               <p className="text-white text-sm">
@@ -348,7 +348,9 @@ export default function HomeComponent(props: HomeComponentInterface) {
                   width={50}
                 />
               </div>
-              <p className="text-white text-xl font-bold mb-3">Consultation</p>
+              <p className="text-white text-xl font-bold mt-4 lg:mt-0 mb-3">
+                Consultation
+              </p>
               <p className="text-white text-sm">
                 We provide comprehensive consultation services, engaging with
                 clients, architects, and builders to ensure the best material

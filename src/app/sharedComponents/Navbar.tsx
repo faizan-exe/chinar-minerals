@@ -48,7 +48,7 @@ export default function Navbar(props: NavbarComponentInterface) {
             </p>
           </Link>
           <div className="flex justify-between items-center pr-3 py-3 border-b-2">
-            <Link href={"/pages/products"}>
+            <Link href={"/pages/products/granite"}>
               <p className="text-black text-lg">Products</p>
             </Link>
             <Image
@@ -79,6 +79,11 @@ export default function Navbar(props: NavbarComponentInterface) {
               <p className="text-base text-black py-3">Phosphorus</p>
             </div>
           ) : null}
+          <Link href={"/pages/prices"}>
+            <p className="text-black text-lg py-3 border-b-2 flex items-center">
+              Prices
+            </p>
+          </Link>
           <Link href={"/pages/aboutUs"}>
             <p className="text-black text-lg py-3 border-b-2 flex items-center">
               About Us
@@ -238,6 +243,16 @@ export default function Navbar(props: NavbarComponentInterface) {
                   </p>
                 </div>
               )}
+            </p>
+          </Link>
+          <Link href={"/pages/prices"} className="md:flex hidden">
+            <p
+              className="2xl:text-lg lg:text-base text-sm"
+              style={
+                props.isHeaderShow ? { color: "black" } : { color: "white" }
+              }
+            >
+              Prices
             </p>
           </Link>
           <Link href={"/pages/aboutUs"} className="md:flex hidden">
