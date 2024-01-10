@@ -109,10 +109,10 @@ export default function ServicesComponent(props: ServicesComponentInterface) {
           />
           <div className="absolute bg-black opacity-60 w-full h-full top-0 left-0" />
           <div
-            className="absolute py-16 px-10 z-10 w-full lg:w-[80%] h-full"
+            className="absolute flex flex-col justify-center px-10 z-10 w-full lg:w-[80%] h-full"
             data-aos="fade-right"
           >
-            <p className="text-white text-3xl xl:text-4xl 2xl:text-5xl lg:leading-loose font-bold mb-10 abolute">
+            <p className="text-white text-3xl md:text-5xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold mb-10 abolute">
               Our approach <br /> and position
             </p>
             <p className="text-white text-sm">

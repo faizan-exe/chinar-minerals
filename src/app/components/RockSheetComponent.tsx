@@ -215,6 +215,7 @@ export default function RockSheetComponent(props: RockSheetComponentInterface) {
                 </p>
               </div>
             </div>
+
             <div className="flex flex-col bg-[#f3f3f3]  lg:w-[30%] h-auto shadow opacity-100 md:opacity-80 hover:opacity-100 hover:scale-105 rounded-3xl">
               <div className="relative w-full h-40 md:h-72">
                 <Image

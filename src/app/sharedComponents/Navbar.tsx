@@ -68,6 +68,11 @@ export default function Navbar(props: NavbarComponentInterface) {
                   Geological Services
                 </p>
               </Link>
+              <Link href={"/pages/services/geochemicalServices"}>
+                <p className="text-base text-black py-3 border-b-2">
+                  Geochemical Services
+                </p>
+              </Link>
               {/* <Link href={"/pages/products/rocksheet"}>
                 <p className="text-base text-black py-3 border-b-2">
                   Geological Services
@@ -231,7 +236,7 @@ export default function Navbar(props: NavbarComponentInterface) {
                       Geological Services
                     </p>
                   </Link>
-                  {/* <Link href={"/pages/services/geologicalServices"}>
+                  <Link href={"/pages/services/geochemicalServices"}>
                     <p
                       className={`text-base p-3 hover:bg-[#9B0113] ${
                         props.isHeaderShow
@@ -239,9 +244,9 @@ export default function Navbar(props: NavbarComponentInterface) {
                           : "hover:bg-[#9B0113]"
                       }`}
                     >
-                      Rocksheet
+                      Geochemical Services
                     </p>
-                  </Link> */}
+                  </Link>
                 </div>
               )}
             </p>
