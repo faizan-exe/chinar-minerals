@@ -135,122 +135,140 @@ export default function GeochemicalServicesComponent(
             geochemical services contribute significantly to the efficiency,
             safety, and environmental responsibility of the mining industry.
           </p>
-          <p className="text-black text-2xl md:text-3xl font-bold text-center">
-            Reliable & High-Quality Geochemical Analysis Services
-          </p>
         </div>
       </div>
 
-      <div className="w-full flex justify-evenly gap-1 md:gap-2 lg:gap-4 xl:gap-6 2xl:gap-10 px-[5%] lg:px-[8%] xl:px-[10%] 2xl:px-[15%] my-10">
-        <div
-          style={{ backgroundColor: selectedIndex === 0 ? "#D7051D" : "white" }}
-          className="shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
-          onClick={() => setSelectedIndex(0)}
+      <div className="w-full px-[5%] lg:px-[8%] xl:px-[10%] 2xl:px-[15%] my-10">
+        <p
+          className="text-black text-2xl md:text-3xl font-bold text-center my-5"
+          data-aos="fade-down"
         >
-          <Image
-            src={
-              selectedIndex === 0 ? AppImages.gcIcon2White : AppImages.gcIcon2
-            }
-            alt="Image"
-            className="h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
-          />
-          <p
-            style={{
-              color: selectedIndex === 0 ? "white" : "black",
-            }}
-            className="text-[8px] md:text-xs lg:text-sm lg:max-w-[70%] text-center"
-          >
-            Metallic screening
-          </p>
-        </div>
+          Reliable & High-Quality Geochemical Analysis Services
+        </p>
         <div
-          style={{ backgroundColor: selectedIndex === 1 ? "#D7051D" : "white" }}
-          className="shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
-          onClick={() => setSelectedIndex(1)}
+          className="w-full flex justify-evenly gap-1 md:gap-2 lg:gap-4 xl:gap-6 2xl:gap-10"
+          data-aos="fade-right"
         >
-          <Image
-            src={
-              selectedIndex === 1 ? AppImages.gcIcon1White : AppImages.gcIcon1
-            }
-            alt="Image"
-            className="h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
-          />
-          <p
+          <div
             style={{
-              color: selectedIndex === 1 ? "white" : "black",
+              backgroundColor: selectedIndex === 0 ? "#D7051D" : "white",
             }}
-            className="text-[8px] md:text-xs lg:text-sm lg:max-w-[70%] text-center"
+            className="shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
+            onClick={() => setSelectedIndex(0)}
           >
-            PhotonAssay™ analysis
-          </p>
-        </div>
-        <div
-          style={{ backgroundColor: selectedIndex === 2 ? "#D7051D" : "white" }}
-          className=" shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
-          onClick={() => setSelectedIndex(2)}
-        >
-          <Image
-            src={
-              selectedIndex === 2 ? AppImages.gcIcon3White : AppImages.gcIcon3
-            }
-            alt="Image"
-            className="h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
-          />
-          <p
+            <Image
+              src={
+                selectedIndex === 0 ? AppImages.gcIcon2White : AppImages.gcIcon2
+              }
+              alt="Image"
+              className="h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
+            />
+            <p
+              style={{
+                color: selectedIndex === 0 ? "white" : "black",
+              }}
+              className="text-[8px] md:text-xs lg:text-sm lg:max-w-[70%] text-center"
+            >
+              Metallic screening
+            </p>
+          </div>
+          <div
             style={{
-              color: selectedIndex === 2 ? "white" : "black",
+              backgroundColor: selectedIndex === 1 ? "#D7051D" : "white",
             }}
-            className="text-[8px] md:text-xs lg:text-sm lg:max-w-[70%] text-center"
+            className="shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
+            onClick={() => setSelectedIndex(1)}
           >
-            Carbon, sulphur & mercury analysis
-          </p>
-        </div>
-        <div
-          style={{ backgroundColor: selectedIndex === 3 ? "#D7051D" : "white" }}
-          className="shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
-          onClick={() => setSelectedIndex(3)}
-        >
-          <Image
-            src={
-              selectedIndex === 3 ? AppImages.gcIcon4White : AppImages.gcIcon4
-            }
-            alt="Image"
-            className="h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
-          />
-          <p
+            <Image
+              src={
+                selectedIndex === 1 ? AppImages.gcIcon1White : AppImages.gcIcon1
+              }
+              alt="Image"
+              className="h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
+            />
+            <p
+              style={{
+                color: selectedIndex === 1 ? "white" : "black",
+              }}
+              className="text-[8px] md:text-xs lg:text-sm lg:max-w-[70%] text-center"
+            >
+              PhotonAssay™ analysis
+            </p>
+          </div>
+          <div
             style={{
-              color: selectedIndex === 3 ? "white" : "black",
+              backgroundColor: selectedIndex === 2 ? "#D7051D" : "white",
             }}
-            className="text-[8px] md:text-xs lg:text-sm lg:max-w-[70%] text-center"
+            className=" shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
+            onClick={() => setSelectedIndex(2)}
           >
-            Specific gravity testing
-          </p>
-        </div>
-        <div
-          style={{ backgroundColor: selectedIndex === 4 ? "#D7051D" : "white" }}
-          className="shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
-          onClick={() => setSelectedIndex(4)}
-        >
-          <Image
-            src={
-              selectedIndex === 4 ? AppImages.gcIcon5White : AppImages.gcIcon5
-            }
-            alt="Image"
-            className="h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
-          />
-          <p
+            <Image
+              src={
+                selectedIndex === 2 ? AppImages.gcIcon3White : AppImages.gcIcon3
+              }
+              alt="Image"
+              className="h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
+            />
+            <p
+              style={{
+                color: selectedIndex === 2 ? "white" : "black",
+              }}
+              className="text-[8px] md:text-xs lg:text-sm lg:max-w-[70%] text-center"
+            >
+              Carbon, sulphur & mercury analysis
+            </p>
+          </div>
+          <div
             style={{
-              color: selectedIndex === 4 ? "white" : "black",
+              backgroundColor: selectedIndex === 3 ? "#D7051D" : "white",
             }}
-            className="text-[8px] md:text-xs lg:text-sm lg:max-w-[70%] text-center"
+            className="shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
+            onClick={() => setSelectedIndex(3)}
           >
-            Ultra-trace metal analysis by digestion
-          </p>
+            <Image
+              src={
+                selectedIndex === 3 ? AppImages.gcIcon4White : AppImages.gcIcon4
+              }
+              alt="Image"
+              className="h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
+            />
+            <p
+              style={{
+                color: selectedIndex === 3 ? "white" : "black",
+              }}
+              className="text-[8px] md:text-xs lg:text-sm lg:max-w-[70%] text-center"
+            >
+              Specific gravity testing
+            </p>
+          </div>
+          <div
+            style={{
+              backgroundColor: selectedIndex === 4 ? "#D7051D" : "white",
+            }}
+            className="shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
+            onClick={() => setSelectedIndex(4)}
+          >
+            <Image
+              src={
+                selectedIndex === 4 ? AppImages.gcIcon5White : AppImages.gcIcon5
+              }
+              alt="Image"
+              className="h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
+            />
+            <p
+              style={{
+                color: selectedIndex === 4 ? "white" : "black",
+              }}
+              className="text-[8px] md:text-xs lg:text-sm lg:max-w-[70%] text-center"
+            >
+              Ultra-trace metal analysis by digestion
+            </p>
+          </div>
         </div>
       </div>
 
       <div className="w-full flex px-[5%] lg:px-[8%] xl:px-[10%] 2xl:px-[15%] mt-10 lg:mt-20 mb-10">
-        <div className="w-full md:w-[45%]">
+        <div className="w-full md:w-[45%]" data-aos="fade-right">
           <p className="text-black text-xl md:text-2xl font-bold">
             {gcServicesdata[selectedIndex].heading}
           </p>
@@ -264,7 +282,7 @@ export default function GeochemicalServicesComponent(
             How We work
           </button>
         </div>
-        <div className="hidden md:block md:w-[55%]">
+        <div className="hidden md:block md:w-[55%]" data-aos="fade-left">
           <div className="flex justify-end items-start w-full h-full mt-5">
             <div className="xl:w-[75%] w-[70%] xl:h-[75%] h-[70%] relative">
               <Image
@@ -285,7 +303,7 @@ export default function GeochemicalServicesComponent(
       <div className="w-full flex flex-col md:flex-row items-center px-[5%] lg:px-[8%] xl:px-[10%] 2xl:px-[15%] mt-14 mb-10 md:mb-0 relative h-full md:h-[calc(60vh)]">
         <div className="absolute w-[50%] h-full top-0 left-0 bg-white" />
         <div className="hidden md:block absolute w-[50%] h-full top-0 right-0 bg-[#D7051D]" />
-        <div className="w-full md:w-[40%] z-20">
+        <div className="w-full md:w-[40%] z-20" data-aos="fade-right">
           <p className="text-black text-2xl md:text-3xl font-bold">
             Analytical Techniques
           </p>
@@ -296,7 +314,10 @@ export default function GeochemicalServicesComponent(
             techniques, these services
           </p>
         </div>
-        <div className="w-full flex flex-col md:flex-row gap-10 md:gap-4 xl:gap-10 lg:w-[60%] z-20">
+        <div
+          className="w-full flex flex-col md:flex-row gap-10 md:gap-4 xl:gap-10 lg:w-[60%] z-20"
+          data-aos="fade-left"
+        >
           <div className="flex flex-col bg-[#f3f3f3] w-full shadow rounded-3xl">
             <div className="relative w-full h-44">
               <Image src={AppImages.geoService7} alt="Image" fill />

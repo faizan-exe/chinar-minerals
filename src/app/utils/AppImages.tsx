@@ -109,4 +109,13 @@ export const AppImages = {
   gcData51: require("../../../public/images/gcData5-1.webp"),
   gcData52: require("../../../public/images/gcData5-2.webp"),
   scrollIcon: require("../../../public/images/scrollIcon.webp"),
+  geoPhyService1: require("../../../public/images/geoPhyService1.webp"),
+  geoPhy1: require("../../../public/images/geoPhy1.webp"),
+  geoPhy2: require("../../../public/images/geoPhy2.webp"),
+  geoPhy3: require("../../../public/images/geoPhy3.webp"),
+  geoPhy4: require("../../../public/images/geoPhy4.webp"),
+  geoPhyIcon1: require("../../../public/images/geoPhyIcon1.webp"),
+  geoPhyIcon2: require("../../../public/images/geoPhyIcon2.webp"),
+  geoPhyIcon3: require("../../../public/images/geoPhyIcon3.webp"),
+  geoPhyServices2: require("../../../public/images/geoPhyServices2.webp"),
 };
