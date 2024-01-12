@@ -55,12 +55,36 @@ const gcServicesdata = [
   },
 ];
 
+const gcServicesdata2 = [
+  {
+    image1: AppImages.geoService7,
+    heading1: "Analytical Techniques",
+    text1:
+      "At Chinar Minerals Geochemical services play a pivotal role in mining and mineral exploration by providing essential insights into the composition",
+    heading2: "Analytical Techniques",
+    text2:
+      "At Chinar Minerals Geochemical services play a pivotal role in mining and mineral exploration by providing essential insights into the composition",
+    image2: AppImages.geoService8,
+  },
+  {
+    image1: AppImages.geoService7,
+    heading1: "Technical Techniques",
+    text1:
+      "At Chinar Minerals Geochemical services play a pivotal role in mining and mineral exploration by providing essential insights into the composition",
+    heading2: "Technical Techniques",
+    text2:
+      "At Chinar Minerals Geochemical services play a pivotal role in mining and mineral exploration by providing essential insights into the composition",
+    image2: AppImages.geoService8,
+  },
+];
+
 interface GeochemicalServicesComponentInterface {}
 
 export default function GeochemicalServicesComponent(
   props: GeochemicalServicesComponentInterface
 ) {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex2, setSelectedIndex2] = useState(0);
   const [startAnimation, setStartAnimation] = useState(false);
   const [isHeaderShow, setIsHeaderShow] = useState(false);
   let lastScrollTop = 0;
@@ -320,39 +344,86 @@ export default function GeochemicalServicesComponent(
         >
           <div className="flex flex-col bg-[#f3f3f3] w-full shadow rounded-3xl">
             <div className="relative w-full h-44">
-              <Image src={AppImages.geoService7} alt="Image" fill />
+              <Image
+                src={gcServicesdata2[selectedIndex2].image1}
+                alt="Image"
+                fill
+              />
             </div>
             <div className="w-full p-5">
               <p className="text-black text-lg font-semibold xl:my-4">
-                Analytical Techniques
+                {gcServicesdata2[selectedIndex2].heading1}
               </p>
-              <p className="text-black text-sm md:text-base">
-                At Chinar Minerals Geochemical services play a pivotal role in
-                mining and mineral exploration by providing essential insights
-                into the composition
+              <p className="text-black text-base md:text-sm lg:text-base">
+                {gcServicesdata2[selectedIndex2].text1}
               </p>
             </div>
           </div>
           <div className="flex flex-col bg-[#f3f3f3] w-full shadow rounded-3xl">
             <div className="relative w-full h-44">
-              <Image src={AppImages.geoService8} alt="Image" fill />
+              <Image
+                src={gcServicesdata2[selectedIndex2].image2}
+                alt="Image"
+                fill
+              />
             </div>
             <div className="w-full p-5">
               <p className="text-black text-lg font-semibold xl:my-4">
-                Analytical Techniques
+                {gcServicesdata2[selectedIndex2].heading2}
               </p>
-              <p className="text-black text-sm md:text-base">
-                At Chinar Minerals Geochemical services play a pivotal role in
-                mining and mineral exploration by providing essential insights
-                into the composition
+              <p className="text-black text-base md:text-sm lg:text-base">
+                {gcServicesdata2[selectedIndex2].text2}
               </p>
             </div>
           </div>
-          <div className="hidden md:flex justify-end items-center">
+          <div className="md:hidden flex flex-col bg-[#f3f3f3] w-full shadow rounded-3xl">
+            <div className="relative w-full h-44">
+              <Image src={gcServicesdata2[1].image1} alt="Image" fill />
+            </div>
+            <div className="w-full p-5">
+              <p className="text-black text-lg font-semibold xl:my-4">
+                {gcServicesdata2[1].heading1}
+              </p>
+              <p className="text-black text-base md:text-sm lg:text-base">
+                {gcServicesdata2[1].text1}
+              </p>
+            </div>
+          </div>
+          <div className="md:hidden flex flex-col bg-[#f3f3f3] w-full shadow rounded-3xl">
+            <div className="relative w-full h-44">
+              <Image src={gcServicesdata2[1].image2} alt="Image" fill />
+            </div>
+            <div className="w-full p-5">
+              <p className="text-black text-lg font-semibold xl:my-4">
+                {gcServicesdata2[1].heading2}
+              </p>
+              <p className="text-black text-base md:text-sm lg:text-base">
+                {gcServicesdata2[1].text2}
+              </p>
+            </div>
+          </div>
+
+          <div className="hidden md:flex md:flex-col justify-center gap-5 items-center">
             <Image
-              src={AppImages.scrollIcon}
+              src={AppImages.scrollLeftIcon}
               alt="Image"
-              className="h-48 w-60"
+              className="h-24 w-60"
+              style={{ transform: "rotate(180deg)" }}
+              onClick={() => {
+                selectedIndex2 === 1
+                  ? setSelectedIndex2(0)
+                  : setSelectedIndex2(1);
+              }}
+            />
+            <Image
+              src={AppImages.scrollLeftIcon}
+              alt="Image"
+              className="h-24 w-60"
+              onClick={() => {
+                selectedIndex2 === 1
+                  ? setSelectedIndex2(0)
+                  : setSelectedIndex2(1);
+              }}
             />
           </div>
         </div>

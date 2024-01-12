@@ -12,8 +12,10 @@ interface NavbarComponentInterface {
 export default function Navbar(props: NavbarComponentInterface) {
   const [isProductOpen, setIsProductOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isAboutUsOpen, setIsAboutUsOpen] = useState(false);
   const [isProductMobOpen, setIsProductMobOpen] = useState(false);
   const [isServiceMobOpen, setIsServiceMobOpen] = useState(false);
+  const [isAboutUsMobOpen, setIsAboutUsMobOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);
   useEffect(() => {
@@ -123,11 +125,31 @@ export default function Navbar(props: NavbarComponentInterface) {
               Prices
             </p>
           </Link>
-          <Link href={"/pages/aboutUs"}>
-            <p className="text-black text-lg py-3 border-b-2 flex items-center">
-              About Us
-            </p>
-          </Link>
+          <div className="flex justify-between items-center pr-3 py-3 border-b-2">
+            <Link href={"/pages/aboutUs"}>
+              <p className="text-black text-lg">About Us</p>
+            </Link>
+            <Image
+              src={AppImages.arrow}
+              alt="Logo"
+              className="w-[25px] h-[25px]"
+              style={
+                isAboutUsMobOpen
+                  ? { transform: "rotate(270deg)" }
+                  : { transform: "rotate(90deg)" }
+              }
+              onClick={() => {
+                setIsAboutUsMobOpen(!isAboutUsMobOpen);
+              }}
+            />
+          </div>
+          {isAboutUsMobOpen ? (
+            <div className="bg-white px-[5%]">
+              <Link href={"/pages/aboutUs/ourTeam"}>
+                <p className="text-base text-black py-3 border-b-2">Our Team</p>
+              </Link>
+            </div>
+          ) : null}
           <Link href={"/pages/contactUs"}>
             <p className="text-black text-lg py-3">Contact Us</p>
           </Link>
@@ -370,12 +392,64 @@ export default function Navbar(props: NavbarComponentInterface) {
           </Link>
           <Link href={"/pages/aboutUs"} className="md:flex hidden">
             <p
-              className="2xl:text-lg lg:text-base text-sm"
+              className="2xl:text-lg lg:text-base text-sm flex items-center gap-1 lg:gap-2 relative"
               style={
                 props.isHeaderShow ? { color: "black" } : { color: "white" }
               }
+              onMouseEnter={() => {
+                setIsAboutUsOpen(true);
+              }}
+              onMouseLeave={() => {
+                setIsAboutUsOpen(false);
+              }}
             >
-              About us
+              About Us
+              <span>
+                <Image
+                  src={
+                    props.isHeaderShow
+                      ? AppImages.dropdownBlack
+                      : AppImages.dropdownWhite
+                  }
+                  alt="Icon"
+                  className="h-[6px] lg:h-2 w-auto"
+                />
+              </span>
+              {isAboutUsOpen && (
+                <div
+                  style={
+                    props.isHeaderShow
+                      ? {
+                          backgroundColor: "white",
+                          boxShadow: "0px 6px 4px 0px rgba(0, 0, 0, 0.25)",
+                          color: "black",
+                        }
+                      : {
+                          backgroundColor: "#D7051D",
+                          color: "white",
+                        }
+                  }
+                  className="absolute top-[25px] shadow"
+                  onMouseEnter={() => {
+                    setIsAboutUsOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    setIsAboutUsOpen(false);
+                  }}
+                >
+                  <Link href={"/pages/aboutUs/ourTeam"}>
+                    <p
+                      className={`text-base p-3 hover:bg-[#9B0113] ${
+                        props.isHeaderShow
+                          ? "hover:bg-[#acacac]"
+                          : "hover:bg-[#9B0113]"
+                      }`}
+                    >
+                      our Team
+                    </p>
+                  </Link>
+                </div>
+              )}
             </p>
           </Link>
           <Link href={"/pages/contactUs"} className="md:flex hidden">

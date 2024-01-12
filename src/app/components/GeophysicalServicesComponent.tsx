@@ -7,51 +7,42 @@ import Navbar from "../sharedComponents/Navbar";
 import { AppImages } from "../utils/AppImages";
 import Footer from "../sharedComponents/Footer";
 
-const gcServicesdata = [
+const gpServicesdata = [
   {
-    heading: "Metallic Screening",
-    text1:
-      "At Chinar Minerals Geochemical services play a pivotal role in mining and mineral exploration by providing essential insights into the composition of geological materials. Through advanced analytical techniques, these services",
-    text2:
-      "Lorem Ipsum is simply dummy text of the printing /n Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing",
-    image1: AppImages.gcData11,
-    image2: AppImages.gcData12,
+    text: [
+      "Five Seismic Crews are in operation with Vibroseis & Dynamite Energy Source.",
+      "2D/3D Seismic Data Acquisition Operations.",
+      "On site Quality Control and Processing up to Brute stack.",
+      "High Accuracy & Reliable Surveying with RTK GPS System.",
+      "Trimble TBC, Leica GEO.OFFICE & SKI-PRO Software for Post Processing of GPS Survey Data.",
+      "Refraction Survey and Up-hole Logging.",
+      "All Crews equipped with Modern Communications system.",
+    ],
+    image: AppImages.geoPhyServices1,
   },
   {
-    heading: "PhotoAssay Analysis",
-    text1:
-      "At Chinar Minerals Geochemical services play a pivotal role in mining and mineral exploration by providing essential insights into the composition of geological materials. Through advanced analytical techniques, these services",
-    text2:
-      "Lorem Ipsum is simply dummy text of the printing /n Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing",
-    image1: AppImages.gcData21,
-    image2: AppImages.gcData22,
+    text: [
+      "Five Seismic Crews are in operation with Vibroseis & Dynamite Energy Source.",
+      "2D/3D Seismic Data Acquisition Operations.",
+      "On site Quality Control and Processing up to Brute stack.",
+      "High Accuracy & Reliable Surveying with RTK GPS System.",
+      "Trimble TBC, Leica GEO.OFFICE & SKI-PRO Software for Post Processing of GPS Survey Data.",
+      "Refraction Survey and Up-hole Logging.",
+      "All Crews equipped with Modern Communications system.",
+    ],
+    image: AppImages.geoPhyServices2,
   },
   {
-    heading: "Carbon, sulphur & mercury analysis",
-    text1:
-      "At Chinar Minerals Geochemical services play a pivotal role in mining and mineral exploration by providing essential insights into the composition of geological materials. Through advanced analytical techniques, these services",
-    text2:
-      "Lorem Ipsum is simply dummy text of the printing /n Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing",
-    image1: AppImages.gcData31,
-    image2: AppImages.gcData32,
-  },
-  {
-    heading: "Specific gravity testing",
-    text1:
-      "At Chinar Minerals Geochemical services play a pivotal role in mining and mineral exploration by providing essential insights into the composition of geological materials. Through advanced analytical techniques, these services",
-    text2:
-      "Lorem Ipsum is simply dummy text of the printing /n Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing",
-    image1: AppImages.gcData41,
-    image2: AppImages.gcData42,
-  },
-  {
-    heading: "Ultra-trace metal analysis by digestion",
-    text1:
-      "At Chinar Minerals Geochemical services play a pivotal role in mining and mineral exploration by providing essential insights into the composition of geological materials. Through advanced analytical techniques, these services",
-    text2:
-      "Lorem Ipsum is simply dummy text of the printing /n Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing",
-    image1: AppImages.gcData51,
-    image2: AppImages.gcData52,
+    text: [
+      "Five Seismic Crews are in operation with Vibroseis & Dynamite Energy Source.",
+      "2D/3D Seismic Data Acquisition Operations.",
+      "On site Quality Control and Processing up to Brute stack.",
+      "High Accuracy & Reliable Surveying with RTK GPS System.",
+      "Trimble TBC, Leica GEO.OFFICE & SKI-PRO Software for Post Processing of GPS Survey Data.",
+      "Refraction Survey and Up-hole Logging.",
+      "All Crews equipped with Modern Communications system.",
+    ],
+    image: AppImages.geoPhyServices3,
   },
 ];
 
@@ -143,78 +134,108 @@ export default function GeophysicalServicesComponent(
       </div>
 
       <div className="bg-[#f3f3f3] w-full px-[5%] lg:px-[8%] xl:px-[15%] my-10 p-10">
-        <p className="text-black text-2xl md:text-3xl font-bold max-w-[550px] my-5">
-          Reliable & High-Quality Geophysical Analysis Services
-        </p>
-        <div className="w-full flex items-center gap-10 my-8">
+        <div className="flex justify-between items-center">
+          <p className="text-black text-2xl md:text-3xl font-bold max-w-[550px] my-5 basis-10/12">
+            Reliable & High-Quality Geophysical Analysis Services
+          </p>
+          <p className="text-[#D7051D] text-lg tracking-widest font-normal basis-2/12">
+            <span
+              onClick={() => {
+                if (selectedIndex === 0) setSelectedIndex(2);
+                else setSelectedIndex(selectedIndex - 1);
+              }}
+            >
+              {"<"}
+            </span>
+            <span className="text-black">{selectedIndex + 1}</span>/3{" "}
+            <span
+              onClick={() => {
+                if (selectedIndex === 2) setSelectedIndex(0);
+                else setSelectedIndex(selectedIndex + 1);
+              }}
+            >
+              {">"}
+            </span>
+          </p>
+        </div>
+        <div className="w-full flex items-center gap-3 md:gap-6 xl:gap-10 my-8">
           <div
-            // style={{
-            //   backgroundColor: selectedIndex === 0 ? "#D7051D" : "white",
-            // }}
-            className="bg-[#D7051D] shadow w-[30%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
-            // onClick={() => setSelectedIndex(0)}
+            style={{
+              backgroundColor: selectedIndex === 0 ? "#D7051D" : "white",
+            }}
+            className="shadow lg:w-[25%] w-[30%] h-36 md:h-40 lg:h-48 flex gap-3 flex-col items-center px-[4px] lg:px-0 py-2 md:py-2 lg:py-4 rounded-lg cursor-pointer"
+            onClick={() => setSelectedIndex(0)}
           >
-            <Image
-              // src={
-              //   selectedIndex === 0 ? AppImages.gcIcon2White : AppImages.gcIcon2
-              // }
-              src={AppImages.geoPhyIcon1}
-              alt="Image"
-              className="h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
-            />
+            <div className="flex justify-center items-center basis-3/5">
+              <Image
+                src={
+                  selectedIndex === 0
+                    ? AppImages.geoPhyIcon1White
+                    : AppImages.geoPhyIcon1
+                }
+                alt="Image"
+                className="w-16 h-20 md:h-24 md:w-20 lg:h-28 lg:w-24"
+              />
+            </div>
             <p
-              // style={{
-              //   color: selectedIndex === 0 ? "white" : "black",
-              // }}
-              className="text-[8px] text-white md:text-xs lg:text-sm lg:max-w-[70%] text-center"
+              style={{
+                color: selectedIndex === 0 ? "white" : "black",
+              }}
+              className="text-[10px] md:text-xs lg:text-sm lg:max-w-[80%] text-center basis-2/5"
             >
               Quality Seismic Data Acquisition
             </p>
           </div>
           <div
-            // style={{
-            //   backgroundColor: selectedIndex === 0 ? "#D7051D" : "white",
-            // }}
-            className="bg-white shadow w-[30%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
-            // onClick={() => setSelectedIndex(0)}
+            style={{
+              backgroundColor: selectedIndex === 1 ? "#D7051D" : "white",
+            }}
+            className="shadow lg:w-[25%] w-[30%] h-36 md:h-40 lg:h-48 flex gap-3 flex-col items-center px-[4px] lg:px-0 py-2 md:py-2 lg:py-4 rounded-lg cursor-pointer"
+            onClick={() => setSelectedIndex(1)}
           >
-            <Image
-              // src={
-              //   selectedIndex === 0 ? AppImages.gcIcon2White : AppImages.gcIcon2
-              // }
-              src={AppImages.geoPhyIcon2}
-              alt="Image"
-              className="h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
-            />
+            <div className="flex justify-center items-center basis-3/5">
+              <Image
+                src={
+                  selectedIndex === 1
+                    ? AppImages.geoPhyIcon2White
+                    : AppImages.geoPhyIcon2
+                }
+                alt="Image"
+                className="w-16 h-20 md:h-24 md:w-20 lg:h-28 lg:w-24"
+              />
+            </div>
             <p
-              // style={{
-              //   color: selectedIndex === 0 ? "white" : "black",
-              // }}
-              className="text-[8px] text-black md:text-xs lg:text-sm lg:max-w-[70%] text-center"
+              style={{
+                color: selectedIndex === 1 ? "white" : "black",
+              }}
+              className="text-[9px] text-black md:text-xs lg:text-sm lg:max-w-[90%] text-center basis-2/5"
             >
               Geophysical Equipment & Services
             </p>
           </div>
           <div
-            // style={{
-            //   backgroundColor: selectedIndex === 0 ? "#D7051D" : "white",
-            // }}
-            className="bg-white shadow w-[30%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
-            // onClick={() => setSelectedIndex(0)}
+            style={{
+              backgroundColor: selectedIndex === 2 ? "#D7051D" : "white",
+            }}
+            className=" shadow lg:w-[25%] w-[30%] h-36 md:h-40 lg:h-48 flex gap-3 flex-col items-center px-[4px] lg:px-0 py-2 md:py-2 lg:py-4 rounded-lg cursor-pointer"
+            onClick={() => setSelectedIndex(2)}
           >
-            <Image
-              // src={
-              //   selectedIndex === 0 ? AppImages.gcIcon2White : AppImages.gcIcon2
-              // }
-              src={AppImages.geoPhyIcon3}
-              alt="Image"
-              className="h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
-            />
+            <div className="flex justify-center items-center basis-3/5">
+              <Image
+                src={
+                  selectedIndex === 2
+                    ? AppImages.geoPhyIcon3White
+                    : AppImages.geoPhyIcon3
+                }
+                alt="Image"
+                className="w-16 h-20 md:h-24 md:w-20 lg:h-28 lg:w-24"
+              />
+            </div>
             <p
-              // style={{
-              //   color: selectedIndex === 0 ? "white" : "black",
-              // }}
-              className="text-[8px] text-black md:text-xs lg:text-sm lg:max-w-[70%] text-center"
+              style={{
+                color: selectedIndex === 2 ? "white" : "black",
+              }}
+              className="text-[10px] md:text-xs lg:text-sm lg:max-w-[80%] text-center basis-2/5"
             >
               Geophysical gravity surveys
             </p>
@@ -222,18 +243,17 @@ export default function GeophysicalServicesComponent(
         </div>
         <div className="w-full flex flex-col md:flex-row gap-5 my-16">
           <div className="w-full md:w-[50%]">
-            <Image src={AppImages.geoPhyServices2} alt="Image" />
+            <Image src={gpServicesdata[selectedIndex].image} alt="Image" />
           </div>
           <div className="w-full md:w-[50%] flex items-center">
-            <p className="text-black text-base">
-              Five Seismic Crews are in operation with Vibroseis & Dynamite
-              Energy Source. 2D/3D Seismic Data Acquisition Operations. On site
-              Quality Control and Processing up to Brute stack. High Accuracy &
-              Reliable Surveying with RTK GPS System. Trimble TBC, Leica
-              GEO.OFFICE & SKI-PRO Software for Post Processing of GPS Survey
-              Data. Refraction Survey and Up-hole Logging. All Crews equipped
-              with Modern Communications system. 
-            </p>
+            <ul
+              role="list"
+              className="marker:text-black list-disc pl-5 space-y-3 text-black text-base"
+            >
+              {gpServicesdata[selectedIndex].text.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
