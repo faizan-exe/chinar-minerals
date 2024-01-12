@@ -126,7 +126,6 @@ export const AppImages = {
   ourTeam1: require("../../../public/images/ourTeam1.webp"),
   facebookRed: require("../../../public/images/facebookRed.webp"),
   instagramRed: require("../../../public/images/instagramRed.webp"),
-  linkedInRed: require("../../../public/images/linkedInRed.webp"),
   twitterRed: require("../../../public/images/twitterRed.webp"),
   scrollRightIcon: require("../../../public/images/scrollRightIcon.webp"),
   scrollLeftIcon: require("../../../public/images/scrollLeftIcon.webp"),
