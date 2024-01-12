@@ -58,20 +58,20 @@ const gcServicesdata = [
 const gcServicesdata2 = [
   {
     image1: AppImages.geoService7,
-    heading1: "Analytical Techniques",
+    heading1: "Analytical Technique1",
     text1:
       "At Chinar Minerals Geochemical services play a pivotal role in mining and mineral exploration by providing essential insights into the composition",
-    heading2: "Analytical Techniques",
+    heading2: "Analytical Technique2",
     text2:
       "At Chinar Minerals Geochemical services play a pivotal role in mining and mineral exploration by providing essential insights into the composition",
     image2: AppImages.geoService8,
   },
   {
     image1: AppImages.geoService7,
-    heading1: "Technical Techniques",
+    heading1: "Technical Technique1",
     text1:
       "At Chinar Minerals Geochemical services play a pivotal role in mining and mineral exploration by providing essential insights into the composition",
-    heading2: "Technical Techniques",
+    heading2: "Technical Technique2",
     text2:
       "At Chinar Minerals Geochemical services play a pivotal role in mining and mineral exploration by providing essential insights into the composition",
     image2: AppImages.geoService8,
