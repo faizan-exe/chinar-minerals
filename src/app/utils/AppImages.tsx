@@ -124,6 +124,7 @@ export const AppImages = {
   geoPhyServices3: require("../../../public/images/geoPhyServices3.webp"),
   leadershipIcon: require("../../../public/images/leadershipIcon.webp"),
   ourTeam1: require("../../../public/images/ourTeam1.webp"),
+  linkedInRed: require("../../../public/images/linkedInRed.webp"),
   facebookRed: require("../../../public/images/facebookRed.webp"),
   instagramRed: require("../../../public/images/instagramRed.webp"),
   twitterRed: require("../../../public/images/twitterRed.webp"),
