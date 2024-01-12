@@ -138,7 +138,7 @@ export default function GeophysicalServicesComponent(
           <p className="text-black text-2xl md:text-3xl font-bold max-w-[550px] my-5 basis-10/12">
             Reliable & High-Quality Geophysical Analysis Services
           </p>
-          <p className="text-[#D7051D] text-lg tracking-widest font-normal basis-2/12">
+          <p className="text-[#D7051D] text-lg tracking-widest font-normal basis-2/12 cursor-pointer">
             <span
               onClick={() => {
                 if (selectedIndex === 0) setSelectedIndex(2);

@@ -133,7 +133,7 @@ export default function OurTeamComponent(props: OurTeamComponentInterface) {
               </p>
             </div>
             <div className="bg-[#D7051D] cursor-pointer w-full px-9 py-2">
-              <p>Read More</p>
+              <p className="text-white">Read More</p>
             </div>
           </div>
           <div className="w-full md:w-[50%] lg:w-[40%] shadow rounded-lg overflow-hidden">
@@ -181,105 +181,7 @@ export default function OurTeamComponent(props: OurTeamComponentInterface) {
               </p>
             </div>
             <div className="bg-[#D7051D] cursor-pointer w-full px-9 py-2">
-              <p>Read More</p>
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex justify-center flex-col md:flex-row gap-10">
-          <div className="w-full md:w-[50%] lg:w-[40%] shadow rounded-lg overflow-hidden">
-            <div className="basis-1/2">
-              <Image src={AppImages.ourTeam1} alt="Image" />
-            </div>
-            <div className="basis-1/2">
-              <p className="text-black font-bold text-2xl lg:text-3xl my-3 px-9">
-                LIAQAT ALI SULTAN
-              </p>
-              <div className="flex justify-between my-3 px-9">
-                <p className="text-black font-semibold text-2xl">CEO</p>
-                <div className="flex items-center gap-2">
-                  <Image
-                    src={AppImages.linkedInRed}
-                    alt="Icon"
-                    height={25}
-                    width={25}
-                  />
-                  <Image
-                    src={AppImages.twitterRed}
-                    alt="Icon"
-                    height={25}
-                    width={25}
-                  />
-                  <Image
-                    src={AppImages.facebookRed}
-                    alt="Icon"
-                    height={25}
-                    width={25}
-                  />
-                  <Image
-                    src={AppImages.instagramRed}
-                    alt="Icon"
-                    height={25}
-                    width={25}
-                  />
-                </div>
-              </div>
-              <div className="h-0 w-full border-2 border-[#D7051D] my-2" />
-              <p className="text-black text-base px-9 py-5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s.
-              </p>
-            </div>
-            <div className="bg-[#D7051D] cursor-pointer w-full px-9 py-2">
-              <p>Read More</p>
-            </div>
-          </div>
-          <div className="w-full md:w-[50%] lg:w-[40%] shadow rounded-lg overflow-hidden">
-            <div className="basis-1/2">
-              <Image src={AppImages.ourTeam1} alt="Image" />
-            </div>
-            <div className="basis-1/2">
-              <p className="text-black font-bold text-2xl lg:text-3xl my-3 px-9">
-                LIAQAT ALI SULTAN
-              </p>
-              <div className="flex justify-between my-3 px-9">
-                <p className="text-black font-semibold text-2xl">CEO</p>
-                <div className="flex items-center gap-2">
-                  <Image
-                    src={AppImages.linkedInRed}
-                    alt="Icon"
-                    height={25}
-                    width={25}
-                  />
-                  <Image
-                    src={AppImages.twitterRed}
-                    alt="Icon"
-                    height={25}
-                    width={25}
-                  />
-                  <Image
-                    src={AppImages.facebookRed}
-                    alt="Icon"
-                    height={25}
-                    width={25}
-                  />
-                  <Image
-                    src={AppImages.instagramRed}
-                    alt="Icon"
-                    height={25}
-                    width={25}
-                  />
-                </div>
-              </div>
-              <div className="h-0 w-full border-2 border-[#D7051D] my-2" />
-              <p className="text-black text-base px-9 py-5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s.
-              </p>
-            </div>
-            <div className="bg-[#D7051D] cursor-pointer w-full px-9 py-2">
-              <p>Read More</p>
+              <p className="text-white">Read More</p>
             </div>
           </div>
         </div>
@@ -329,7 +231,7 @@ export default function OurTeamComponent(props: OurTeamComponentInterface) {
               </p>
             </div>
             <div className="bg-[#D7051D] cursor-pointer w-full px-9 py-2">
-              <p>Read More</p>
+              <p className="text-white">Read More</p>
             </div>
           </div>
           <div className="w-full md:w-[50%] lg:w-[40%] shadow rounded-lg overflow-hidden">
@@ -377,7 +279,105 @@ export default function OurTeamComponent(props: OurTeamComponentInterface) {
               </p>
             </div>
             <div className="bg-[#D7051D] cursor-pointer w-full px-9 py-2">
-              <p>Read More</p>
+              <p className="text-white">Read More</p>
+            </div>
+          </div>
+        </div>
+        <div className="w-full flex justify-center flex-col md:flex-row gap-10">
+          <div className="w-full md:w-[50%] lg:w-[40%] shadow rounded-lg overflow-hidden">
+            <div className="basis-1/2">
+              <Image src={AppImages.ourTeam1} alt="Image" />
+            </div>
+            <div className="basis-1/2">
+              <p className="text-black font-bold text-2xl lg:text-3xl my-3 px-9">
+                LIAQAT ALI SULTAN
+              </p>
+              <div className="flex justify-between my-3 px-9">
+                <p className="text-black font-semibold text-2xl">CEO</p>
+                <div className="flex items-center gap-2">
+                  <Image
+                    src={AppImages.linkedInRed}
+                    alt="Icon"
+                    height={25}
+                    width={25}
+                  />
+                  <Image
+                    src={AppImages.twitterRed}
+                    alt="Icon"
+                    height={25}
+                    width={25}
+                  />
+                  <Image
+                    src={AppImages.facebookRed}
+                    alt="Icon"
+                    height={25}
+                    width={25}
+                  />
+                  <Image
+                    src={AppImages.instagramRed}
+                    alt="Icon"
+                    height={25}
+                    width={25}
+                  />
+                </div>
+              </div>
+              <div className="h-0 w-full border-2 border-[#D7051D] my-2" />
+              <p className="text-black text-base px-9 py-5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s.
+              </p>
+            </div>
+            <div className="bg-[#D7051D] cursor-pointer w-full px-9 py-2">
+              <p className="text-white">Read More</p>
+            </div>
+          </div>
+          <div className="w-full md:w-[50%] lg:w-[40%] shadow rounded-lg overflow-hidden">
+            <div className="basis-1/2">
+              <Image src={AppImages.ourTeam1} alt="Image" />
+            </div>
+            <div className="basis-1/2">
+              <p className="text-black font-bold text-2xl lg:text-3xl my-3 px-9">
+                LIAQAT ALI SULTAN
+              </p>
+              <div className="flex justify-between my-3 px-9">
+                <p className="text-black font-semibold text-2xl">CEO</p>
+                <div className="flex items-center gap-2">
+                  <Image
+                    src={AppImages.linkedInRed}
+                    alt="Icon"
+                    height={25}
+                    width={25}
+                  />
+                  <Image
+                    src={AppImages.twitterRed}
+                    alt="Icon"
+                    height={25}
+                    width={25}
+                  />
+                  <Image
+                    src={AppImages.facebookRed}
+                    alt="Icon"
+                    height={25}
+                    width={25}
+                  />
+                  <Image
+                    src={AppImages.instagramRed}
+                    alt="Icon"
+                    height={25}
+                    width={25}
+                  />
+                </div>
+              </div>
+              <div className="h-0 w-full border-2 border-[#D7051D] my-2" />
+              <p className="text-black text-base px-9 py-5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s.
+              </p>
+            </div>
+            <div className="bg-[#D7051D] cursor-pointer w-full px-9 py-2">
+              <p className="text-white">Read More</p>
             </div>
           </div>
         </div>
