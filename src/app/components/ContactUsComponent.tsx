@@ -7,13 +7,52 @@ import Navbar from "../sharedComponents/Navbar";
 import { AppImages } from "../utils/AppImages";
 import Footer from "../sharedComponents/Footer";
 import Map from "../sharedComponents/Map";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 interface ContactUsComponentInterface {}
 
 export default function ContactUsComponent(props: ContactUsComponentInterface) {
+  const { register, handleSubmit, reset } = useForm();
   const [startAnimation, setStartAnimation] = useState(false);
   const [isHeaderShow, setIsHeaderShow] = useState(false);
   let lastScrollTop = 0;
+
+  const sendEmail = async (data: any) => {
+    console.log(data);
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        toast.success("Thank you for contacting us.", {
+          duration: 4000,
+          position: "bottom-right",
+          style: {
+            border: "1px solid #161B1B",
+            padding: "16px",
+            color: "#D7051D",
+          },
+          iconTheme: {
+            primary: "#CE0000",
+            secondary: "#FFFFFF",
+          },
+        });
+        reset();
+      } else {
+        throw new Error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      // Handle the error, e.g., show an error message
+    }
+  };
+
   useEffect(() => {
     setStartAnimation(true);
     AOS.init({
@@ -78,13 +117,17 @@ export default function ContactUsComponent(props: ContactUsComponentInterface) {
           <p className="text-[#757474]  text-sm font-normal">
             Contact Us & we will get back to you at our earliest.
           </p>
-          <div className="border border-black rounded-lg px-6 py-10 mt-5">
+          <form
+            className="border border-black rounded-lg px-6 py-10 mt-5"
+            onSubmit={handleSubmit(sendEmail)}
+          >
             <div className="flex gap-5 flex-col lg:flex-row">
               <div className="w-full">
                 <p className="text-black text-xs font-normal">First Name</p>
                 <input
                   type="text"
                   className="w-full h-12 px-4 border-b border-black focus:outline-none focus:border-b text-black"
+                  {...register("fname")}
                 />
               </div>
               <div className="w-full">
@@ -92,6 +135,7 @@ export default function ContactUsComponent(props: ContactUsComponentInterface) {
                 <input
                   type="text"
                   className="w-full h-12 px-4 border-b border-black focus:outline-none focus:border-b text-black"
+                  {...register("lname")}
                 />
               </div>
             </div>
@@ -101,6 +145,7 @@ export default function ContactUsComponent(props: ContactUsComponentInterface) {
                 <input
                   type="text"
                   className="w-full h-12 px-4 border-b border-black focus:outline-none focus:border-b text-black"
+                  {...register("email")}
                 />
               </div>
               <div className="w-full">
@@ -108,6 +153,7 @@ export default function ContactUsComponent(props: ContactUsComponentInterface) {
                 <input
                   type="text"
                   className="w-full h-12 px-4 border-b border-black focus:outline-none focus:border-b text-black"
+                  {...register("number")}
                 />
               </div>
             </div>
@@ -116,6 +162,7 @@ export default function ContactUsComponent(props: ContactUsComponentInterface) {
               <input
                 type="text"
                 className="w-full h-12 px-4 border-b border-black focus:outline-none focus:border-b text-black"
+                {...register("subject")}
               />
             </div>
             <div className="w-full mt-8">
@@ -123,19 +170,26 @@ export default function ContactUsComponent(props: ContactUsComponentInterface) {
               <input
                 type="text"
                 className="w-full h-12 px-4 border-b border-black focus:outline-none focus:border-b text-black"
+                {...register("message")}
               />
             </div>
             <div className="flex justify-between mt-8">
               <div className="w-full"></div>
-              <button className="bg-[#D7051D] text-lg md:text-xl text-white py-2 lg:py-3 px-5 lg:px-8 rounded-lg my-5">
+              <button
+                type="submit"
+                className="bg-[#D7051D] text-lg md:text-xl text-white py-2 lg:py-3 px-5 lg:px-8 rounded-lg my-5"
+              >
                 Send
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
 
-      <div className="flex gap-10 lg:gap-5 flex-col lg:flex-row px-[5%] lg:px-[8%] xl:px-[15%] mt-5 my-16">
+      <div
+        className="flex gap-10 lg:gap-5 flex-col lg:flex-row px-[5%] lg:px-[8%] xl:px-[15%] mt-5 my-16"
+        data-aos="fade-up"
+      >
         <div className="w-full lg:w-1/3 flex justify-start">
           <div className="flex flex-col items-start">
             <p className="text-black font-bold text-3xl my-4">Head Office</p>

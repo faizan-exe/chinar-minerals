@@ -9,3 +9,36 @@
 .bgBlack {
   background-color: rgba(0, 0, 0, 0.6);
 }
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-fade {
+  animation: fade-out 0.3s ease-in-out, fade-in 0.3s ease-in-out 0.3s;
+}
+
+.fade-image {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-image.fade-out {
+  opacity: 0;
+}
+
+.fade-image.fade-in {
+  opacity: 1;
+}

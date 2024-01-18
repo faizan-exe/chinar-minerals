@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "../styles/style.css";
 import Navbar from "../sharedComponents/Navbar";
 import { AppImages } from "../utils/AppImages";
 import Footer from "../sharedComponents/Footer";
@@ -88,6 +89,20 @@ export default function GeochemicalServicesComponent(
   const [startAnimation, setStartAnimation] = useState(false);
   const [isHeaderShow, setIsHeaderShow] = useState(false);
   let lastScrollTop = 0;
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const handleSelectIndex = (index: any) => {
+    setIsAnimating(true);
+    setTimeout(() => {
+      setSelectedIndex(index);
+      setIsAnimating(false);
+    }, 200);
+
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 400);
+  };
+
   useEffect(() => {
     setStartAnimation(true);
     AOS.init({
@@ -178,7 +193,7 @@ export default function GeochemicalServicesComponent(
               backgroundColor: selectedIndex === 0 ? "#D7051D" : "white",
             }}
             className="shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
-            onClick={() => setSelectedIndex(0)}
+            onClick={() => handleSelectIndex(0)}
           >
             <Image
               src={
@@ -201,7 +216,7 @@ export default function GeochemicalServicesComponent(
               backgroundColor: selectedIndex === 1 ? "#D7051D" : "white",
             }}
             className="shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
-            onClick={() => setSelectedIndex(1)}
+            onClick={() => handleSelectIndex(1)}
           >
             <Image
               src={
@@ -224,7 +239,7 @@ export default function GeochemicalServicesComponent(
               backgroundColor: selectedIndex === 2 ? "#D7051D" : "white",
             }}
             className=" shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
-            onClick={() => setSelectedIndex(2)}
+            onClick={() => handleSelectIndex(2)}
           >
             <Image
               src={
@@ -247,7 +262,7 @@ export default function GeochemicalServicesComponent(
               backgroundColor: selectedIndex === 3 ? "#D7051D" : "white",
             }}
             className="shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
-            onClick={() => setSelectedIndex(3)}
+            onClick={() => handleSelectIndex(3)}
           >
             <Image
               src={
@@ -270,7 +285,7 @@ export default function GeochemicalServicesComponent(
               backgroundColor: selectedIndex === 4 ? "#D7051D" : "white",
             }}
             className="shadow w-[20%] flex gap-3 flex-col items-center px-[2px] lg:px-0 py-1 md:py-2 lg:py-4 xl:py-6 2xl:py-8 rounded-lg cursor-pointer"
-            onClick={() => setSelectedIndex(4)}
+            onClick={() => handleSelectIndex(4)}
           >
             <Image
               src={
@@ -293,31 +308,38 @@ export default function GeochemicalServicesComponent(
 
       <div className="w-full flex px-[5%] lg:px-[8%] xl:px-[10%] 2xl:px-[15%] mt-10 lg:mt-20 mb-10">
         <div className="w-full md:w-[45%]" data-aos="fade-right">
-          <p className="text-black text-xl md:text-2xl font-bold">
-            {gcServicesdata[selectedIndex].heading}
-          </p>
-          <p className="text-black text-sm md:text-base my-6 md:max-w-[85%]">
-            {gcServicesdata[selectedIndex].text1}
-          </p>
-          <p className="text-black text-sm md:text-base my-6 md:max-w-[70%]">
-            {gcServicesdata[selectedIndex].text2}
-          </p>
-          <button className="bg-[#D7051D] font-bold text-lg md:text-xl text-white p-3 lg:p-5 rounded-lg">
-            How We work
-          </button>
+          <div className={`${isAnimating ? "animate-fade" : ""}`}>
+            <p className="text-black text-xl md:text-2xl font-bold">
+              {gcServicesdata[selectedIndex].heading}
+            </p>
+            <p className="text-black text-sm md:text-base my-6 md:max-w-[85%]">
+              {gcServicesdata[selectedIndex].text1}
+            </p>
+            <p className="text-black text-sm md:text-base my-6 md:max-w-[70%]">
+              {gcServicesdata[selectedIndex].text2}
+            </p>
+            <button className="bg-[#D7051D] font-bold text-lg md:text-xl text-white p-3 lg:p-5 rounded-lg">
+              How We work
+            </button>
+          </div>
         </div>
         <div className="hidden md:block md:w-[55%]" data-aos="fade-left">
           <div className="flex justify-end items-start w-full h-full mt-5">
-            <div className="xl:w-[75%] w-[70%] xl:h-[75%] h-[70%] relative">
+            <div
+              className={`xl:w-[75%] w-[70%] xl:h-[75%] h-[70%] relative ${
+                isAnimating ? "animate-fade" : ""
+              }`}
+            >
               <Image
                 src={gcServicesdata[selectedIndex].image1}
                 alt="Image"
                 fill
+                className="fade-image"
               />
               <Image
                 src={gcServicesdata[selectedIndex].image2}
                 alt="Image"
-                className="absolute left-[-120px] bottom-[-80px] h-[60%] w-[60%]"
+                className="absolute left-[-120px] bottom-[-80px] h-[60%] w-[60%] fade-image"
               />
             </div>
           </div>

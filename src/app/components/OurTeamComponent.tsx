@@ -61,14 +61,17 @@ export default function OurTeamComponent(props: OurTeamComponentInterface) {
       </div>
 
       <div className="w-full px-[5%] lg:px-[6%] xl:px-[10%] mt-10 mb-20 flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-6 xl:gap-8 ">
-        <div className="w-full lg:w-[30%] flex items-center justify-center">
+        <div
+          className="w-full lg:w-[30%] flex items-center justify-center"
+          data-aos="fade-right"
+        >
           <Image
             src={AppImages.leadershipIcon}
             alt="Image"
             className="h-28 w-44 md:h-36 md:w-52 lg:h-44 lg:w-60"
           />
         </div>
-        <div className="w-full lg:w-[70%]">
+        <div className="w-full lg:w-[70%]" data-aos="fade-left">
           <p className="text-black text-2xl md:text-2xl font-bold mb-5 text-center lg:text-left">
             Board of Directors
           </p>
@@ -87,7 +90,10 @@ export default function OurTeamComponent(props: OurTeamComponentInterface) {
       </div>
 
       <div className="w-full px-[5%] lg:px-[6%] xl:px-[10%] my-20 flex gap-10 2xl:gap-14 flex-col">
-        <div className="w-full flex justify-center flex-col md:flex-row gap-10">
+        <div
+          className="w-full flex justify-center flex-col md:flex-row gap-10"
+          data-aos="fade-up"
+        >
           <div className="w-full md:w-[50%] lg:w-[40%] shadow rounded-lg overflow-hidden">
             <div className="basis-1/2">
               <Image src={AppImages.ourTeam1} alt="Image" />
@@ -185,7 +191,10 @@ export default function OurTeamComponent(props: OurTeamComponentInterface) {
             </div>
           </div>
         </div>
-        <div className="w-full flex justify-center flex-col md:flex-row gap-10">
+        <div
+          className="w-full flex justify-center flex-col md:flex-row gap-10"
+          data-aos="fade-up"
+        >
           <div className="w-full md:w-[50%] lg:w-[40%] shadow rounded-lg overflow-hidden">
             <div className="basis-1/2">
               <Image src={AppImages.ourTeam1} alt="Image" />
@@ -283,7 +292,10 @@ export default function OurTeamComponent(props: OurTeamComponentInterface) {
             </div>
           </div>
         </div>
-        <div className="w-full flex justify-center flex-col md:flex-row gap-10">
+        <div
+          className="w-full flex justify-center flex-col md:flex-row gap-10"
+          data-aos="fade-up"
+        >
           <div className="w-full md:w-[50%] lg:w-[40%] shadow rounded-lg overflow-hidden">
             <div className="basis-1/2">
               <Image src={AppImages.ourTeam1} alt="Image" />

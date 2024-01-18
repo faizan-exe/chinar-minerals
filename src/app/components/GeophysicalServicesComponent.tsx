@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import AOS from "aos";
+import "../styles/style.css";
 import "aos/dist/aos.css";
 import Navbar from "../sharedComponents/Navbar";
 import { AppImages } from "../utils/AppImages";
@@ -22,8 +23,8 @@ const gpServicesdata = [
   },
   {
     text: [
-      "Five Seismic Crews are in operation with Vibroseis & Dynamite Energy Source.",
       "2D/3D Seismic Data Acquisition Operations.",
+      "Five Seismic Crews are in operation with Vibroseis & Dynamite Energy Source.",
       "On site Quality Control and Processing up to Brute stack.",
       "High Accuracy & Reliable Surveying with RTK GPS System.",
       "Trimble TBC, Leica GEO.OFFICE & SKI-PRO Software for Post Processing of GPS Survey Data.",
@@ -34,10 +35,10 @@ const gpServicesdata = [
   },
   {
     text: [
+      "High Accuracy & Reliable Surveying with RTK GPS System.",
       "Five Seismic Crews are in operation with Vibroseis & Dynamite Energy Source.",
       "2D/3D Seismic Data Acquisition Operations.",
       "On site Quality Control and Processing up to Brute stack.",
-      "High Accuracy & Reliable Surveying with RTK GPS System.",
       "Trimble TBC, Leica GEO.OFFICE & SKI-PRO Software for Post Processing of GPS Survey Data.",
       "Refraction Survey and Up-hole Logging.",
       "All Crews equipped with Modern Communications system.",
@@ -55,6 +56,20 @@ export default function GeophysicalServicesComponent(
   const [startAnimation, setStartAnimation] = useState(false);
   const [isHeaderShow, setIsHeaderShow] = useState(false);
   let lastScrollTop = 0;
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const handleSelectIndex = (index: any) => {
+    setIsAnimating(true);
+    setTimeout(() => {
+      setSelectedIndex(index);
+      setIsAnimating(false);
+    }, 200);
+
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 400);
+  };
+
   useEffect(() => {
     setStartAnimation(true);
     AOS.init({
@@ -135,14 +150,20 @@ export default function GeophysicalServicesComponent(
 
       <div className="bg-[#f3f3f3] w-full px-[5%] lg:px-[8%] xl:px-[15%] my-10 p-10">
         <div className="flex justify-between items-center">
-          <p className="text-black text-2xl md:text-3xl font-bold max-w-[550px] my-5 basis-10/12">
+          <p
+            className="text-black text-2xl md:text-3xl font-bold max-w-[550px] my-5 basis-10/12"
+            data-aos="fade-right"
+          >
             Reliable & High-Quality Geophysical Analysis Services
           </p>
-          <p className="text-[#D7051D] text-lg tracking-widest font-normal basis-2/12 cursor-pointer">
+          <p
+            className="text-[#D7051D] text-lg tracking-widest font-normal basis-2/12 cursor-pointer"
+            data-aos="fade-left"
+          >
             <span
               onClick={() => {
-                if (selectedIndex === 0) setSelectedIndex(2);
-                else setSelectedIndex(selectedIndex - 1);
+                if (selectedIndex === 0) handleSelectIndex(2);
+                else handleSelectIndex(selectedIndex - 1);
               }}
             >
               {"<"}
@@ -150,21 +171,24 @@ export default function GeophysicalServicesComponent(
             <span className="text-black">{selectedIndex + 1}</span>/3{" "}
             <span
               onClick={() => {
-                if (selectedIndex === 2) setSelectedIndex(0);
-                else setSelectedIndex(selectedIndex + 1);
+                if (selectedIndex === 2) handleSelectIndex(0);
+                else handleSelectIndex(selectedIndex + 1);
               }}
             >
               {">"}
             </span>
           </p>
         </div>
-        <div className="w-full flex items-center gap-3 md:gap-6 xl:gap-10 my-8">
+        <div
+          className="w-full flex items-center gap-3 md:gap-6 xl:gap-10 my-8"
+          data-aos="fade-right"
+        >
           <div
             style={{
               backgroundColor: selectedIndex === 0 ? "#D7051D" : "white",
             }}
             className="shadow lg:w-[25%] w-[30%] h-36 md:h-40 lg:h-48 flex gap-3 flex-col items-center px-[4px] lg:px-0 py-2 md:py-2 lg:py-4 rounded-lg cursor-pointer"
-            onClick={() => setSelectedIndex(0)}
+            onClick={() => handleSelectIndex(0)}
           >
             <div className="flex justify-center items-center basis-3/5">
               <Image
@@ -191,7 +215,7 @@ export default function GeophysicalServicesComponent(
               backgroundColor: selectedIndex === 1 ? "#D7051D" : "white",
             }}
             className="shadow lg:w-[25%] w-[30%] h-36 md:h-40 lg:h-48 flex gap-3 flex-col items-center px-[4px] lg:px-0 py-2 md:py-2 lg:py-4 rounded-lg cursor-pointer"
-            onClick={() => setSelectedIndex(1)}
+            onClick={() => handleSelectIndex(1)}
           >
             <div className="flex justify-center items-center basis-3/5">
               <Image
@@ -218,7 +242,7 @@ export default function GeophysicalServicesComponent(
               backgroundColor: selectedIndex === 2 ? "#D7051D" : "white",
             }}
             className=" shadow lg:w-[25%] w-[30%] h-36 md:h-40 lg:h-48 flex gap-3 flex-col items-center px-[4px] lg:px-0 py-2 md:py-2 lg:py-4 rounded-lg cursor-pointer"
-            onClick={() => setSelectedIndex(2)}
+            onClick={() => handleSelectIndex(2)}
           >
             <div className="flex justify-center items-center basis-3/5">
               <Image
@@ -242,18 +266,29 @@ export default function GeophysicalServicesComponent(
           </div>
         </div>
         <div className="w-full flex flex-col md:flex-row gap-5 my-16">
-          <div className="w-full md:w-[50%]">
-            <Image src={gpServicesdata[selectedIndex].image} alt="Image" />
+          <div className="w-full md:w-[50%]" data-aos="fade-right">
+            <div className={` ${isAnimating ? "animate-fade" : ""}`}>
+              <Image
+                src={gpServicesdata[selectedIndex].image}
+                alt="Image"
+                className="fade-image"
+              />
+            </div>
           </div>
-          <div className="w-full md:w-[50%] flex items-center">
-            <ul
-              role="list"
-              className="marker:text-black list-disc pl-5 space-y-3 text-black text-base"
-            >
-              {gpServicesdata[selectedIndex].text.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
+          <div
+            className="w-full md:w-[50%] flex items-center"
+            data-aos="fade-left"
+          >
+            <div className={` ${isAnimating ? "animate-fade" : ""}`}>
+              <ul
+                role="list"
+                className="marker:text-black list-disc pl-5 space-y-3 text-black text-base"
+              >
+                {gpServicesdata[selectedIndex].text.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
