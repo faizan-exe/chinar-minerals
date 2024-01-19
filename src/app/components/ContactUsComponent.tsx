@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "../sharedComponents/Navbar";

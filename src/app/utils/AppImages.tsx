@@ -130,4 +130,8 @@ export const AppImages = {
   twitterRed: require("../../../public/images/twitterRed.webp"),
   scrollRightIcon: require("../../../public/images/scrollRightIcon.webp"),
   scrollLeftIcon: require("../../../public/images/scrollLeftIcon.webp"),
+  eccChairman: require("../../../public/images/eccChairman.webp"),
+  svc: require("../../../public/images/svc.webp"),
+  vc: require("../../../public/images/vc.webp"),
+  founder: require("../../../public/images/founder.webp"),
 };
