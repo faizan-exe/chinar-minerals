@@ -152,10 +152,10 @@ export default function HomeComponent(props: HomeComponentInterface) {
             </p>
           </div>
 
-          <div className="h-[30%] flex justify-center items-center gap-5 xl:gap-10">
-            <div className="w-[40%] flex flex-col lg:items-end items-center">
-              <p className="text-black font-extrabold lg:text-xl xl:text-3xl">
-                Iqbal
+          <div className="h-[30%] flex justify-center lg:justify-end xl:justify-center items-center gap-5 xl:gap-10">
+            <div className="w-[50%] lg:w-[40%] flex flex-col lg:items-end items-center">
+              <p className="text-black font-extrabold text-sm lg:text-lg xl:text-2xl">
+                Liaqat Ali Sultan
               </p>
               <p className="text-black lg:text-xl xl:text-3xl my-1">CEO</p>
             </div>
@@ -164,7 +164,7 @@ export default function HomeComponent(props: HomeComponentInterface) {
               <Image
                 src={AppImages.signature}
                 alt="Signature"
-                className="h-[80%] lg:h-[20%] w-auto"
+                className="h-20 lg:h-[20%] w-auto"
               />
             </div>
           </div>
